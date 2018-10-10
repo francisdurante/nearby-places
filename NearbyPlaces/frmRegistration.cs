@@ -60,5 +60,10 @@ namespace NearbyPlaces
                 MessageBox.Show("Please Complete Information Needed Or;\nSelect Specific Item needed", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void frmRegistration_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

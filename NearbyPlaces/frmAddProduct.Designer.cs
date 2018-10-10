@@ -32,11 +32,18 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblCategory = new System.Windows.Forms.Label();
             this.gbProductDetails = new System.Windows.Forms.GroupBox();
-            this.txtProductName = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             this.gbImageThumbnail = new System.Windows.Forms.GroupBox();
+            this.pbMenuPic = new System.Windows.Forms.PictureBox();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.txtFilePath = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.gbProductDetails.SuspendLayout();
+            this.gbImageThumbnail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMenuPic)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProductName
@@ -81,20 +88,6 @@
             this.gbProductDetails.TabStop = false;
             this.gbProductDetails.Text = "Product Details";
             // 
-            // txtProductName
-            // 
-            this.txtProductName.Location = new System.Drawing.Point(97, 26);
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(170, 20);
-            this.txtProductName.TabIndex = 3;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(97, 52);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(170, 20);
-            this.txtPrice.TabIndex = 4;
-            // 
             // cbCategory
             // 
             this.cbCategory.FormattingEnabled = true;
@@ -103,20 +96,86 @@
             this.cbCategory.Size = new System.Drawing.Size(170, 21);
             this.cbCategory.TabIndex = 5;
             // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(97, 52);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(170, 20);
+            this.txtPrice.TabIndex = 4;
+            // 
+            // txtProductName
+            // 
+            this.txtProductName.Location = new System.Drawing.Point(97, 26);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(170, 20);
+            this.txtProductName.TabIndex = 3;
+            // 
             // gbImageThumbnail
             // 
+            this.gbImageThumbnail.Controls.Add(this.txtFilePath);
+            this.gbImageThumbnail.Controls.Add(this.btnUpload);
+            this.gbImageThumbnail.Controls.Add(this.pbMenuPic);
             this.gbImageThumbnail.Location = new System.Drawing.Point(291, 12);
             this.gbImageThumbnail.Name = "gbImageThumbnail";
-            this.gbImageThumbnail.Size = new System.Drawing.Size(273, 142);
+            this.gbImageThumbnail.Size = new System.Drawing.Size(339, 142);
             this.gbImageThumbnail.TabIndex = 6;
             this.gbImageThumbnail.TabStop = false;
             this.gbImageThumbnail.Text = "Image Thumbnail";
+            // 
+            // pbMenuPic
+            // 
+            this.pbMenuPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbMenuPic.Location = new System.Drawing.Point(6, 19);
+            this.pbMenuPic.Name = "pbMenuPic";
+            this.pbMenuPic.Size = new System.Drawing.Size(165, 88);
+            this.pbMenuPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMenuPic.TabIndex = 0;
+            this.pbMenuPic.TabStop = false;
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.Location = new System.Drawing.Point(6, 113);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(118, 23);
+            this.btnUpload.TabIndex = 1;
+            this.btnUpload.Text = "BROWSE";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // txtFilePath
+            // 
+            this.txtFilePath.Location = new System.Drawing.Point(130, 115);
+            this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.ReadOnly = true;
+            this.txtFilePath.Size = new System.Drawing.Size(203, 20);
+            this.txtFilePath.TabIndex = 2;
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(12, 181);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(171, 51);
+            this.btnSubmit.TabIndex = 7;
+            this.btnSubmit.Text = "SUBMIT";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(189, 181);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(171, 51);
+            this.btnCancel.TabIndex = 8;
+            this.btnCancel.Text = "CANCEL";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // frmAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 262);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.gbImageThumbnail);
             this.Controls.Add(this.gbProductDetails);
             this.Name = "frmAddProduct";
@@ -124,6 +183,9 @@
             this.Load += new System.EventHandler(this.frmAddProduct_Load);
             this.gbProductDetails.ResumeLayout(false);
             this.gbProductDetails.PerformLayout();
+            this.gbImageThumbnail.ResumeLayout(false);
+            this.gbImageThumbnail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMenuPic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -138,5 +200,10 @@
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.GroupBox gbImageThumbnail;
+        private System.Windows.Forms.Button btnUpload;
+        private System.Windows.Forms.PictureBox pbMenuPic;
+        private System.Windows.Forms.TextBox txtFilePath;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

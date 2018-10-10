@@ -35,19 +35,19 @@
             this.txtRePassword = new System.Windows.Forms.TextBox();
             this.lblRePassword = new System.Windows.Forms.Label();
             this.gbAccountDetails = new System.Windows.Forms.GroupBox();
+            this.lblSecurity = new System.Windows.Forms.Label();
+            this.txtSecurity = new System.Windows.Forms.TextBox();
             this.gbEstablishmentDetails = new System.Windows.Forms.GroupBox();
-            this.txtEstablishmentName = new System.Windows.Forms.TextBox();
-            this.txtLon = new System.Windows.Forms.TextBox();
-            this.lblEstName = new System.Windows.Forms.Label();
-            this.lblLon = new System.Windows.Forms.Label();
-            this.lblLat = new System.Windows.Forms.Label();
-            this.txtLat = new System.Windows.Forms.TextBox();
-            this.lblEmotion = new System.Windows.Forms.Label();
-            this.cbEmotion = new System.Windows.Forms.ComboBox();
             this.cbAge = new System.Windows.Forms.ComboBox();
             this.lblAge = new System.Windows.Forms.Label();
-            this.txtSecurity = new System.Windows.Forms.TextBox();
-            this.lblSecurity = new System.Windows.Forms.Label();
+            this.cbEmotion = new System.Windows.Forms.ComboBox();
+            this.lblEmotion = new System.Windows.Forms.Label();
+            this.txtEstablishmentName = new System.Windows.Forms.TextBox();
+            this.txtLon = new System.Windows.Forms.TextBox();
+            this.txtLat = new System.Windows.Forms.TextBox();
+            this.lblEstName = new System.Windows.Forms.Label();
+            this.lblLat = new System.Windows.Forms.Label();
+            this.lblLon = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.gbAccountDetails.SuspendLayout();
@@ -121,6 +121,23 @@
             this.gbAccountDetails.TabStop = false;
             this.gbAccountDetails.Text = "Account Details";
             // 
+            // lblSecurity
+            // 
+            this.lblSecurity.AutoSize = true;
+            this.lblSecurity.Location = new System.Drawing.Point(10, 102);
+            this.lblSecurity.Name = "lblSecurity";
+            this.lblSecurity.Size = new System.Drawing.Size(113, 13);
+            this.lblSecurity.TabIndex = 7;
+            this.lblSecurity.Text = "Security Registration : ";
+            // 
+            // txtSecurity
+            // 
+            this.txtSecurity.Location = new System.Drawing.Point(125, 99);
+            this.txtSecurity.Name = "txtSecurity";
+            this.txtSecurity.PasswordChar = '_';
+            this.txtSecurity.Size = new System.Drawing.Size(152, 20);
+            this.txtSecurity.TabIndex = 6;
+            // 
             // gbEstablishmentDetails
             // 
             this.gbEstablishmentDetails.Controls.Add(this.cbAge);
@@ -140,77 +157,6 @@
             this.gbEstablishmentDetails.TabStop = false;
             this.gbEstablishmentDetails.Text = "EstablishmentDetails";
             this.gbEstablishmentDetails.Enter += new System.EventHandler(this.gbEstablishmentDetails_Enter);
-            // 
-            // txtEstablishmentName
-            // 
-            this.txtEstablishmentName.Location = new System.Drawing.Point(144, 19);
-            this.txtEstablishmentName.Name = "txtEstablishmentName";
-            this.txtEstablishmentName.Size = new System.Drawing.Size(205, 20);
-            this.txtEstablishmentName.TabIndex = 7;
-            // 
-            // txtLon
-            // 
-            this.txtLon.Location = new System.Drawing.Point(144, 71);
-            this.txtLon.Name = "txtLon";
-            this.txtLon.Size = new System.Drawing.Size(205, 20);
-            this.txtLon.TabIndex = 11;
-            // 
-            // lblEstName
-            // 
-            this.lblEstName.AutoSize = true;
-            this.lblEstName.Location = new System.Drawing.Point(13, 22);
-            this.lblEstName.Name = "lblEstName";
-            this.lblEstName.Size = new System.Drawing.Size(106, 13);
-            this.lblEstName.TabIndex = 6;
-            this.lblEstName.Text = "Establisment Name : ";
-            this.lblEstName.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lblLon
-            // 
-            this.lblLon.AutoSize = true;
-            this.lblLon.Location = new System.Drawing.Point(13, 74);
-            this.lblLon.Name = "lblLon";
-            this.lblLon.Size = new System.Drawing.Size(87, 13);
-            this.lblLon.TabIndex = 10;
-            this.lblLon.Text = "Map Longitude : ";
-            // 
-            // lblLat
-            // 
-            this.lblLat.AutoSize = true;
-            this.lblLat.Location = new System.Drawing.Point(13, 48);
-            this.lblLat.Name = "lblLat";
-            this.lblLat.Size = new System.Drawing.Size(74, 13);
-            this.lblLat.TabIndex = 8;
-            this.lblLat.Text = "Map latitude : ";
-            // 
-            // txtLat
-            // 
-            this.txtLat.Location = new System.Drawing.Point(144, 45);
-            this.txtLat.Name = "txtLat";
-            this.txtLat.Size = new System.Drawing.Size(205, 20);
-            this.txtLat.TabIndex = 9;
-            // 
-            // lblEmotion
-            // 
-            this.lblEmotion.AutoSize = true;
-            this.lblEmotion.Location = new System.Drawing.Point(13, 102);
-            this.lblEmotion.Name = "lblEmotion";
-            this.lblEmotion.Size = new System.Drawing.Size(115, 13);
-            this.lblEmotion.TabIndex = 12;
-            this.lblEmotion.Text = "Good For Emotion Of : ";
-            // 
-            // cbEmotion
-            // 
-            this.cbEmotion.FormattingEnabled = true;
-            this.cbEmotion.Items.AddRange(new object[] {
-            "----SELECT THE BEST ONE----",
-            "HAPPY",
-            "SAD",
-            "ALL"});
-            this.cbEmotion.Location = new System.Drawing.Point(144, 97);
-            this.cbEmotion.Name = "cbEmotion";
-            this.cbEmotion.Size = new System.Drawing.Size(205, 21);
-            this.cbEmotion.TabIndex = 13;
             // 
             // cbAge
             // 
@@ -236,22 +182,76 @@
             this.lblAge.TabIndex = 14;
             this.lblAge.Text = "Good For Age Of : ";
             // 
-            // txtSecurity
+            // cbEmotion
             // 
-            this.txtSecurity.Location = new System.Drawing.Point(125, 99);
-            this.txtSecurity.Name = "txtSecurity";
-            this.txtSecurity.PasswordChar = '_';
-            this.txtSecurity.Size = new System.Drawing.Size(152, 20);
-            this.txtSecurity.TabIndex = 6;
+            this.cbEmotion.FormattingEnabled = true;
+            this.cbEmotion.Items.AddRange(new object[] {
+            "----SELECT THE BEST ONE----",
+            "HAPPY",
+            "SAD",
+            "ALL"});
+            this.cbEmotion.Location = new System.Drawing.Point(144, 97);
+            this.cbEmotion.Name = "cbEmotion";
+            this.cbEmotion.Size = new System.Drawing.Size(205, 21);
+            this.cbEmotion.TabIndex = 13;
             // 
-            // lblSecurity
+            // lblEmotion
             // 
-            this.lblSecurity.AutoSize = true;
-            this.lblSecurity.Location = new System.Drawing.Point(10, 102);
-            this.lblSecurity.Name = "lblSecurity";
-            this.lblSecurity.Size = new System.Drawing.Size(113, 13);
-            this.lblSecurity.TabIndex = 7;
-            this.lblSecurity.Text = "Security Registration : ";
+            this.lblEmotion.AutoSize = true;
+            this.lblEmotion.Location = new System.Drawing.Point(13, 102);
+            this.lblEmotion.Name = "lblEmotion";
+            this.lblEmotion.Size = new System.Drawing.Size(115, 13);
+            this.lblEmotion.TabIndex = 12;
+            this.lblEmotion.Text = "Good For Emotion Of : ";
+            // 
+            // txtEstablishmentName
+            // 
+            this.txtEstablishmentName.Location = new System.Drawing.Point(144, 19);
+            this.txtEstablishmentName.Name = "txtEstablishmentName";
+            this.txtEstablishmentName.Size = new System.Drawing.Size(205, 20);
+            this.txtEstablishmentName.TabIndex = 7;
+            // 
+            // txtLon
+            // 
+            this.txtLon.Location = new System.Drawing.Point(144, 71);
+            this.txtLon.Name = "txtLon";
+            this.txtLon.Size = new System.Drawing.Size(205, 20);
+            this.txtLon.TabIndex = 11;
+            // 
+            // txtLat
+            // 
+            this.txtLat.Location = new System.Drawing.Point(144, 45);
+            this.txtLat.Name = "txtLat";
+            this.txtLat.Size = new System.Drawing.Size(205, 20);
+            this.txtLat.TabIndex = 9;
+            // 
+            // lblEstName
+            // 
+            this.lblEstName.AutoSize = true;
+            this.lblEstName.Location = new System.Drawing.Point(13, 22);
+            this.lblEstName.Name = "lblEstName";
+            this.lblEstName.Size = new System.Drawing.Size(106, 13);
+            this.lblEstName.TabIndex = 6;
+            this.lblEstName.Text = "Establisment Name : ";
+            this.lblEstName.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblLat
+            // 
+            this.lblLat.AutoSize = true;
+            this.lblLat.Location = new System.Drawing.Point(13, 48);
+            this.lblLat.Name = "lblLat";
+            this.lblLat.Size = new System.Drawing.Size(74, 13);
+            this.lblLat.TabIndex = 8;
+            this.lblLat.Text = "Map latitude : ";
+            // 
+            // lblLon
+            // 
+            this.lblLon.AutoSize = true;
+            this.lblLon.Location = new System.Drawing.Point(13, 74);
+            this.lblLon.Name = "lblLon";
+            this.lblLon.Size = new System.Drawing.Size(87, 13);
+            this.lblLon.TabIndex = 10;
+            this.lblLon.Text = "Map Longitude : ";
             // 
             // btnSubmit
             // 
@@ -283,6 +283,7 @@
             this.Controls.Add(this.gbAccountDetails);
             this.Name = "frmRegistration";
             this.Text = "Establishment Registration";
+            this.Load += new System.EventHandler(this.frmRegistration_Load);
             this.gbAccountDetails.ResumeLayout(false);
             this.gbAccountDetails.PerformLayout();
             this.gbEstablishmentDetails.ResumeLayout(false);
