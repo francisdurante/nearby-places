@@ -111,12 +111,12 @@ namespace NearbyPlaces
             }
         }
 
-        public static ArrayList getCategory(int id)
+        public static ArrayList getCategory(int id,string process)
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
             HttpResponseMessage response = client.GetAsync("api/get_category?id=" + id +
-                "&pass=est_get_category").Result;
+                "&pass=est_get_category&for_process="+process).Result;
             var result = response.Content.ReadAsStringAsync().Result;
             var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
             string responseStatus = status["status"].ToString();
@@ -131,6 +131,27 @@ namespace NearbyPlaces
                 }
             }
             return category;
+        }
+        public static ArrayList getProduct(int id, string process)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("api/get_product?id=" + id +
+                "&pass=get_product&for_process=" + process).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+
+            ArrayList product = new ArrayList();
+            if (responseStatus.Equals("success"))
+            {
+                int length = ((JArray)status["data"]).Count;
+                for (int x = 0; x < length; x++)
+                {
+                    product.Add(status["data"][x]["item_name"].ToString());
+                }
+            }
+            return product;
         }
 
         public static bool addProduct(string productName, string productPrice, string productPicPath,string product_cat)
@@ -171,14 +192,103 @@ namespace NearbyPlaces
                 return false;
             }
         }
-        public static void UploadMyFile(string localFilePath)
+       
+        public static void editCategory(int id,string categoryName)
         {
-            string url = "http://darkened-career.000webhostapp.com/";
-            using (WebClient client = new WebClient())
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("api/edit_category?est_id=" + id +
+                "&pass=edit_category"+
+                "&cat_name="+ categoryName).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+            if (responseStatus.Equals("success"))
             {
-                client.UploadFile(url, localFilePath);
+                forEditCategory.forEditCategory.setCatId(Convert.ToInt32((status["data"]["id"])));
+                forEditCategory.forEditCategory.setCategoryName(status["data"]["category_name"].ToString());
+                forEditCategory.forEditCategory.setStatus(Convert.ToInt32(status["data"]["status"]));
+            }
+            else
+            {
+                MessageBox.Show("Error in retrieving Data", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public static bool submit_edited_category(int cat_id, int est_id, string cat_name, int status)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("api/submit_edited_category?cat_id=" + cat_id +
+                "&pass=submit_edited_category" +
+                "&cat_name=" + cat_name +
+                "&status="+status+
+                "&est_id="+est_id).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status1 = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status1["status"].ToString();
+            if (responseStatus.Equals("success"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
+        public static void editProduct(int id, string productName)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("api/edit_product?est_id=" + id +
+                "&pass=get_product" +
+                "&item_name=" + productName).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+            if (responseStatus.Equals("success"))
+            {
+                forEditProduct.forEditProductVO.setItemId(Convert.ToInt32((status["data"]["item_id"])));
+                forEditProduct.forEditProductVO.setItemName(status["data"]["item_name"].ToString());
+                forEditProduct.forEditProductVO.setStatus(Convert.ToInt32(status["data"]["item_status"]));
+                forEditProduct.forEditProductVO.setPath(status["data"]["path"].ToString());
+                forEditProduct.forEditProductVO.setPrice(status["data"]["price"].ToString());
+                forEditProduct.forEditProductVO.setCategory(status["data"]["category_name"].ToString());
+            }
+            else
+            {
+                MessageBox.Show("Error in retrieving Data", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static bool submit_edited_product(int item_id, int est_id, string cat_name, int status, string localPath, string item_name,string price,int upload)//upload 1 0-dont upload
+        {
+            HttpClient client = new HttpClient();
+            var formData = new MultipartFormDataContent();
+            if (upload == 1) { 
+                HttpContent pPP = new StreamContent(File.Open(localPath, FileMode.Open));
+                formData.Add(pPP, "imageOne", "image123.jpg");
+            }
+            string url = "http://darkened-career.000webhostapp.com/api/submit_edited_product?id=" + item_id +
+                "&pass=submit_edited_product" +
+                "&cat_name=" + cat_name +
+                "&status=" + status +
+                "&est_id=" + est_id +
+                "&item_name="+item_name +
+                "&price="+price+
+                "&upload="+upload;
+            var result = client.PostAsync(url, formData);
+            var response = result.Result.Content.ReadAsStringAsync().Result;
+            var status1 = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(response);
+            string responseStatus = status1["status"].ToString();
+            if (responseStatus.Equals("success"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

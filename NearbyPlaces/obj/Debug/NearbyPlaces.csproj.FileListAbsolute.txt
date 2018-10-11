@@ -34,3 +34,5 @@ C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Debug\Nearb
 C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.csproj.GenerateResource.Cache
 C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Debug\Dropbox.Api.dll
 C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Debug\Dropbox.Api.xml
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmEditCategory.resources
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmEditProduct.resources

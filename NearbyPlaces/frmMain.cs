@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -61,6 +62,42 @@ namespace NearbyPlaces
             {
                 MessageBox.Show("Add Product Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void editCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form f = Application.OpenForms["frmEditCategory"];
+            if (f == null)
+            {
+                frmEditCategory fec = new frmEditCategory();
+                fec.MdiParent = this;
+                fec.Show();
+            }
+            else
+            {
+                MessageBox.Show("Edit Category Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void editProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form f = Application.OpenForms["frmEditProduct"];
+            if (f == null)
+            {
+                frmEditProduct fep = new frmEditProduct();
+                fep.MdiParent = this;
+                fep.Show();
+            }
+            else
+            {
+                MessageBox.Show("Edit Product Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(1);
+            Process.GetCurrentProcess().Kill();
         }
     }
 }

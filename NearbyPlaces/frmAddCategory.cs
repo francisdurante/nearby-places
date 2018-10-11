@@ -20,7 +20,7 @@ namespace NearbyPlaces
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ApiClass.getCategory(ForLoginEstVO.getEstID());
+           
         }
 
         private void button1_Click(object sender, EventArgs e)

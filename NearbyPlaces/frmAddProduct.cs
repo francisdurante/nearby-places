@@ -31,7 +31,7 @@ namespace NearbyPlaces
             cbCategory.Items.Clear();
             cbCategory.Items.Add("");
             ArrayList category = new ArrayList();
-            category = ApiClass.getCategory(ForLoginEstVO.getEstID());
+            category = ApiClass.getCategory(ForLoginEstVO.getEstID(),"all_active");
             for(int x = 0; x < category.Count; x++)
             {
                 cbCategory.Items.Add(category[x]);
@@ -40,17 +40,15 @@ namespace NearbyPlaces
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            if (open.ShowDialog() == DialogResult.OK)
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Title = "Open Image";
+            dlg.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (dlg.ShowDialog() == DialogResult.OK)
             {
-                // display image in picture box  
-               // pbMenuPic.Image = new Bitmap(open.FileName);
-                fileInfo = new FileInfo(open.FileName);
-                // image file path  
-                txtFilePath.Text = open.FileName;
-                
+                pbMenuPic.ImageLocation = dlg.FileName;
+                txtFilePath.Text = dlg.FileName;
             }
+            dlg.Dispose();
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
