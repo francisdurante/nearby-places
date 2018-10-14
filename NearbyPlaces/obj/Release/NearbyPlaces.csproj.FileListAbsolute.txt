@@ -1,1 +1,41 @@
 C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Release\NearbyPlaces.exe.config
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Release\NearbyPlaces.exe
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Release\NearbyPlaces.pdb
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Release\Dropbox.Api.dll
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Release\Newtonsoft.Json.dll
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Release\System.Net.Http.Formatting.dll
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Release\Dropbox.Api.xml
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Release\Newtonsoft.Json.xml
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Release\System.Net.Http.Formatting.xml
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmAddCategory.resources
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmAddProduct.resources
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmEditCategory.resources
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmEditProduct.resources
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmLoginForm.resources
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmMain.resources
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmRegistration.resources
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.Properties.Resources.resources
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.csproj.GenerateResource.Cache
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.exe
+C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.pdb
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Release\NearbyPlaces.exe.config
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.exe
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.pdb
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Release\NearbyPlaces.exe
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Release\NearbyPlaces.pdb
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Release\Dropbox.Api.dll
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Release\Newtonsoft.Json.dll
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Release\System.Net.Http.Formatting.dll
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Release\Dropbox.Api.xml
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Release\Newtonsoft.Json.xml
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Release\System.Net.Http.Formatting.xml
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.csprojResolveAssemblyReference.cache
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmAddCategory.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmAddProduct.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmEditCategory.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmEditProduct.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmLoginForm.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmMain.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmRegistration.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.Properties.Resources.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.csproj.GenerateResource.Cache

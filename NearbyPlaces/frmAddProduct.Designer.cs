@@ -36,9 +36,9 @@
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.gbImageThumbnail = new System.Windows.Forms.GroupBox();
-            this.pbMenuPic = new System.Windows.Forms.PictureBox();
-            this.btnUpload = new System.Windows.Forms.Button();
             this.txtFilePath = new System.Windows.Forms.TextBox();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.pbMenuPic = new System.Windows.Forms.PictureBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.gbProductDetails.SuspendLayout();
@@ -122,15 +122,13 @@
             this.gbImageThumbnail.TabStop = false;
             this.gbImageThumbnail.Text = "Image Thumbnail";
             // 
-            // pbMenuPic
+            // txtFilePath
             // 
-            this.pbMenuPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbMenuPic.Location = new System.Drawing.Point(6, 19);
-            this.pbMenuPic.Name = "pbMenuPic";
-            this.pbMenuPic.Size = new System.Drawing.Size(165, 88);
-            this.pbMenuPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMenuPic.TabIndex = 0;
-            this.pbMenuPic.TabStop = false;
+            this.txtFilePath.Location = new System.Drawing.Point(130, 115);
+            this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.ReadOnly = true;
+            this.txtFilePath.Size = new System.Drawing.Size(203, 20);
+            this.txtFilePath.TabIndex = 2;
             // 
             // btnUpload
             // 
@@ -142,13 +140,15 @@
             this.btnUpload.UseVisualStyleBackColor = true;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
-            // txtFilePath
+            // pbMenuPic
             // 
-            this.txtFilePath.Location = new System.Drawing.Point(130, 115);
-            this.txtFilePath.Name = "txtFilePath";
-            this.txtFilePath.ReadOnly = true;
-            this.txtFilePath.Size = new System.Drawing.Size(203, 20);
-            this.txtFilePath.TabIndex = 2;
+            this.pbMenuPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbMenuPic.Location = new System.Drawing.Point(6, 19);
+            this.pbMenuPic.Name = "pbMenuPic";
+            this.pbMenuPic.Size = new System.Drawing.Size(165, 88);
+            this.pbMenuPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMenuPic.TabIndex = 0;
+            this.pbMenuPic.TabStop = false;
             // 
             // btnSubmit
             // 
@@ -168,6 +168,7 @@
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmAddProduct
             // 

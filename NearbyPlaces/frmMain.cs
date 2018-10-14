@@ -96,8 +96,21 @@ namespace NearbyPlaces
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(1);
-            Process.GetCurrentProcess().Kill();
+            
+        }
+
+        private void lOGOUTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you want to Exit?", "Exit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Environment.Exit(1);
+                Process.GetCurrentProcess().Kill();
+            }
+            else
+            {
+
+            }
         }
     }
 }

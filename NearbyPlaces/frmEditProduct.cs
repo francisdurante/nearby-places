@@ -159,5 +159,10 @@ namespace NearbyPlaces
                 status = 0;
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
