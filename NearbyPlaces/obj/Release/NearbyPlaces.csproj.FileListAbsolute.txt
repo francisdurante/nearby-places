@@ -39,3 +39,5 @@ C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Rel
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmRegistration.resources
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.Properties.Resources.resources
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.csproj.GenerateResource.Cache
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmAddEstType.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmEditEstType.resources

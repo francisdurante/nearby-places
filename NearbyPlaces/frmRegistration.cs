@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,7 +42,7 @@ namespace NearbyPlaces
             {
                 if (txtPassword.Text == txtRePassword.Text)
                 {
-                    if (ApiClass.establishment_registration(txtUsername.Text, txtPassword.Text, txtEstablishmentName.Text, txtLat.Text, txtLon.Text, cbEmotion.Text, cbAge.Text, txtSecurity.Text))
+                    if (ApiClass.establishment_registration(txtUsername.Text, txtPassword.Text, txtEstablishmentName.Text, txtLat.Text, txtLon.Text, cbEmotion.Text, cbAge.Text, txtSecurity.Text,forEstablishmentType.ForEstablishmentTypeVO.getEstTypeID()))
                     {
                         MessageBox.Show("Registration Success", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -63,12 +64,22 @@ namespace NearbyPlaces
 
         private void frmRegistration_Load(object sender, EventArgs e)
         {
-
+            ArrayList type = new ArrayList();
+            type = ApiClass.get_est_type("active", "");
+            for(int x = 0; x < type.Count; x++)
+            {
+                cbEstType.Items.Add(type[x]);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cbEstType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ApiClass.get_est_type("specific", cbEstType.Text);
         }
     }
 }

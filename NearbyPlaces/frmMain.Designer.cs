@@ -41,6 +41,11 @@
             this.editCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.establishmentTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrationTab = new System.Windows.Forms.ToolStripMenuItem();
+            this.userName = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +54,8 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsLoggedIn,
-            this.tsEstName});
+            this.tsEstName,
+            this.userName});
             this.statusStrip1.Location = new System.Drawing.Point(0, 509);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(860, 22);
@@ -74,6 +80,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.establishmentSystemToolStripMenuItem,
             this.aboutSystemToolStripMenuItem,
+            this.registrationTab,
             this.lOGOUTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -85,7 +92,8 @@
             // 
             this.establishmentSystemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addProductOnMenuToolStripMenuItem,
-            this.categoryMenuToolStripMenuItem});
+            this.categoryMenuToolStripMenuItem,
+            this.establishmentTypeToolStripMenuItem});
             this.establishmentSystemToolStripMenuItem.Name = "establishmentSystemToolStripMenuItem";
             this.establishmentSystemToolStripMenuItem.Size = new System.Drawing.Size(165, 20);
             this.establishmentSystemToolStripMenuItem.Text = "Establishment Maintenance";
@@ -96,21 +104,21 @@
             this.addProductToolStripMenuItem,
             this.editProductToolStripMenuItem});
             this.addProductOnMenuToolStripMenuItem.Name = "addProductOnMenuToolStripMenuItem";
-            this.addProductOnMenuToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.addProductOnMenuToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.addProductOnMenuToolStripMenuItem.Text = "Product Menu";
             this.addProductOnMenuToolStripMenuItem.Click += new System.EventHandler(this.addProductOnMenuToolStripMenuItem_Click);
             // 
             // addProductToolStripMenuItem
             // 
             this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
-            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addProductToolStripMenuItem.Text = "Add Product";
             this.addProductToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click);
             // 
             // editProductToolStripMenuItem
             // 
             this.editProductToolStripMenuItem.Name = "editProductToolStripMenuItem";
-            this.editProductToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.editProductToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.editProductToolStripMenuItem.Text = "Edit Product";
             this.editProductToolStripMenuItem.Click += new System.EventHandler(this.editProductToolStripMenuItem_Click);
             // 
@@ -120,20 +128,20 @@
             this.addCategoryToolStripMenuItem,
             this.editCategoryToolStripMenuItem});
             this.categoryMenuToolStripMenuItem.Name = "categoryMenuToolStripMenuItem";
-            this.categoryMenuToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.categoryMenuToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.categoryMenuToolStripMenuItem.Text = "Category Menu";
             // 
             // addCategoryToolStripMenuItem
             // 
             this.addCategoryToolStripMenuItem.Name = "addCategoryToolStripMenuItem";
-            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addCategoryToolStripMenuItem.Text = "Add Category";
             this.addCategoryToolStripMenuItem.Click += new System.EventHandler(this.addCategoryToolStripMenuItem_Click);
             // 
             // editCategoryToolStripMenuItem
             // 
             this.editCategoryToolStripMenuItem.Name = "editCategoryToolStripMenuItem";
-            this.editCategoryToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.editCategoryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.editCategoryToolStripMenuItem.Text = "Edit Category";
             this.editCategoryToolStripMenuItem.Click += new System.EventHandler(this.editCategoryToolStripMenuItem_Click);
             // 
@@ -150,18 +158,57 @@
             this.lOGOUTToolStripMenuItem.Text = "LOGOUT";
             this.lOGOUTToolStripMenuItem.Click += new System.EventHandler(this.lOGOUTToolStripMenuItem_Click);
             // 
+            // establishmentTypeToolStripMenuItem
+            // 
+            this.establishmentTypeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addTypeToolStripMenuItem,
+            this.editTypeToolStripMenuItem});
+            this.establishmentTypeToolStripMenuItem.Name = "establishmentTypeToolStripMenuItem";
+            this.establishmentTypeToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.establishmentTypeToolStripMenuItem.Text = "Establishment Type";
+            // 
+            // addTypeToolStripMenuItem
+            // 
+            this.addTypeToolStripMenuItem.Name = "addTypeToolStripMenuItem";
+            this.addTypeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addTypeToolStripMenuItem.Text = "Add Type";
+            this.addTypeToolStripMenuItem.Click += new System.EventHandler(this.addTypeToolStripMenuItem_Click);
+            // 
+            // editTypeToolStripMenuItem
+            // 
+            this.editTypeToolStripMenuItem.Name = "editTypeToolStripMenuItem";
+            this.editTypeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editTypeToolStripMenuItem.Text = "Edit Type";
+            this.editTypeToolStripMenuItem.Click += new System.EventHandler(this.editTypeToolStripMenuItem_Click);
+            // 
+            // registrationTab
+            // 
+            this.registrationTab.Name = "registrationTab";
+            this.registrationTab.Size = new System.Drawing.Size(99, 20);
+            this.registrationTab.Text = "REGISTRATION";
+            this.registrationTab.Click += new System.EventHandler(this.registrationTab_Click);
+            // 
+            // userName
+            // 
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(65, 17);
+            this.userName.Text = "UserName:";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.EATERYFINDERLOGO;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(860, 531);
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
-            this.Text = "frmMain";
+            this.Text = "EATERY FINDER V1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -189,5 +236,10 @@
         private System.Windows.Forms.ToolStripMenuItem addCategoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editCategoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lOGOUTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem establishmentTypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addTypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editTypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrationTab;
+        private System.Windows.Forms.ToolStripStatusLabel userName;
     }
 }

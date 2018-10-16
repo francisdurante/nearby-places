@@ -50,6 +50,8 @@
             this.lblLon = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lblEstType = new System.Windows.Forms.Label();
+            this.cbEstType = new System.Windows.Forms.ComboBox();
             this.gbAccountDetails.SuspendLayout();
             this.gbEstablishmentDetails.SuspendLayout();
             this.SuspendLayout();
@@ -116,7 +118,7 @@
             this.gbAccountDetails.Controls.Add(this.txtPassword);
             this.gbAccountDetails.Location = new System.Drawing.Point(13, 13);
             this.gbAccountDetails.Name = "gbAccountDetails";
-            this.gbAccountDetails.Size = new System.Drawing.Size(283, 164);
+            this.gbAccountDetails.Size = new System.Drawing.Size(283, 198);
             this.gbAccountDetails.TabIndex = 6;
             this.gbAccountDetails.TabStop = false;
             this.gbAccountDetails.Text = "Account Details";
@@ -140,6 +142,8 @@
             // 
             // gbEstablishmentDetails
             // 
+            this.gbEstablishmentDetails.Controls.Add(this.cbEstType);
+            this.gbEstablishmentDetails.Controls.Add(this.lblEstType);
             this.gbEstablishmentDetails.Controls.Add(this.cbAge);
             this.gbEstablishmentDetails.Controls.Add(this.lblAge);
             this.gbEstablishmentDetails.Controls.Add(this.cbEmotion);
@@ -152,7 +156,7 @@
             this.gbEstablishmentDetails.Controls.Add(this.lblLon);
             this.gbEstablishmentDetails.Location = new System.Drawing.Point(302, 13);
             this.gbEstablishmentDetails.Name = "gbEstablishmentDetails";
-            this.gbEstablishmentDetails.Size = new System.Drawing.Size(355, 164);
+            this.gbEstablishmentDetails.Size = new System.Drawing.Size(355, 198);
             this.gbEstablishmentDetails.TabIndex = 7;
             this.gbEstablishmentDetails.TabStop = false;
             this.gbEstablishmentDetails.Text = "EstablishmentDetails";
@@ -255,7 +259,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(13, 184);
+            this.btnSubmit.Location = new System.Drawing.Point(12, 217);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(201, 51);
             this.btnSubmit.TabIndex = 8;
@@ -265,7 +269,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(220, 184);
+            this.btnCancel.Location = new System.Drawing.Point(219, 217);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(201, 51);
             this.btnCancel.TabIndex = 9;
@@ -273,17 +277,35 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lblEstType
+            // 
+            this.lblEstType.AutoSize = true;
+            this.lblEstType.Location = new System.Drawing.Point(13, 155);
+            this.lblEstType.Name = "lblEstType";
+            this.lblEstType.Size = new System.Drawing.Size(108, 13);
+            this.lblEstType.TabIndex = 16;
+            this.lblEstType.Text = "Establishment Type : ";
+            // 
+            // cbEstType
+            // 
+            this.cbEstType.FormattingEnabled = true;
+            this.cbEstType.Location = new System.Drawing.Point(144, 151);
+            this.cbEstType.Name = "cbEstType";
+            this.cbEstType.Size = new System.Drawing.Size(205, 21);
+            this.cbEstType.TabIndex = 17;
+            this.cbEstType.SelectedIndexChanged += new System.EventHandler(this.cbEstType_SelectedIndexChanged);
+            // 
             // frmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 247);
+            this.ClientSize = new System.Drawing.Size(681, 280);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.gbEstablishmentDetails);
             this.Controls.Add(this.gbAccountDetails);
             this.Name = "frmRegistration";
-            this.Text = "Establishment Registration";
+            this.Text = "-";
             this.Load += new System.EventHandler(this.frmRegistration_Load);
             this.gbAccountDetails.ResumeLayout(false);
             this.gbAccountDetails.PerformLayout();
@@ -317,5 +339,7 @@
         private System.Windows.Forms.TextBox txtSecurity;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cbEstType;
+        private System.Windows.Forms.Label lblEstType;
     }
 }

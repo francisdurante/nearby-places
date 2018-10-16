@@ -14,6 +14,15 @@ namespace NearbyPlaces.ForEstablishmentLogin
         public static string good_for_emotion_of;
         public static string good_at_of;
         public static int status;
+        public static string userName;
+        public static string getUser()
+        {
+            return userName;
+        }
+        public static void setUser(string user)
+        {
+            userName = user;
+        }
 
         public static int getEstID()
         {

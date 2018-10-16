@@ -38,9 +38,9 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(15, 98);
+            this.btnLogin.Location = new System.Drawing.Point(15, 86);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(112, 45);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -81,9 +81,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(110, 98);
+            this.button1.Location = new System.Drawing.Point(133, 86);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(112, 45);
             this.button1.TabIndex = 5;
             this.button1.Text = "CANCEL";
             this.button1.UseVisualStyleBackColor = true;
@@ -102,6 +102,7 @@
             this.Controls.Add(this.btnLogin);
             this.Name = "frmLoginForm";
             this.Text = "Establishment Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLoginForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

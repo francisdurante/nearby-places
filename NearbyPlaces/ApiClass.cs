@@ -45,8 +45,9 @@ namespace NearbyPlaces
 
         }
 
-        public static bool establishment_registration(string username, string password, string est_name, string lat, string lon, string emotion, string age, string pass)
+        public static bool establishment_registration(string username, string password, string est_name, string lat, string lon, string emotion, string age, string pass,int est_id)
         {
+            MessageBox.Show(est_id + "");
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
             HttpResponseMessage response = client.GetAsync("api/establishment_registration?username=" + username +
@@ -56,7 +57,8 @@ namespace NearbyPlaces
                 "&lat=" + lat +
                 "&lon=" + lon +
                 "&emotion=" + emotion +
-                "&age=" + age).Result;
+                "&age=" + age +
+                "&est_type_id=" + est_id).Result;
             var result = response.Content.ReadAsStringAsync().Result;
             var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
             string responseStatus = status["status"].ToString();
@@ -282,6 +284,103 @@ namespace NearbyPlaces
             var status1 = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(response);
             string responseStatus = status1["status"].ToString();
             if (responseStatus.Equals("success"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool add_est_type(string est_name)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("api/add_est_type?est_type_name=" + est_name +
+                "&pass=insert_est_tpye").Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+            if (responseStatus.Equals("success"))
+            {
+                return true;
+            }
+            else if(responseStatus.Equals("existing"))
+            {
+                MessageBox.Show("Establishment Type Already Exist", "Add Establishment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                MessageBox.Show("Error in Adding Establishment Type", "Add Establishment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public static ArrayList get_est_type(string status1, string est_type_name)
+        {
+            ArrayList type = new ArrayList();
+            string url = "";
+            HttpClient client = new HttpClient();
+            if(status1 == "all")
+            {
+                url = "api/get_all_est_type?pass=get_est_type&status=all";
+            }
+            else if(status1 == "active")
+            {
+                url = "api/get_all_est_type?pass=get_est_type&status=active";
+            }
+            else if(status1 == "specific")
+            {
+                url = "api/get_all_est_type?pass=get_est_type&status=specific&est_type_name=" +
+                    est_type_name;
+            }
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync(url).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+            if(responseStatus == "success" && status1 == "specific")
+            {
+                forEstablishmentType.ForEstablishmentTypeVO.setEstTypeID(Convert.ToInt32(status["data"]["id"]));
+                forEstablishmentType.ForEstablishmentTypeVO.setEstTypeName(status["data"]["est_type_name"].ToString());
+                forEstablishmentType.ForEstablishmentTypeVO.setStatus(Convert.ToInt32(status["data"]["status"]));
+            }
+            else if(responseStatus == "success" && status1 == "all")
+            {
+                int length = ((JArray)status["data"]).Count;
+                for (int x = 0; x < length; x++)
+                {
+                    type.Add(status["data"][x]["est_type_name"].ToString());
+                }
+            }
+            else if(responseStatus =="success" && status1 == "active")
+            {
+                int length = ((JArray)status["data"]).Count;
+                for (int x = 0; x < length; x++)
+                {
+                    type.Add(status["data"][x]["est_type_name"].ToString());
+                }
+            }
+            return type;
+        }
+
+        public static bool submit_edited_est_type(string est_type_name,int editStatus,int id)
+        {
+            if(est_type_name == forEstablishmentType.ForEstablishmentTypeVO.getEstTypeName())
+            {
+                est_type_name = "";
+            }
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("api/edit_est_type?est_type_name=" + est_type_name +
+                "&pass=edit_est_type" +
+                "&id="+id+
+                "&status="+ editStatus).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+            if(responseStatus == "success")
             {
                 return true;
             }

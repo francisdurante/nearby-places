@@ -24,6 +24,7 @@ class ApiController extends Controller
         $insert_est["good_at_of"] = $request->age;
         $insert_est["status"] = 1;
         $insert_est["date_created"] = Carbon::now();
+        $insert_est["est_type_id"] = $request->est_type_id;
         
         $pass = $request->pass;
         if($pass == "est_registration"){
@@ -49,6 +50,7 @@ class ApiController extends Controller
         $insert["first_name"] = $request->first_name;
         $insert["last_name"] = $request->last_name;
         $insert["username"] = $request->username;
+        $insert["email_address"] = $request->email;
         $insert["password"] = Hash::make($request->password);
         $insert["date_created"] = Carbon::now('Asia/Manila');
         $insert["status"] = 1;
@@ -58,14 +60,14 @@ class ApiController extends Controller
         if($check == 0){
             if($pass == "user_registration"){
                 DB::table("tbl_user")->insert($insert);
-                $response["status"] = "success";
+                $response = "success";
             }else{
-                $response["status"] = "fail";
+                $response = "fail";
             }
         }else{
-            $response["status"] = "existing";
+            $response = "existing";
         }
-        return json_encode($response);
+        return $response;
     }
     
     public function login(Request $request){
@@ -78,7 +80,7 @@ class ApiController extends Controller
                         $response["status"] = "sucess";
                         $response["data"] = DB::table("tbl_user")->where("username",$request->username)->get();
                     }else{
-                        $response["status"]="Wrong password";
+                        $response["status"]="fail";
                         $response["data"] = "";
                     }
                 }
@@ -107,7 +109,7 @@ class ApiController extends Controller
             $response["status"] = "fail";
             $response["data"] = "";
         }
-        return json_encode($response);
+        return $response;
     }
     
     public function add_category(Request $request){
@@ -301,6 +303,68 @@ class ApiController extends Controller
                 $response["status"] = "fails";
                 $response["data"] = "";
             }
+        }
+        return $response;
+    }
+    
+    public function add_est_type(Request $request){
+        $insert["est_type_name"] = $request->est_type_name;
+        $insert["date_created"] = Carbon::now('Asia/Manila');
+        $check_existing = DB::table("tbl_est_type")->where("est_type_name",$request->est_type_name)->count();
+        if($request->pass == "insert_est_tpye"){
+            if($check_existing == 0){
+                $id = DB::table("tbl_est_type")->insertGetId($insert);
+                if($id > 0){
+                    $response["status"] = "success";
+                }else{
+                    $response["status"] = "fail";
+                }
+            }else{
+                $response["status"] = "existing";
+            }
+        }else{
+            $response["status"] = "fail";
+        }
+        return $response;
+    }
+    public function edit_est_type(Request $request){
+        $update["est_type_name"] = $request->est_type_name;
+        $update["status"] = (int)$request->status;
+        $id = (int)$request->id;
+        if($request->pass == "edit_est_type"){
+            if($update["est_type_name"] == ""){//est_type_name not edited
+                DB::table("tbl_est_type")->where("id",$id)->update(["status" => (int)$request->status]);
+                $response["status"] = "success";
+            }else{ 
+                $count = DB::table("tbl_est_type")->where("est_type_name",$request->est_type_name)->count();
+                if($count > 0){
+                    $response["status"] = "existing";
+                }else{
+                    DB::table("tbl_est_type")->where("id",$id)->update($update);
+                    $response["status"] = "success";
+                }
+            }
+        }else{
+                $response["status"] = "fail";
+        }
+        return $response;
+    }
+    public function get_all_est_type(Request $request){
+        $status = $request->status;
+        if($request->pass == "get_est_type"){
+            if($status == "all"){
+                $response["data"] = DB::table("tbl_est_type")->get();
+                $response["status"] = "success";
+            }else if($status == "active"){
+                $response["data"] = DB::table("tbl_est_type")->where("status",1)->get();
+                $response["status"] = "success";
+            }else if($status = "specific"){
+                $response["data"] = DB::table("tbl_est_type")->where("est_type_name",$request->est_type_name)->first();
+                $response["status"] = "success";
+            }
+        }else{
+            $response["data"] = "";
+            $response["status"] = "fail";
         }
         return $response;
     }
