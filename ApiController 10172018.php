@@ -11,7 +11,6 @@ use Carbon\Carbon;
 class ApiController extends Controller
 {
     public function establishment_registration(Request $request){
-        //($request->all());
         $insert["username"] = $request->username;
         $insert["password"] = Hash::make($request->password);
         $insert["date_created"] = Carbon::now('Asia/Manila');
@@ -25,9 +24,15 @@ class ApiController extends Controller
         $insert_est["status"] = 1;
         $insert_est["date_created"] = Carbon::now();
         $insert_est["est_type_id"] = $request->est_type_id;
-        
         $pass = $request->pass;
+        $imageOne = $request->file('imageOne');
         if($pass == "est_registration"){
+            if($imageOne != null){
+                $filename = $insert_est["establishment_name"] . '-' . time() . '.' . "jpg";
+                $location = public_path('images/');
+                $imageOne->move($location, $filename);
+                $insert_est["est_front_store"] = $location . $filename;
+            }
             $check = DB::table("tbl_estabalishment_user")->where("username",$insert["username"])->count();
             if($check == 0){
                 $insert_est["establishment_user_id"] = DB::table("tbl_estabalishment_user")->insertGetId($insert);
@@ -38,12 +43,12 @@ class ApiController extends Controller
                    $response["status"] = "fail";
                }
             }else{
-                $response["status"] = "fail";
+                $response["status"] = "existing";
             }
         }else{
             $response["status"] = "fail";
         }
-        return json_encode($response);
+        return $response;
     }
     
     public function user_registration(Request $request){
@@ -163,7 +168,7 @@ class ApiController extends Controller
         if($check_existing == 0)
         {
             $imageOne = $request->file('imageOne');
-            $filename = 'productone' . '-' . time() . '.' . $imageOne->getClientOriginalExtension();
+            $filename = $request->product_name . '-' . time() . '.' . "jpg";
             $location = public_path('images/');
             $request->file('imageOne')->move($location, $filename);
       
@@ -240,7 +245,7 @@ class ApiController extends Controller
                 {
                     if((int)$request->upload == 1){
                         $imageOne = $request->file('imageOne');
-                        $filename = 'productone' . '-' . time() . '.' . $imageOne->getClientOriginalExtension();
+                        $filename = $item_name . $request->id . '-' . time() . '.' . $imageOne->getClientOriginalExtension();
                             $location = public_path('images/');
                         $request->file('imageOne')->move($location, $filename);
                         $update["path"]      = $location . $filename;
@@ -254,7 +259,7 @@ class ApiController extends Controller
                 else{
                     if((int)$request->upload == 1){
                         $imageOne = $request->file('imageOne');
-                        $filename = 'productone' . '-' . time() . '.' . $imageOne->getClientOriginalExtension();
+                        $filename = $item_name . $request->id . '-' . time() . '.' . $imageOne->getClientOriginalExtension();
                             $location = public_path('images/');
                         $request->file('imageOne')->move($location, $filename);
                         $update["path"]      = $location . $filename;

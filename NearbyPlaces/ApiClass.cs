@@ -1,17 +1,11 @@
-﻿using Dropbox.Api;
-using Dropbox.Api.Files;
-using NearbyPlaces.ForEstablishmentLogin;
+﻿using NearbyPlaces.ForEstablishmentLogin;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NearbyPlaces
@@ -45,12 +39,10 @@ namespace NearbyPlaces
 
         }
 
-        public static bool establishment_registration(string username, string password, string est_name, string lat, string lon, string emotion, string age, string pass,int est_id)
+        public static bool establishment_registration(string username, string password, string est_name, string lat, string lon, string emotion, string age, string pass,int est_id,string storePath)
         {
-            MessageBox.Show(est_id + "");
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
-            HttpResponseMessage response = client.GetAsync("api/establishment_registration?username=" + username +
+            string url = "http://darkened-career.000webhostapp.com/api/establishment_registration?username=" + username +
                 "&password=" + password +
                 "&pass=" + pass +
                 "&est_name=" + est_name +
@@ -58,9 +50,21 @@ namespace NearbyPlaces
                 "&lon=" + lon +
                 "&emotion=" + emotion +
                 "&age=" + age +
-                "&est_type_id=" + est_id).Result;
-            var result = response.Content.ReadAsStringAsync().Result;
-            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+                "&est_type_id=" + est_id;
+            var result = client.GetAsync(url);
+            if (storePath != "")
+            {
+                var formData = new MultipartFormDataContent();
+                HttpContent pPP = new StreamContent(File.Open(storePath, FileMode.Open));
+                formData.Add(pPP, "imageOne", "image123.jpg");
+                result = client.PostAsync(url, formData);
+            }
+            else
+            {
+                 result = client.GetAsync(url);
+            }
+            var response = result.Result.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(response);
             string responseStatus = status["status"].ToString();
             if (responseStatus.Equals("success"))
             {

@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/establishment_registration','ApiController@establishment_registration');
+Route::any('/establishment_registration','ApiController@establishment_registration');
 Route::get('/user_registration','ApiController@user_registration');
 Route::get('/login','ApiController@login');
 Route::get('/add_category','ApiController@add_category');

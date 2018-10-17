@@ -132,7 +132,7 @@
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(6, 113);
+            this.btnUpload.Location = new System.Drawing.Point(0, 112);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(118, 23);
             this.btnUpload.TabIndex = 1;

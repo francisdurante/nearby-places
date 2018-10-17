@@ -38,6 +38,8 @@
             this.lblSecurity = new System.Windows.Forms.Label();
             this.txtSecurity = new System.Windows.Forms.TextBox();
             this.gbEstablishmentDetails = new System.Windows.Forms.GroupBox();
+            this.cbEstType = new System.Windows.Forms.ComboBox();
+            this.lblEstType = new System.Windows.Forms.Label();
             this.cbAge = new System.Windows.Forms.ComboBox();
             this.lblAge = new System.Windows.Forms.Label();
             this.cbEmotion = new System.Windows.Forms.ComboBox();
@@ -50,10 +52,12 @@
             this.lblLon = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lblEstType = new System.Windows.Forms.Label();
-            this.cbEstType = new System.Windows.Forms.ComboBox();
+            this.lblFrontStore = new System.Windows.Forms.Label();
+            this.pbFrontStore = new System.Windows.Forms.PictureBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
             this.gbAccountDetails.SuspendLayout();
             this.gbEstablishmentDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFrontStore)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -142,6 +146,9 @@
             // 
             // gbEstablishmentDetails
             // 
+            this.gbEstablishmentDetails.Controls.Add(this.btnBrowse);
+            this.gbEstablishmentDetails.Controls.Add(this.pbFrontStore);
+            this.gbEstablishmentDetails.Controls.Add(this.lblFrontStore);
             this.gbEstablishmentDetails.Controls.Add(this.cbEstType);
             this.gbEstablishmentDetails.Controls.Add(this.lblEstType);
             this.gbEstablishmentDetails.Controls.Add(this.cbAge);
@@ -156,11 +163,29 @@
             this.gbEstablishmentDetails.Controls.Add(this.lblLon);
             this.gbEstablishmentDetails.Location = new System.Drawing.Point(302, 13);
             this.gbEstablishmentDetails.Name = "gbEstablishmentDetails";
-            this.gbEstablishmentDetails.Size = new System.Drawing.Size(355, 198);
+            this.gbEstablishmentDetails.Size = new System.Drawing.Size(355, 291);
             this.gbEstablishmentDetails.TabIndex = 7;
             this.gbEstablishmentDetails.TabStop = false;
             this.gbEstablishmentDetails.Text = "EstablishmentDetails";
             this.gbEstablishmentDetails.Enter += new System.EventHandler(this.gbEstablishmentDetails_Enter);
+            // 
+            // cbEstType
+            // 
+            this.cbEstType.FormattingEnabled = true;
+            this.cbEstType.Location = new System.Drawing.Point(144, 151);
+            this.cbEstType.Name = "cbEstType";
+            this.cbEstType.Size = new System.Drawing.Size(205, 21);
+            this.cbEstType.TabIndex = 17;
+            this.cbEstType.SelectedIndexChanged += new System.EventHandler(this.cbEstType_SelectedIndexChanged);
+            // 
+            // lblEstType
+            // 
+            this.lblEstType.AutoSize = true;
+            this.lblEstType.Location = new System.Drawing.Point(13, 155);
+            this.lblEstType.Name = "lblEstType";
+            this.lblEstType.Size = new System.Drawing.Size(108, 13);
+            this.lblEstType.TabIndex = 16;
+            this.lblEstType.Text = "Establishment Type : ";
             // 
             // cbAge
             // 
@@ -259,7 +284,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(12, 217);
+            this.btnSubmit.Location = new System.Drawing.Point(12, 310);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(201, 51);
             this.btnSubmit.TabIndex = 8;
@@ -269,7 +294,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(219, 217);
+            this.btnCancel.Location = new System.Drawing.Point(219, 310);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(201, 51);
             this.btnCancel.TabIndex = 9;
@@ -277,29 +302,39 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // lblEstType
+            // lblFrontStore
             // 
-            this.lblEstType.AutoSize = true;
-            this.lblEstType.Location = new System.Drawing.Point(13, 155);
-            this.lblEstType.Name = "lblEstType";
-            this.lblEstType.Size = new System.Drawing.Size(108, 13);
-            this.lblEstType.TabIndex = 16;
-            this.lblEstType.Text = "Establishment Type : ";
+            this.lblFrontStore.AutoSize = true;
+            this.lblFrontStore.Location = new System.Drawing.Point(13, 230);
+            this.lblFrontStore.Name = "lblFrontStore";
+            this.lblFrontStore.Size = new System.Drawing.Size(65, 13);
+            this.lblFrontStore.TabIndex = 18;
+            this.lblFrontStore.Text = "Front Store :";
             // 
-            // cbEstType
+            // pbFrontStore
             // 
-            this.cbEstType.FormattingEnabled = true;
-            this.cbEstType.Location = new System.Drawing.Point(144, 151);
-            this.cbEstType.Name = "cbEstType";
-            this.cbEstType.Size = new System.Drawing.Size(205, 21);
-            this.cbEstType.TabIndex = 17;
-            this.cbEstType.SelectedIndexChanged += new System.EventHandler(this.cbEstType_SelectedIndexChanged);
+            this.pbFrontStore.Location = new System.Drawing.Point(144, 192);
+            this.pbFrontStore.Name = "pbFrontStore";
+            this.pbFrontStore.Size = new System.Drawing.Size(205, 93);
+            this.pbFrontStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFrontStore.TabIndex = 19;
+            this.pbFrontStore.TabStop = false;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(16, 246);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(122, 23);
+            this.btnBrowse.TabIndex = 20;
+            this.btnBrowse.Text = "BROWSE";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // frmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 280);
+            this.ClientSize = new System.Drawing.Size(690, 373);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.gbEstablishmentDetails);
@@ -311,6 +346,7 @@
             this.gbAccountDetails.PerformLayout();
             this.gbEstablishmentDetails.ResumeLayout(false);
             this.gbEstablishmentDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFrontStore)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,5 +377,8 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ComboBox cbEstType;
         private System.Windows.Forms.Label lblEstType;
+        private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.PictureBox pbFrontStore;
+        private System.Windows.Forms.Label lblFrontStore;
     }
 }

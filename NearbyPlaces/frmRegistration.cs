@@ -13,6 +13,7 @@ namespace NearbyPlaces
 {
     public partial class frmRegistration : Form
     {
+        private string frontStorePicPath = "";
         public frmRegistration()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace NearbyPlaces
             {
                 if (txtPassword.Text == txtRePassword.Text)
                 {
-                    if (ApiClass.establishment_registration(txtUsername.Text, txtPassword.Text, txtEstablishmentName.Text, txtLat.Text, txtLon.Text, cbEmotion.Text, cbAge.Text, txtSecurity.Text,forEstablishmentType.ForEstablishmentTypeVO.getEstTypeID()))
+                    if (ApiClass.establishment_registration(txtUsername.Text, txtPassword.Text, txtEstablishmentName.Text, txtLat.Text, txtLon.Text, cbEmotion.Text, cbAge.Text, txtSecurity.Text,forEstablishmentType.ForEstablishmentTypeVO.getEstTypeID(),frontStorePicPath))
                     {
                         MessageBox.Show("Registration Success", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -80,6 +81,20 @@ namespace NearbyPlaces
         private void cbEstType_SelectedIndexChanged(object sender, EventArgs e)
         {
             ApiClass.get_est_type("specific", cbEstType.Text);
+        }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Title = "Open Image";
+            dlg.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                pbFrontStore.ImageLocation = dlg.FileName;
+                frontStorePicPath = dlg.FileName;
+            }
+            else{ frontStorePicPath = ""; }
+            dlg.Dispose();
         }
     }
 }
