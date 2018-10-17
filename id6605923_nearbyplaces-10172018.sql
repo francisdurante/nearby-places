@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 16, 2018 at 02:25 PM
+-- Generation Time: Oct 17, 2018 at 01:31 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.0.26
 
@@ -50,7 +50,10 @@ INSERT INTO `tbl_estabalishment_user` (`id`, `username`, `password`, `status`, `
 (35, 'review1', '$2y$10$vKFypro18quWiFm6EIadWeNkwQflzKkNYoFrmNzBvM8p97zANl/He', 1, '2018-10-09'),
 (36, 'review000', '$2y$10$8oFySyV0BjnG2wlpwM031.mrJKIHByDRrMdE1zuobepu1U4ECLM4e', 1, '2018-10-09'),
 (37, 'review0001', '$2y$10$vZhrb7.weYqy9xnxBIZFv.aqOOhiebuoxXXr9J3cNoxaxfWoAwOra', 1, '2018-10-16'),
-(38, 'review00001', '$2y$10$REXq.yjl7.QzBVEZJYm/Uus/oJm155iTGJMEeq.qgWmOXMQOq9tE6', 1, '2018-10-16');
+(38, 'review00001', '$2y$10$REXq.yjl7.QzBVEZJYm/Uus/oJm155iTGJMEeq.qgWmOXMQOq9tE6', 1, '2018-10-16'),
+(39, 'chaba@gmail.com', '$2y$10$e0Tdm3DVQDB8bsWmONE32.bt2XtpVazAqqGa94cZip2fWv1PHingK', 1, '2018-10-17'),
+(40, 'review123', '$2y$10$w7fQjdl70BcRx2oFa5tuX..t6a5KyVU3dC4GntIvt6pNUAYCCAcqa', 1, '2018-10-17'),
+(41, 'Test123', '$2y$10$xO3fCjrEAKSmocB.wNSR3.LpWmrOMRRPqcbwisgSA67dRchpqz6ga', 1, '2018-10-17');
 
 -- --------------------------------------------------------
 
@@ -68,19 +71,23 @@ CREATE TABLE `tbl_establishment` (
   `good_at_of` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   `date_created` date DEFAULT NULL,
-  `est_type_id` int(11) DEFAULT NULL
+  `est_type_id` int(11) DEFAULT NULL,
+  `est_front_store` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `tbl_establishment`
 --
 
-INSERT INTO `tbl_establishment` (`id`, `establishment_user_id`, `establishment_name`, `location_latitude`, `location_longitude`, `good_for_emotion_of`, `good_at_of`, `status`, `date_created`, `est_type_id`) VALUES
-(1, 30, 'francisres', '.12457851000', '.45412265874', 'all', 'all', 1, NULL, NULL),
-(2, 34, 'francisres', '.12457851000', '.45412265874', 'all', 'all', 1, NULL, NULL),
-(3, 35, 'francisres', '.45412265874', NULL, 'all', 'all', 1, '2018-10-09', NULL),
-(4, 36, 'Francis kaininan', '1.25555555555', '1.02154876', 'HAPPY', 'CHILDREN', 1, '2018-10-09', NULL),
-(5, 38, 'Test', '21321321', '2313213', 'ALL', 'ALL', 1, '2018-10-16', 1);
+INSERT INTO `tbl_establishment` (`id`, `establishment_user_id`, `establishment_name`, `location_latitude`, `location_longitude`, `good_for_emotion_of`, `good_at_of`, `status`, `date_created`, `est_type_id`, `est_front_store`) VALUES
+(1, 30, 'francisres', '.12457851000', '.45412265874', 'all', 'all', 1, NULL, NULL, NULL),
+(2, 34, 'francisres', '.12457851000', '.45412265874', 'all', 'all', 1, NULL, NULL, NULL),
+(3, 35, 'francisres', '.45412265874', NULL, 'all', 'all', 1, '2018-10-09', NULL, NULL),
+(4, 36, 'Francis kaininan', '1.25555555555', '1.02154876', 'HAPPY', 'CHILDREN', 1, '2018-10-09', NULL, NULL),
+(5, 38, 'Test', '21321321', '2313213', 'ALL', 'ALL', 1, '2018-10-16', 1, NULL),
+(6, 39, 'Jollibee', NULL, NULL, 'HAPPY', 'YOUTH (15 - 24 years old)', 1, '2018-10-17', 2, NULL),
+(7, 40, 'Test123', '12321', '12312', 'ALL', 'ALL', 1, '2018-10-17', 1, '/storage/ssd5/923/6605923/public_html/images/Test123-1539781976.jpg'),
+(8, 41, 'Test123', '1122', '123145', 'ALL', 'ALL', 1, '2018-10-17', 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -101,7 +108,8 @@ CREATE TABLE `tbl_est_type` (
 
 INSERT INTO `tbl_est_type` (`id`, `est_type_name`, `status`, `date_created`) VALUES
 (1, 'Coffe Shop', 1, '2018-10-16 19:36:36'),
-(2, 'Restaurant', 1, '2018-10-16 20:28:09');
+(2, 'Restaurant', 1, '2018-10-16 20:28:09'),
+(3, 'COFFEE SHOP', 1, '2018-10-17 12:12:06');
 
 -- --------------------------------------------------------
 
@@ -244,19 +252,19 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_estabalishment_user`
 --
 ALTER TABLE `tbl_estabalishment_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `tbl_establishment`
 --
 ALTER TABLE `tbl_establishment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_est_type`
 --
 ALTER TABLE `tbl_est_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_menu_category`
