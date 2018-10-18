@@ -32,6 +32,7 @@ namespace NearbyPlaces
             {
                 registrationTab.Visible = true;
                 establishmentTypeToolStripMenuItem.Visible = true;
+                showAllEst.Visible = true;
                 addProductOnMenuToolStripMenuItem.Visible = false;
                 categoryMenuToolStripMenuItem.Visible = false;
             }
@@ -39,6 +40,7 @@ namespace NearbyPlaces
             {
                 registrationTab.Visible = false;
                 establishmentTypeToolStripMenuItem.Visible = false;
+                showAllEst.Visible = false;
                 addProductOnMenuToolStripMenuItem.Visible = true;
                 categoryMenuToolStripMenuItem.Visible = true;
             }
@@ -167,6 +169,21 @@ namespace NearbyPlaces
             else
             {
                 MessageBox.Show("Registration Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void showAllEst_Click(object sender, EventArgs e)
+        {
+            Form f = Application.OpenForms["frmRegisteredEst"];
+            if (f == null)
+            {
+                frmRegisteredEst fep = new frmRegisteredEst();
+                fep.MdiParent = this;
+                fep.Show();
+            }
+            else
+            {
+                MessageBox.Show("Registered Establishment Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

@@ -51,7 +51,8 @@ namespace NearbyPlaces
                 "&emotion=" + emotion +
                 "&age=" + age +
                 "&est_type_id=" + est_id;
-            var result = client.GetAsync(url);
+
+            var result = (dynamic)null;
             if (storePath != "")
             {
                 var formData = new MultipartFormDataContent();
@@ -66,6 +67,7 @@ namespace NearbyPlaces
             var response = result.Result.Content.ReadAsStringAsync().Result;
             var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(response);
             string responseStatus = status["status"].ToString();
+            MessageBox.Show(responseStatus);
             if (responseStatus.Equals("success"))
             {
                 return true;
@@ -123,6 +125,27 @@ namespace NearbyPlaces
             client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
             HttpResponseMessage response = client.GetAsync("api/get_category?id=" + id +
                 "&pass=est_get_category&for_process="+process).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+
+            ArrayList category = new ArrayList();
+            if (responseStatus.Equals("success"))
+            {
+                int length = ((JArray)status["data"]).Count;
+                for (int x = 0; x < length; x++)
+                {
+                    category.Add(status["data"][x]["category_name"].ToString());
+                }
+            }
+            return category;
+        }
+        public static ArrayList getCategory(string process)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("api/get_category?" +
+                "&pass=est_get_category&for_process=" + process).Result;
             var result = response.Content.ReadAsStringAsync().Result;
             var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
             string responseStatus = status["status"].ToString();
@@ -392,6 +415,50 @@ namespace NearbyPlaces
             {
                 return false;
             }
+        }
+        public static string[,] get_all_est_user(string key,string filter)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("api/get_all_est_user?pass=get_all_est_user&key=" + key + "&filter="+filter).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+            string[,] est_user = null;
+            if (responseStatus == "success")
+            {
+
+                int length = ((JArray)status["data"]).Count;
+                est_user = new string[length, 11];
+                for (int x = 0; x < length; x++)
+                {
+                    int i = 0;
+                    est_user[x, i] = status["data"][x]["establishment_user_id"].ToString();
+                    est_user[x, ++i] = status["data"][x]["username"].ToString();
+                    est_user[x, ++i] = status["data"][x]["establishment_name"].ToString();
+                    est_user[x, ++i] = status["data"][x]["est_type_name"].ToString();
+                    est_user[x, ++i] = status["data"][x]["location_latitude"] == null ? "N/A" : status["data"][x]["location_latitude"].ToString();
+                    est_user[x, ++i] = status["data"][x]["location_longitude"] == null ? "N/A" : status["data"][x]["location_longitude"].ToString();
+                    est_user[x, ++i] = status["data"][x]["good_for_emotion_of"].ToString();
+                    est_user[x, ++i] = status["data"][x]["good_at_of"].ToString();
+                    est_user[x, ++i] = status["data"][x]["est_front_store"] == null ? "N/A" : path(status["data"][x]["est_front_store"].ToString());
+                    est_user[x, ++i] = status["data"][x]["est_status"].ToString() == "1" ? "ACTIVE" : "INACTIVE";
+                    est_user[x, ++i] = status["data"][x]["user_status"].ToString() == "1" ? "ACTIVE" : "INACTIVE";
+
+                }
+            }
+            else {
+                MessageBox.Show("Error Getting Registered Establishment", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                est_user = null;
+            }
+
+            return est_user;
+        }
+        public static string path(string path)
+        {
+            String[] separated = path.Split('/');
+            path = separated[6] + "/" + separated[7];
+            return "http://darkened-career.000webhostapp.com/" + path;
         }
     }
 }

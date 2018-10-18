@@ -27,14 +27,14 @@ class ApiController extends Controller
         $pass = $request->pass;
         $imageOne = $request->file('imageOne');
         if($pass == "est_registration"){
-            if($imageOne != null){
-                $filename = $insert_est["establishment_name"] . '-' . time() . '.' . "jpg";
-                $location = public_path('images/');
-                $imageOne->move($location, $filename);
-                $insert_est["est_front_store"] = $location . $filename;
-            }
             $check = DB::table("tbl_estabalishment_user")->where("username",$insert["username"])->count();
             if($check == 0){
+                if($imageOne != null){
+                    $filename = $insert_est["establishment_name"] . '-' . time() . '.' . "jpg";
+                    $location = public_path('images/');
+                    $imageOne->move($location, $filename);
+                    $insert_est["est_front_store"] = $location . $filename;
+                }
                 $insert_est["establishment_user_id"] = DB::table("tbl_estabalishment_user")->insertGetId($insert);
                if($insert_est["establishment_user_id"] > 0){
                     DB::table("tbl_establishment")->insert($insert_est);
@@ -151,10 +151,19 @@ class ApiController extends Controller
                 $response["status"] = "fails";
                 $response["data"] = "";
             }
-        }else{
-            if($request->pass == "est_get_category"){
+        }else if($id != null){
+             if($request->pass == "est_get_category"){
                 $response["status"] = "success";
                 $response["data"] = DB::table("tbl_menu_category")->select("category_name")->where("added_by",$id)->get();
+            }else{
+                $response["status"] = "fails";
+                $response["data"] = "";
+            }
+        }
+        else{
+           if($request->pass == "est_get_category"){
+                $response["status"] = "success";
+                $response["data"] = DB::table("tbl_menu_category")->select("category_name")->get();
             }else{
                 $response["status"] = "fails";
                 $response["data"] = "";
@@ -370,6 +379,32 @@ class ApiController extends Controller
         }else{
             $response["data"] = "";
             $response["status"] = "fail";
+        }
+        return $response;
+    }
+    public function get_all_est_user(Request $request){
+        if($request->pass == "get_all_est_user"){
+            if($request->key == null && $request->filter == null){
+                $response["status"] = "success";
+                $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->
+                join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
+                join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
+            }else if($request->key != null && $request->filter == null){
+                 $response["status"] = "success";
+                 $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->where("tbl_establishment.establishment_name","LIKE","%".$request->key."%")->orWhere("tbl_est_type.est_type_name",$request->key)->
+                join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
+                join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
+            }else if($request->key != null && $request->filter != null){
+                $response["status"] = "success";
+                $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->where("tbl_establishment.establishment_name",$request->key)->where("tbl_est_type.est_type_name",$request->filter)->
+                join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
+                join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
+            }else if($request->key == null && $request->filter != null){
+                $response["status"] = "success";
+                $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->where("tbl_est_type.est_type_name",$request->filter)->
+                join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
+                join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
+            }  
         }
         return $response;
     }

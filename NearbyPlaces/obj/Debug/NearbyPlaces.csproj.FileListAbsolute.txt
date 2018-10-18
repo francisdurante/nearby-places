@@ -36,3 +36,27 @@ C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Debug\Dropb
 C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\bin\Debug\Dropbox.Api.xml
 C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmEditCategory.resources
 C:\Users\Francis\Desktop\nearby - Copy\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmEditProduct.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Debug\NearbyPlaces.exe.config
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.exe
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.pdb
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Debug\NearbyPlaces.exe
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Debug\NearbyPlaces.pdb
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Debug\Dropbox.Api.dll
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Debug\Dropbox.Api.xml
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.csprojResolveAssemblyReference.cache
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmAddCategory.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmAddEstType.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmAddProduct.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmEditCategory.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmEditEstType.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmEditProduct.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmLoginForm.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmMain.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmRegisteredEst.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmRegistration.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.Properties.Resources.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.csproj.GenerateResource.Cache
