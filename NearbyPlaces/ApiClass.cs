@@ -39,7 +39,7 @@ namespace NearbyPlaces
 
         }
 
-        public static bool establishment_registration(string username, string password, string est_name, string lat, string lon, string emotion, string age, string pass,int est_id,string storePath)
+        public static bool establishment_registration(string username, string password, string est_name, string lat, string lon, string emotion, string age, string pass,int est_id,string storePath,string address)
         {
             HttpClient client = new HttpClient();
             string url = "http://darkened-career.000webhostapp.com/api/establishment_registration?username=" + username +
@@ -50,7 +50,8 @@ namespace NearbyPlaces
                 "&lon=" + lon +
                 "&emotion=" + emotion +
                 "&age=" + age +
-                "&est_type_id=" + est_id;
+                "&est_type_id=" + est_id +
+                "&address="+address;
 
             var result = (dynamic)null;
             if (storePath != "")
@@ -429,7 +430,7 @@ namespace NearbyPlaces
             {
 
                 int length = ((JArray)status["data"]).Count;
-                est_user = new string[length, 11];
+                est_user = new string[length, 12];
                 for (int x = 0; x < length; x++)
                 {
                     int i = 0;
@@ -444,6 +445,7 @@ namespace NearbyPlaces
                     est_user[x, ++i] = status["data"][x]["est_front_store"] == null ? "N/A" : path(status["data"][x]["est_front_store"].ToString());
                     est_user[x, ++i] = status["data"][x]["est_status"].ToString() == "1" ? "ACTIVE" : "INACTIVE";
                     est_user[x, ++i] = status["data"][x]["user_status"].ToString() == "1" ? "ACTIVE" : "INACTIVE";
+                    est_user[x, ++i] = status["data"][x]["address"] == null ? "N/A" : status["data"][x]["address"].ToString();
 
                 }
             }

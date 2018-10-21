@@ -28,10 +28,11 @@ namespace NearbyPlaces
         {
             string[,] data = ApiClass.get_all_est_user(key,filter);
             lvEst.Items.Clear();
-            for (int x = 0; x < data.Length/11; x++)
+            for (int x = 0; x < data.Length/12; x++)
             {
                 int i = 0;
                 ListViewItem lv = new ListViewItem(data[x,i]);
+                lv.SubItems.Add(data[x, ++i]);
                 lv.SubItems.Add(data[x, ++i]);
                 lv.SubItems.Add(data[x, ++i]);
                 lv.SubItems.Add(data[x, ++i]);

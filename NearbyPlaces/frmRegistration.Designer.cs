@@ -38,6 +38,9 @@
             this.lblSecurity = new System.Windows.Forms.Label();
             this.txtSecurity = new System.Windows.Forms.TextBox();
             this.gbEstablishmentDetails = new System.Windows.Forms.GroupBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.pbFrontStore = new System.Windows.Forms.PictureBox();
+            this.lblFrontStore = new System.Windows.Forms.Label();
             this.cbEstType = new System.Windows.Forms.ComboBox();
             this.lblEstType = new System.Windows.Forms.Label();
             this.cbAge = new System.Windows.Forms.ComboBox();
@@ -52,9 +55,8 @@
             this.lblLon = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lblFrontStore = new System.Windows.Forms.Label();
-            this.pbFrontStore = new System.Windows.Forms.PictureBox();
-            this.btnBrowse = new System.Windows.Forms.Button();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
             this.gbAccountDetails.SuspendLayout();
             this.gbEstablishmentDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFrontStore)).BeginInit();
@@ -122,7 +124,7 @@
             this.gbAccountDetails.Controls.Add(this.txtPassword);
             this.gbAccountDetails.Location = new System.Drawing.Point(13, 13);
             this.gbAccountDetails.Name = "gbAccountDetails";
-            this.gbAccountDetails.Size = new System.Drawing.Size(283, 198);
+            this.gbAccountDetails.Size = new System.Drawing.Size(283, 321);
             this.gbAccountDetails.TabIndex = 6;
             this.gbAccountDetails.TabStop = false;
             this.gbAccountDetails.Text = "Account Details";
@@ -146,6 +148,8 @@
             // 
             // gbEstablishmentDetails
             // 
+            this.gbEstablishmentDetails.Controls.Add(this.txtAddress);
+            this.gbEstablishmentDetails.Controls.Add(this.lblAddress);
             this.gbEstablishmentDetails.Controls.Add(this.btnBrowse);
             this.gbEstablishmentDetails.Controls.Add(this.pbFrontStore);
             this.gbEstablishmentDetails.Controls.Add(this.lblFrontStore);
@@ -163,11 +167,39 @@
             this.gbEstablishmentDetails.Controls.Add(this.lblLon);
             this.gbEstablishmentDetails.Location = new System.Drawing.Point(302, 13);
             this.gbEstablishmentDetails.Name = "gbEstablishmentDetails";
-            this.gbEstablishmentDetails.Size = new System.Drawing.Size(355, 291);
+            this.gbEstablishmentDetails.Size = new System.Drawing.Size(355, 321);
             this.gbEstablishmentDetails.TabIndex = 7;
             this.gbEstablishmentDetails.TabStop = false;
             this.gbEstablishmentDetails.Text = "EstablishmentDetails";
             this.gbEstablishmentDetails.Enter += new System.EventHandler(this.gbEstablishmentDetails_Enter);
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(16, 265);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(122, 23);
+            this.btnBrowse.TabIndex = 20;
+            this.btnBrowse.Text = "BROWSE";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // pbFrontStore
+            // 
+            this.pbFrontStore.Location = new System.Drawing.Point(144, 222);
+            this.pbFrontStore.Name = "pbFrontStore";
+            this.pbFrontStore.Size = new System.Drawing.Size(205, 93);
+            this.pbFrontStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFrontStore.TabIndex = 19;
+            this.pbFrontStore.TabStop = false;
+            // 
+            // lblFrontStore
+            // 
+            this.lblFrontStore.AutoSize = true;
+            this.lblFrontStore.Location = new System.Drawing.Point(13, 249);
+            this.lblFrontStore.Name = "lblFrontStore";
+            this.lblFrontStore.Size = new System.Drawing.Size(65, 13);
+            this.lblFrontStore.TabIndex = 18;
+            this.lblFrontStore.Text = "Front Store :";
             // 
             // cbEstType
             // 
@@ -284,7 +316,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(12, 310);
+            this.btnSubmit.Location = new System.Drawing.Point(13, 340);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(201, 51);
             this.btnSubmit.TabIndex = 8;
@@ -294,7 +326,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(219, 310);
+            this.btnCancel.Location = new System.Drawing.Point(220, 340);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(201, 51);
             this.btnCancel.TabIndex = 9;
@@ -302,39 +334,27 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // lblFrontStore
+            // txtAddress
             // 
-            this.lblFrontStore.AutoSize = true;
-            this.lblFrontStore.Location = new System.Drawing.Point(13, 230);
-            this.lblFrontStore.Name = "lblFrontStore";
-            this.lblFrontStore.Size = new System.Drawing.Size(65, 13);
-            this.lblFrontStore.TabIndex = 18;
-            this.lblFrontStore.Text = "Front Store :";
+            this.txtAddress.Location = new System.Drawing.Point(144, 178);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(205, 20);
+            this.txtAddress.TabIndex = 22;
             // 
-            // pbFrontStore
+            // lblAddress
             // 
-            this.pbFrontStore.Location = new System.Drawing.Point(144, 192);
-            this.pbFrontStore.Name = "pbFrontStore";
-            this.pbFrontStore.Size = new System.Drawing.Size(205, 93);
-            this.pbFrontStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFrontStore.TabIndex = 19;
-            this.pbFrontStore.TabStop = false;
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.Location = new System.Drawing.Point(16, 246);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(122, 23);
-            this.btnBrowse.TabIndex = 20;
-            this.btnBrowse.Text = "BROWSE";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(13, 181);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(54, 13);
+            this.lblAddress.TabIndex = 21;
+            this.lblAddress.Text = "Address : ";
             // 
             // frmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 373);
+            this.ClientSize = new System.Drawing.Size(697, 403);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.gbEstablishmentDetails);
@@ -380,5 +400,7 @@
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.PictureBox pbFrontStore;
         private System.Windows.Forms.Label lblFrontStore;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label lblAddress;
     }
 }

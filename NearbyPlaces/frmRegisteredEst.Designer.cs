@@ -46,6 +46,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblFilter = new System.Windows.Forms.Label();
             this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.cl_address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lvEst
@@ -61,7 +62,8 @@
             this.cl_age,
             this.cl_front_store,
             this.cl_est_status,
-            this.cl_user_status});
+            this.cl_user_status,
+            this.cl_address});
             this.lvEst.FullRowSelect = true;
             this.lvEst.GridLines = true;
             this.lvEst.Location = new System.Drawing.Point(12, 62);
@@ -178,6 +180,11 @@
             this.cbCategory.Size = new System.Drawing.Size(204, 21);
             this.cbCategory.TabIndex = 6;
             // 
+            // cl_address
+            // 
+            this.cl_address.Text = "Address";
+            this.cl_address.Width = 120;
+            // 
             // frmRegisteredEst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,5 +225,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblFilter;
         private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.ColumnHeader cl_address;
     }
 }

@@ -47,7 +47,6 @@ C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Deb
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Debug\Dropbox.Api.xml
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\bin\Debug\System.Net.Http.Formatting.xml
-C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.csprojResolveAssemblyReference.cache
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmAddCategory.resources
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmAddEstType.resources
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmAddProduct.resources

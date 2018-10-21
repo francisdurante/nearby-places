@@ -43,7 +43,7 @@ namespace NearbyPlaces
             {
                 if (txtPassword.Text == txtRePassword.Text)
                 {
-                    if (ApiClass.establishment_registration(txtUsername.Text, txtPassword.Text, txtEstablishmentName.Text, txtLat.Text, txtLon.Text, cbEmotion.Text, cbAge.Text, txtSecurity.Text,forEstablishmentType.ForEstablishmentTypeVO.getEstTypeID(),frontStorePicPath))
+                    if (ApiClass.establishment_registration(txtUsername.Text, txtPassword.Text, txtEstablishmentName.Text, txtLat.Text, txtLon.Text, cbEmotion.Text, cbAge.Text, txtSecurity.Text,forEstablishmentType.ForEstablishmentTypeVO.getEstTypeID(),frontStorePicPath,txtAddress.Text))
                     {
                         MessageBox.Show("Registration Success", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
