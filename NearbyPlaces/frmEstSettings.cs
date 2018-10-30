@@ -130,5 +130,10 @@ namespace NearbyPlaces
                 MessageBox.Show("Add Category Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
