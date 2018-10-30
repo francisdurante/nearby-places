@@ -127,7 +127,7 @@
             this.Controls.Add(this.lblEstName);
             this.Controls.Add(this.cbEstName);
             this.Name = "frmEditEstType";
-            this.Text = "frmEditEstType";
+            this.Text = "Edit Establishment Type";
             this.Load += new System.EventHandler(this.frmEditEstType_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

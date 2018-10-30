@@ -43,10 +43,12 @@
             this.establishmentTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrationTab = new System.Windows.Forms.ToolStripMenuItem();
-            this.lOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showAllEst = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrationTab = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.establishmentSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -88,6 +90,7 @@
             this.establishmentSystemToolStripMenuItem,
             this.registrationTab,
             this.aboutSystemToolStripMenuItem,
+            this.accountSettingsToolStripMenuItem,
             this.lOGOUTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -176,11 +179,12 @@
             this.editTypeToolStripMenuItem.Text = "Edit Type";
             this.editTypeToolStripMenuItem.Click += new System.EventHandler(this.editTypeToolStripMenuItem_Click);
             // 
-            // aboutSystemToolStripMenuItem
+            // showAllEst
             // 
-            this.aboutSystemToolStripMenuItem.Name = "aboutSystemToolStripMenuItem";
-            this.aboutSystemToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
-            this.aboutSystemToolStripMenuItem.Text = "About System";
+            this.showAllEst.Name = "showAllEst";
+            this.showAllEst.Size = new System.Drawing.Size(253, 22);
+            this.showAllEst.Text = "Show all Registered Establishment";
+            this.showAllEst.Click += new System.EventHandler(this.showAllEst_Click);
             // 
             // registrationTab
             // 
@@ -189,19 +193,33 @@
             this.registrationTab.Text = "REGISTRATION";
             this.registrationTab.Click += new System.EventHandler(this.registrationTab_Click);
             // 
+            // aboutSystemToolStripMenuItem
+            // 
+            this.aboutSystemToolStripMenuItem.Name = "aboutSystemToolStripMenuItem";
+            this.aboutSystemToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.aboutSystemToolStripMenuItem.Text = "About System";
+            // 
+            // accountSettingsToolStripMenuItem
+            // 
+            this.accountSettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.establishmentSettingsToolStripMenuItem});
+            this.accountSettingsToolStripMenuItem.Name = "accountSettingsToolStripMenuItem";
+            this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.accountSettingsToolStripMenuItem.Text = "Account Settings";
+            // 
+            // establishmentSettingsToolStripMenuItem
+            // 
+            this.establishmentSettingsToolStripMenuItem.Name = "establishmentSettingsToolStripMenuItem";
+            this.establishmentSettingsToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.establishmentSettingsToolStripMenuItem.Text = "Establishment Settings";
+            this.establishmentSettingsToolStripMenuItem.Click += new System.EventHandler(this.establishmentSettingsToolStripMenuItem_Click);
+            // 
             // lOGOUTToolStripMenuItem
             // 
             this.lOGOUTToolStripMenuItem.Name = "lOGOUTToolStripMenuItem";
             this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.lOGOUTToolStripMenuItem.Text = "LOGOUT";
             this.lOGOUTToolStripMenuItem.Click += new System.EventHandler(this.lOGOUTToolStripMenuItem_Click);
-            // 
-            // showAllEst
-            // 
-            this.showAllEst.Name = "showAllEst";
-            this.showAllEst.Size = new System.Drawing.Size(253, 22);
-            this.showAllEst.Text = "Show all Registered Establishment";
-            this.showAllEst.Click += new System.EventHandler(this.showAllEst_Click);
             // 
             // frmMain
             // 
@@ -251,5 +269,7 @@
         private System.Windows.Forms.ToolStripMenuItem registrationTab;
         private System.Windows.Forms.ToolStripStatusLabel userName;
         private System.Windows.Forms.ToolStripMenuItem showAllEst;
+        private System.Windows.Forms.ToolStripMenuItem accountSettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem establishmentSettingsToolStripMenuItem;
     }
 }

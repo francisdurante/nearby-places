@@ -30,4 +30,8 @@ Route::any('/get_product','ApiController@getAllProduct');
 Route::any('/add_est_type','ApiController@add_est_type');
 Route::any('/edit_est_type','ApiController@edit_est_type');
 Route::any('/get_all_est_type','ApiController@get_all_est_type');
+Route::any('/get_all_est_user','ApiController@get_all_est_user');
+Route::any('/get_est_product','ApiController@get_est_product');
+Route::any('/submit_edit_establishment_setting','ApiController@submit_edit_establishment_setting');
+Route::any('/change_pass','ApiController@change_pass');
 

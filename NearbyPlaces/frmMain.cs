@@ -186,5 +186,20 @@ namespace NearbyPlaces
                 MessageBox.Show("Registered Establishment Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void establishmentSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form f = Application.OpenForms["frmEstSettings"];
+            if (f == null)
+            {
+                frmEstSettings fes = new frmEstSettings();
+                fes.MdiParent = this;
+                fes.Show();
+            }
+            else
+            {
+                MessageBox.Show("Establishment Settings Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

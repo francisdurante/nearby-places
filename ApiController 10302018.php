@@ -24,6 +24,8 @@ class ApiController extends Controller
         $insert_est["status"] = 1;
         $insert_est["date_created"] = Carbon::now();
         $insert_est["est_type_id"] = $request->est_type_id;
+        $insert_est["address"] = $request->address;
+        
         $pass = $request->pass;
         $imageOne = $request->file('imageOne');
         if($pass == "est_registration"){
@@ -99,7 +101,7 @@ class ApiController extends Controller
                     $checkPassword = DB::table("tbl_estabalishment_user")->where("username",$request->username)->first();
                    if(Hash::check($request->password,$checkPassword->password)){
                         $response["status"] = "sucess";
-                        $response["data"] = DB::table("tbl_establishment")->join('tbl_estabalishment_user','tbl_establishment.establishment_user_id','=','tbl_estabalishment_user.id')->where("username",$request->username)->first();
+                        $response["data"] = DB::table("tbl_establishment")->select("*","tbl_establishment.id as est_id")->join('tbl_estabalishment_user','tbl_establishment.establishment_user_id','=','tbl_estabalishment_user.id')->where("username",$request->username)->first();
                    }else{
                        $response["status"] = "fail";
                         $response["data"] = "";
@@ -405,6 +407,77 @@ class ApiController extends Controller
                 join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
                 join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
             }  
+        }
+        return $response;
+    }
+    
+    public function get_est_product(Request $request){
+        $id = $request->id;
+        if($request->for_process == "all_active")
+        {
+            if($request->pass == "get_product"){
+                $response["status"] = "success";
+                $response["data"] = DB::table("tbl_menu_item")->select("tbl_menu_item.*","tbl_menu_category.category_name","tbl_menu_item.status as item_status","tbl_menu_category.status as category_status")->where("tbl_menu_item.establishment_id",$id)->where("tbl_menu_item.status",1)->join("tbl_menu_category","tbl_menu_category.id","=","tbl_menu_item.category_id")->where("tbl_menu_category.added_by",$id)->orderBy("tbl_menu_category.category_name")->get();
+            }else{
+                $response["status"] = "fails";
+                $response["data"] = "";
+            }
+        }
+        return $response;
+    }
+    
+    public function submit_edit_establishment_setting(Request $request){
+        $est_id = $request->est_id;
+        $update["establishment_name"]   = $request->est_name;
+        $update["location_latitude"]    = $request->lat;
+        $update["location_longitude"]   = $request->lon;
+        $update["good_for_emotion_of"]  = $request->emotion;
+        $update["good_at_of"]           = $request->age;
+        $update["address"]              = $request->address;
+        $est_type                       = $request->est_type;
+        
+        $imageOne = $request->file('imageOne');
+         if($imageOne != null)
+         {
+            $filename = $request->est_name . '-' . time() . '.' . "jpg";
+            $location = public_path('images/');
+            $imageOne->move($location, $filename);
+            $update["est_front_store"] = $location . $filename;
+        }
+        if($request->pass == "submit_edit_est")
+        {
+            $check = DB::table("tbl_est_type")->where("est_type_name",$est_type);
+            if($check->count() == 1)
+            {
+                $est_type_id = DB::table("tbl_est_type")->where("est_type_name",$est_type)->first();
+                $update["est_type_id"] = (int)$est_type_id->id;
+                $affected = DB::table("tbl_establishment")->where("id",$est_id)->update($update);
+                $response["status"] = "success";
+            }else{
+                $response["status"] = "fail";
+            }
+            
+        }else
+        {
+            $response["status"] = "fail";
+        }
+        return $response;
+    }
+    
+    public function change_pass(Request $request)
+    {
+        $est_user_id = $request->user_id;
+        $update["password"] = Hash::make($request->new_password);
+        $checkPassword = DB::table("tbl_estabalishment_user")->where("id",$est_user_id)->first();
+        if($request->pass == "change_est_pass"){
+            if(Hash::check($request->password,$checkPassword->password)){
+                DB::table("tbl_estabalishment_user")->where("id",$est_user_id)->update($update);
+                $response["status"] = "success";
+            }else{
+                $response["status"] = "not match";
+            }
+        }else{
+            $response["status"] = "fail";
         }
         return $response;
     }

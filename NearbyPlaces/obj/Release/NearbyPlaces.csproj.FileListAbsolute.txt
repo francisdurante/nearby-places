@@ -41,3 +41,5 @@ C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Rel
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.csproj.GenerateResource.Cache
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.exe
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.pdb
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmChangePassword.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Release\NearbyPlaces.frmEstSettings.resources

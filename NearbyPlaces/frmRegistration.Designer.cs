@@ -38,6 +38,8 @@
             this.lblSecurity = new System.Windows.Forms.Label();
             this.txtSecurity = new System.Windows.Forms.TextBox();
             this.gbEstablishmentDetails = new System.Windows.Forms.GroupBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.pbFrontStore = new System.Windows.Forms.PictureBox();
             this.lblFrontStore = new System.Windows.Forms.Label();
@@ -55,8 +57,6 @@
             this.lblLon = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.lblAddress = new System.Windows.Forms.Label();
             this.gbAccountDetails.SuspendLayout();
             this.gbEstablishmentDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFrontStore)).BeginInit();
@@ -173,6 +173,22 @@
             this.gbEstablishmentDetails.Text = "EstablishmentDetails";
             this.gbEstablishmentDetails.Enter += new System.EventHandler(this.gbEstablishmentDetails_Enter);
             // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(144, 178);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(205, 20);
+            this.txtAddress.TabIndex = 22;
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(13, 181);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(54, 13);
+            this.lblAddress.TabIndex = 21;
+            this.lblAddress.Text = "Address : ";
+            // 
             // btnBrowse
             // 
             this.btnBrowse.Location = new System.Drawing.Point(16, 265);
@@ -203,6 +219,7 @@
             // 
             // cbEstType
             // 
+            this.cbEstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstType.FormattingEnabled = true;
             this.cbEstType.Location = new System.Drawing.Point(144, 151);
             this.cbEstType.Name = "cbEstType";
@@ -221,6 +238,7 @@
             // 
             // cbAge
             // 
+            this.cbAge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAge.FormattingEnabled = true;
             this.cbAge.Items.AddRange(new object[] {
             "----SELECT THE BEST ONE----",
@@ -245,16 +263,24 @@
             // 
             // cbEmotion
             // 
+            this.cbEmotion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmotion.FormattingEnabled = true;
             this.cbEmotion.Items.AddRange(new object[] {
             "----SELECT THE BEST ONE----",
             "HAPPY",
             "SAD",
+            "ANGER",
+            "CONTEMPT",
+            "DISGUST",
+            "FEAR",
+            "NEUTRAL",
+            "SURPIRSE",
             "ALL"});
             this.cbEmotion.Location = new System.Drawing.Point(144, 97);
             this.cbEmotion.Name = "cbEmotion";
             this.cbEmotion.Size = new System.Drawing.Size(205, 21);
             this.cbEmotion.TabIndex = 13;
+            this.cbEmotion.SelectedIndexChanged += new System.EventHandler(this.cbEmotion_SelectedIndexChanged);
             // 
             // lblEmotion
             // 
@@ -333,22 +359,6 @@
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(144, 178);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(205, 20);
-            this.txtAddress.TabIndex = 22;
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(13, 181);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(54, 13);
-            this.lblAddress.TabIndex = 21;
-            this.lblAddress.Text = "Address : ";
             // 
             // frmRegistration
             // 

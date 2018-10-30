@@ -24,7 +24,7 @@ namespace NearbyPlaces
             var datas = status["data"];
             if (responseStatus.Equals("sucess"))
             {
-                ForEstablishmentLogin.ForLoginEstVO.setEstID(Convert.ToInt32(status["data"]["id"]));
+                ForEstablishmentLogin.ForLoginEstVO.setEstID(Convert.ToInt32(status["data"]["est_id"]));
                 ForEstablishmentLogin.ForLoginEstVO.setEstUserID(Convert.ToInt32(status["data"]["establishment_user_id"]));
                 ForEstablishmentLogin.ForLoginEstVO.setEstName(status["data"]["establishment_name"].ToString());
                 ForEstablishmentLogin.ForLoginEstVO.setEmotion(status["data"]["good_for_emotion_of"].ToString());
@@ -456,11 +456,80 @@ namespace NearbyPlaces
 
             return est_user;
         }
+
+        public static bool submit_edit_est_setting(string id,string est_name,string address,string lat, string lon,string emotion,string age, string est_type,string path)
+        {
+            HttpClient client = new HttpClient();
+            string url = "http://darkened-career.000webhostapp.com/api/submit_edit_establishment_setting?est_name=" + est_name +
+                "&lat=" + lat +
+                "&lon=" + lon +
+                "&emotion=" + emotion +
+                "&age=" + age +
+                "&est_type=" + est_type +
+                "&address=" + address +
+                "&est_id=" + id +
+                "&pass=submit_edit_est";
+
+            var result = (dynamic)null;
+            if (path != "")
+            {
+                var formData = new MultipartFormDataContent();
+                HttpContent pPP = new StreamContent(File.Open(path, FileMode.Open));
+                formData.Add(pPP, "imageOne", "image123.jpg");
+                result = client.PostAsync(url, formData);
+            }
+            else
+            {
+                result = client.GetAsync(url);
+            }
+
+            var response = result.Result.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(response);
+            string responseStatus = status["status"].ToString();
+            if (responseStatus.Equals("success"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
         public static string path(string path)
         {
             String[] separated = path.Split('/');
             path = separated[6] + "/" + separated[7];
             return "http://darkened-career.000webhostapp.com/" + path;
+        }
+
+        public static bool changePass(string password, string new_pass,string user_id)
+        {
+            bool resp = false;
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("api/change_pass?password=" + password +
+                "&pass=change_est_pass" +
+                "&new_password=" + new_pass +
+                "&user_id=" + user_id).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+            if (responseStatus == "success")
+            {
+                resp = true;
+            }
+            else if(responseStatus == "not match")
+            {
+                resp = false;
+                MessageBox.Show("Your Current Password not Match", "Change Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                resp = false;
+                MessageBox.Show("Change Password Failed", "Change Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            return resp;
         }
     }
 }

@@ -96,5 +96,10 @@ namespace NearbyPlaces
             else{ frontStorePicPath = ""; }
             dlg.Dispose();
         }
+
+        private void cbEmotion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
