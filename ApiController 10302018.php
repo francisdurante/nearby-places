@@ -59,6 +59,8 @@ class ApiController extends Controller
         $insert["username"] = $request->username;
         $insert["email_address"] = $request->email;
         $insert["password"] = Hash::make($request->password);
+        $insert["age"] = $request->age;
+        $insert["preferred_food"] = $request->preferred_food;
         $insert["date_created"] = Carbon::now('Asia/Manila');
         $insert["status"] = 1;
         $pass = $request->pass;
@@ -386,27 +388,36 @@ class ApiController extends Controller
     }
     public function get_all_est_user(Request $request){
         if($request->pass == "get_all_est_user"){
-            if($request->key == null && $request->filter == null){
+            if($request->key == null && $request->filter == null && $request->food == null){
                 $response["status"] = "success";
                 $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->
                 join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
                 join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
-            }else if($request->key != null && $request->filter == null){
+            }else if($request->key != null && $request->filter == null && $request->food == null){
                  $response["status"] = "success";
                  $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->where("tbl_establishment.establishment_name","LIKE","%".$request->key."%")->orWhere("tbl_est_type.est_type_name",$request->key)->
                 join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
                 join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
-            }else if($request->key != null && $request->filter != null){
+            }else if($request->key != null && $request->filter != null && $request->food == null){
                 $response["status"] = "success";
                 $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->where("tbl_establishment.establishment_name",$request->key)->where("tbl_est_type.est_type_name",$request->filter)->
                 join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
                 join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
-            }else if($request->key == null && $request->filter != null){
+            }else if($request->key == null && $request->filter != null && $request->food == null){
                 $response["status"] = "success";
                 $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->where("tbl_est_type.est_type_name",$request->filter)->
                 join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
                 join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
-            }  
+            }else if($request->food != null && $request->filter == null && $request->key == null){ 
+                $response["status"] = "success";
+                $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->where("tbl_menu_item.item_name","LIKE","%".$request->food."%")->
+                join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
+                join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->
+                join("tbl_menu_item","tbl_menu_item.establishment_id","=","tbl_estabalishment_user.id")->get();
+            }
+        }
+        if($response["data"]->isEmpty()){
+            $response["status"] = "fail";
         }
         return $response;
     }
