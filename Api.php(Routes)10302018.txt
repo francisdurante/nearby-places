@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Http\Request;
+
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register API routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| is assigned the "api" middleware group. Enjoy building your API!
+|
+*/
+
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
+Route::any('/establishment_registration','ApiController@establishment_registration');
+Route::get('/user_registration','ApiController@user_registration');
+Route::get('/login','ApiController@login');
+Route::get('/add_category','ApiController@add_category');
+Route::get('/get_category','ApiController@getAllCategory');
+Route::any('/add_product','ApiController@add_product');
+Route::any('/submit_edited_category','ApiController@submit_edited_category');
+Route::any('/edit_category','ApiController@get_category');
+Route::any('/edit_product','ApiController@get_product');
+Route::any('/submit_edited_product','ApiController@submit_edited_product');
+Route::any('/get_product','ApiController@getAllProduct');
+Route::any('/add_est_type','ApiController@add_est_type');
+Route::any('/edit_est_type','ApiController@edit_est_type');
+Route::any('/get_all_est_type','ApiController@get_all_est_type');
+Route::any('/get_all_est_user','ApiController@get_all_est_user');
+Route::any('/get_est_product','ApiController@get_est_product');
+Route::any('/submit_edit_establishment_setting','ApiController@submit_edit_establishment_setting');
+Route::any('/change_pass','ApiController@change_pass');
+

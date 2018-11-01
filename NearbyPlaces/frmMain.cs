@@ -27,6 +27,23 @@ namespace NearbyPlaces
         {
             tsLoggedIn.Text = "Establishment ID: " + ForEstablishmentLogin.ForLoginEstVO.getEstID();
             tsEstName.Text = "Establishment Name : " + ForEstablishmentLogin.ForLoginEstVO.getEstName();
+            userName.Text = " User name : " + ForEstablishmentLogin.ForLoginEstVO.getUser();
+            if(ForEstablishmentLogin.ForLoginEstVO.getUser() == "SUPERADMIN")
+            {
+                registrationTab.Visible = true;
+                establishmentTypeToolStripMenuItem.Visible = true;
+                showAllEst.Visible = true;
+                addProductOnMenuToolStripMenuItem.Visible = false;
+                categoryMenuToolStripMenuItem.Visible = false;
+            }
+            else
+            {
+                registrationTab.Visible = false;
+                establishmentTypeToolStripMenuItem.Visible = false;
+                showAllEst.Visible = false;
+                addProductOnMenuToolStripMenuItem.Visible = true;
+                categoryMenuToolStripMenuItem.Visible = true;
+            }
         }
 
         private void addCategoryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,12 +121,84 @@ namespace NearbyPlaces
             DialogResult dialogResult = MessageBox.Show("Do you want to Exit?", "Exit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                Environment.Exit(1);
-                Process.GetCurrentProcess().Kill();
+                Close();
+                frmLoginForm flf = new frmLoginForm();
+                flf.Show();
+            }
+        }
+
+        private void addTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form f = Application.OpenForms["frmAddEstType"];
+            if (f == null)
+            {
+                frmAddEstType fep = new frmAddEstType();
+                fep.MdiParent = this;
+                fep.Show();
             }
             else
             {
+                MessageBox.Show("Add Establishment Type Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
 
+        private void editTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form f = Application.OpenForms["frmEditEstType"];
+            if (f == null)
+            {
+                frmEditEstType fep = new frmEditEstType();
+                fep.MdiParent = this;
+                fep.Show();
+            }
+            else
+            {
+                MessageBox.Show("Edit Establishment Type Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void registrationTab_Click(object sender, EventArgs e)
+        {
+            Form f = Application.OpenForms["frmRegistration"];
+            if (f == null)
+            {
+                frmRegistration fep = new frmRegistration();
+                fep.MdiParent = this;
+                fep.Show();
+            }
+            else
+            {
+                MessageBox.Show("Registration Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void showAllEst_Click(object sender, EventArgs e)
+        {
+            Form f = Application.OpenForms["frmRegisteredEst"];
+            if (f == null)
+            {
+                frmRegisteredEst fep = new frmRegisteredEst();
+                fep.MdiParent = this;
+                fep.Show();
+            }
+            else
+            {
+                MessageBox.Show("Registered Establishment Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void establishmentSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form f = Application.OpenForms["frmEstSettings"];
+            if (f == null)
+            {
+                frmEstSettings fes = new frmEstSettings();
+                fes.MdiParent = this;
+                fes.Show();
+            }
+            else
+            {
+                MessageBox.Show("Establishment Settings Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

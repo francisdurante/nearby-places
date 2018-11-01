@@ -60,6 +60,7 @@
     <Compile Include="forEditCategory\forEditCategory.cs" />
     <Compile Include="forEditProduct\forEditProductVO.cs" />
     <Compile Include="ForEstablishmentLogin\ForLoginEstVO.cs" />
+    <Compile Include="forEstablishmentType\ForEstablishmentTypeVO.cs" />
     <Compile Include="frmAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,17 +73,41 @@
     <Compile Include="frmAddProduct.Designer.cs">
       <DependentUpon>frmAddProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditCategory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEditCategory.Designer.cs">
       <DependentUpon>frmEditCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditEstType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditEstType.Designer.cs">
+      <DependentUpon>frmEditEstType.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEditProduct.Designer.cs">
       <DependentUpon>frmEditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEstType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEstType.Designer.cs">
+      <DependentUpon>frmAddEstType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstSettings.Designer.cs">
+      <DependentUpon>frmEstSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -96,6 +121,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegisteredEst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisteredEst.Designer.cs">
+      <DependentUpon>frmRegisteredEst.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,20 +138,35 @@
     <EmbeddedResource Include="frmAddCategory.resx">
       <DependentUpon>frmAddCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEstType.resx">
+      <DependentUpon>frmAddEstType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddProduct.resx">
       <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditCategory.resx">
       <DependentUpon>frmEditCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditEstType.resx">
+      <DependentUpon>frmEditEstType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEditProduct.resx">
       <DependentUpon>frmEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstSettings.resx">
+      <DependentUpon>frmEstSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisteredEst.resx">
+      <DependentUpon>frmRegisteredEst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistration.resx">
       <DependentUpon>frmRegistration.cs</DependentUpon>
@@ -133,6 +179,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -147,6 +194,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EATERYFINDERLOGO.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

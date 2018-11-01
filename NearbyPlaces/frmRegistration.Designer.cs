@@ -38,6 +38,13 @@
             this.lblSecurity = new System.Windows.Forms.Label();
             this.txtSecurity = new System.Windows.Forms.TextBox();
             this.gbEstablishmentDetails = new System.Windows.Forms.GroupBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.pbFrontStore = new System.Windows.Forms.PictureBox();
+            this.lblFrontStore = new System.Windows.Forms.Label();
+            this.cbEstType = new System.Windows.Forms.ComboBox();
+            this.lblEstType = new System.Windows.Forms.Label();
             this.cbAge = new System.Windows.Forms.ComboBox();
             this.lblAge = new System.Windows.Forms.Label();
             this.cbEmotion = new System.Windows.Forms.ComboBox();
@@ -52,6 +59,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.gbAccountDetails.SuspendLayout();
             this.gbEstablishmentDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFrontStore)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -116,7 +124,7 @@
             this.gbAccountDetails.Controls.Add(this.txtPassword);
             this.gbAccountDetails.Location = new System.Drawing.Point(13, 13);
             this.gbAccountDetails.Name = "gbAccountDetails";
-            this.gbAccountDetails.Size = new System.Drawing.Size(283, 164);
+            this.gbAccountDetails.Size = new System.Drawing.Size(283, 321);
             this.gbAccountDetails.TabIndex = 6;
             this.gbAccountDetails.TabStop = false;
             this.gbAccountDetails.Text = "Account Details";
@@ -140,6 +148,13 @@
             // 
             // gbEstablishmentDetails
             // 
+            this.gbEstablishmentDetails.Controls.Add(this.txtAddress);
+            this.gbEstablishmentDetails.Controls.Add(this.lblAddress);
+            this.gbEstablishmentDetails.Controls.Add(this.btnBrowse);
+            this.gbEstablishmentDetails.Controls.Add(this.pbFrontStore);
+            this.gbEstablishmentDetails.Controls.Add(this.lblFrontStore);
+            this.gbEstablishmentDetails.Controls.Add(this.cbEstType);
+            this.gbEstablishmentDetails.Controls.Add(this.lblEstType);
             this.gbEstablishmentDetails.Controls.Add(this.cbAge);
             this.gbEstablishmentDetails.Controls.Add(this.lblAge);
             this.gbEstablishmentDetails.Controls.Add(this.cbEmotion);
@@ -152,14 +167,78 @@
             this.gbEstablishmentDetails.Controls.Add(this.lblLon);
             this.gbEstablishmentDetails.Location = new System.Drawing.Point(302, 13);
             this.gbEstablishmentDetails.Name = "gbEstablishmentDetails";
-            this.gbEstablishmentDetails.Size = new System.Drawing.Size(355, 164);
+            this.gbEstablishmentDetails.Size = new System.Drawing.Size(355, 321);
             this.gbEstablishmentDetails.TabIndex = 7;
             this.gbEstablishmentDetails.TabStop = false;
             this.gbEstablishmentDetails.Text = "EstablishmentDetails";
             this.gbEstablishmentDetails.Enter += new System.EventHandler(this.gbEstablishmentDetails_Enter);
             // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(144, 178);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(205, 20);
+            this.txtAddress.TabIndex = 22;
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(13, 181);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(54, 13);
+            this.lblAddress.TabIndex = 21;
+            this.lblAddress.Text = "Address : ";
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(16, 265);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(122, 23);
+            this.btnBrowse.TabIndex = 20;
+            this.btnBrowse.Text = "BROWSE";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // pbFrontStore
+            // 
+            this.pbFrontStore.Location = new System.Drawing.Point(144, 222);
+            this.pbFrontStore.Name = "pbFrontStore";
+            this.pbFrontStore.Size = new System.Drawing.Size(205, 93);
+            this.pbFrontStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFrontStore.TabIndex = 19;
+            this.pbFrontStore.TabStop = false;
+            // 
+            // lblFrontStore
+            // 
+            this.lblFrontStore.AutoSize = true;
+            this.lblFrontStore.Location = new System.Drawing.Point(13, 249);
+            this.lblFrontStore.Name = "lblFrontStore";
+            this.lblFrontStore.Size = new System.Drawing.Size(65, 13);
+            this.lblFrontStore.TabIndex = 18;
+            this.lblFrontStore.Text = "Front Store :";
+            // 
+            // cbEstType
+            // 
+            this.cbEstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstType.FormattingEnabled = true;
+            this.cbEstType.Location = new System.Drawing.Point(144, 151);
+            this.cbEstType.Name = "cbEstType";
+            this.cbEstType.Size = new System.Drawing.Size(205, 21);
+            this.cbEstType.TabIndex = 17;
+            this.cbEstType.SelectedIndexChanged += new System.EventHandler(this.cbEstType_SelectedIndexChanged);
+            // 
+            // lblEstType
+            // 
+            this.lblEstType.AutoSize = true;
+            this.lblEstType.Location = new System.Drawing.Point(13, 155);
+            this.lblEstType.Name = "lblEstType";
+            this.lblEstType.Size = new System.Drawing.Size(108, 13);
+            this.lblEstType.TabIndex = 16;
+            this.lblEstType.Text = "Establishment Type : ";
+            // 
             // cbAge
             // 
+            this.cbAge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAge.FormattingEnabled = true;
             this.cbAge.Items.AddRange(new object[] {
             "----SELECT THE BEST ONE----",
@@ -184,16 +263,24 @@
             // 
             // cbEmotion
             // 
+            this.cbEmotion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmotion.FormattingEnabled = true;
             this.cbEmotion.Items.AddRange(new object[] {
             "----SELECT THE BEST ONE----",
             "HAPPY",
             "SAD",
+            "ANGER",
+            "CONTEMPT",
+            "DISGUST",
+            "FEAR",
+            "NEUTRAL",
+            "SURPIRSE",
             "ALL"});
             this.cbEmotion.Location = new System.Drawing.Point(144, 97);
             this.cbEmotion.Name = "cbEmotion";
             this.cbEmotion.Size = new System.Drawing.Size(205, 21);
             this.cbEmotion.TabIndex = 13;
+            this.cbEmotion.SelectedIndexChanged += new System.EventHandler(this.cbEmotion_SelectedIndexChanged);
             // 
             // lblEmotion
             // 
@@ -255,7 +342,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(13, 184);
+            this.btnSubmit.Location = new System.Drawing.Point(13, 340);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(201, 51);
             this.btnSubmit.TabIndex = 8;
@@ -265,7 +352,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(220, 184);
+            this.btnCancel.Location = new System.Drawing.Point(220, 340);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(201, 51);
             this.btnCancel.TabIndex = 9;
@@ -277,18 +364,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 247);
+            this.ClientSize = new System.Drawing.Size(697, 403);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.gbEstablishmentDetails);
             this.Controls.Add(this.gbAccountDetails);
             this.Name = "frmRegistration";
-            this.Text = "Establishment Registration";
+            this.Text = "-";
             this.Load += new System.EventHandler(this.frmRegistration_Load);
             this.gbAccountDetails.ResumeLayout(false);
             this.gbAccountDetails.PerformLayout();
             this.gbEstablishmentDetails.ResumeLayout(false);
             this.gbEstablishmentDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFrontStore)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,5 +405,12 @@
         private System.Windows.Forms.TextBox txtSecurity;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cbEstType;
+        private System.Windows.Forms.Label lblEstType;
+        private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.PictureBox pbFrontStore;
+        private System.Windows.Forms.Label lblFrontStore;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label lblAddress;
     }
 }
