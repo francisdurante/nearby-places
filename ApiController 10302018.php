@@ -52,7 +52,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function user_registration(Request $request){
         $insert["first_name"] = $request->first_name;
         $insert["last_name"] = $request->last_name;
@@ -78,7 +77,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function login(Request $request){
         if($request->pass == "for_login"){
             if($request->for_log == "mobile_app"){
@@ -120,7 +118,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function add_category(Request $request){
         $insert["category_name"] = $request->cat_name;
         $insert["status"] = 1;
@@ -143,7 +140,6 @@ class ApiController extends Controller
         }
         return json_encode($response);
     }
-    
     public function getAllCategory(Request $request){
         $id = $request->id;
         if($request->for_process == "all_active")
@@ -175,7 +171,6 @@ class ApiController extends Controller
         }
         return json_encode($response);
     }
-    
     public function add_product(Request $request){
         $check_existing = DB::table("tbl_menu_item")->where("item_name",$request->product_name)->where("establishment_id",$request->est_id)->count();
         if($check_existing == 0)
@@ -228,7 +223,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function submit_edited_category(Request $request){
         $cat_id = $request->cat_id;
         $est_id = (int)$request->est_id;
@@ -242,7 +236,7 @@ class ApiController extends Controller
         }
         return $response;
     }
-     public function submit_edited_product(Request $request){
+    public function submit_edited_product(Request $request){
         $item_id = $request->id;
         $cat_name = $request->cat_name;
         $item_name = $request->item_name;
@@ -324,7 +318,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function add_est_type(Request $request){
         $insert["est_type_name"] = $request->est_type_name;
         $insert["date_created"] = Carbon::now('Asia/Manila');
@@ -415,13 +408,21 @@ class ApiController extends Controller
                 join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->
                 join("tbl_menu_item","tbl_menu_item.establishment_id","=","tbl_estabalishment_user.id")->get();
             }
+            foreach($response["data"] as $key=>$value){
+                // $response["rate"][$key] = $value->est_id;
+                $response["rate_count"][$value->est_id] = DB::table("tbl_rating")->where("est_id",$value->est_id)->count();
+                $response["rate"][$value->est_id] = DB::table("tbl_rating")->where("est_id",$value->est_id)->avg("rate");
+                if($response["rate"][$value->est_id] == null){
+                    $response["rate"][$value->est_id] = 0;
+                }
+            }
+             
         }
         if($response["data"]->isEmpty()){
             $response["status"] = "fail";
         }
         return $response;
     }
-    
     public function get_est_product(Request $request){
         $id = $request->id;
         if($request->for_process == "all_active")
@@ -436,7 +437,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function submit_edit_establishment_setting(Request $request){
         $est_id = $request->est_id;
         $update["establishment_name"]   = $request->est_name;
@@ -474,7 +474,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function change_pass(Request $request)
     {
         $est_user_id = $request->user_id;
