@@ -52,13 +52,14 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function user_registration(Request $request){
         $insert["first_name"] = $request->first_name;
         $insert["last_name"] = $request->last_name;
         $insert["username"] = $request->username;
         $insert["email_address"] = $request->email;
         $insert["password"] = Hash::make($request->password);
+        $insert["age"] = $request->age;
+        $insert["preferred_food"] = $request->preferred_food;
         $insert["date_created"] = Carbon::now('Asia/Manila');
         $insert["status"] = 1;
         $pass = $request->pass;
@@ -76,7 +77,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function login(Request $request){
         if($request->pass == "for_login"){
             if($request->for_log == "mobile_app"){
@@ -118,7 +118,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function add_category(Request $request){
         $insert["category_name"] = $request->cat_name;
         $insert["status"] = 1;
@@ -141,7 +140,6 @@ class ApiController extends Controller
         }
         return json_encode($response);
     }
-    
     public function getAllCategory(Request $request){
         $id = $request->id;
         if($request->for_process == "all_active")
@@ -173,7 +171,6 @@ class ApiController extends Controller
         }
         return json_encode($response);
     }
-    
     public function add_product(Request $request){
         $check_existing = DB::table("tbl_menu_item")->where("item_name",$request->product_name)->where("establishment_id",$request->est_id)->count();
         if($check_existing == 0)
@@ -226,7 +223,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function submit_edited_category(Request $request){
         $cat_id = $request->cat_id;
         $est_id = (int)$request->est_id;
@@ -240,7 +236,7 @@ class ApiController extends Controller
         }
         return $response;
     }
-     public function submit_edited_product(Request $request){
+    public function submit_edited_product(Request $request){
         $item_id = $request->id;
         $cat_name = $request->cat_name;
         $item_name = $request->item_name;
@@ -322,7 +318,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function add_est_type(Request $request){
         $insert["est_type_name"] = $request->est_type_name;
         $insert["date_created"] = Carbon::now('Asia/Manila');
@@ -386,31 +381,48 @@ class ApiController extends Controller
     }
     public function get_all_est_user(Request $request){
         if($request->pass == "get_all_est_user"){
-            if($request->key == null && $request->filter == null){
+            if($request->key == null && $request->filter == null && $request->food == null){
                 $response["status"] = "success";
                 $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->
                 join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
                 join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
-            }else if($request->key != null && $request->filter == null){
+            }else if($request->key != null && $request->filter == null && $request->food == null){
                  $response["status"] = "success";
                  $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->where("tbl_establishment.establishment_name","LIKE","%".$request->key."%")->orWhere("tbl_est_type.est_type_name",$request->key)->
                 join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
                 join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
-            }else if($request->key != null && $request->filter != null){
+            }else if($request->key != null && $request->filter != null && $request->food == null){
                 $response["status"] = "success";
                 $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->where("tbl_establishment.establishment_name",$request->key)->where("tbl_est_type.est_type_name",$request->filter)->
                 join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
                 join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
-            }else if($request->key == null && $request->filter != null){
+            }else if($request->key == null && $request->filter != null && $request->food == null){
                 $response["status"] = "success";
                 $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->where("tbl_est_type.est_type_name",$request->filter)->
                 join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
                 join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->get();
-            }  
+            }else if($request->food != null && $request->filter == null && $request->key == null){ 
+                $response["status"] = "success";
+                $response["data"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->where("tbl_menu_item.item_name","LIKE","%".$request->food."%")->
+                join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
+                join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->
+                join("tbl_menu_item","tbl_menu_item.establishment_id","=","tbl_estabalishment_user.id")->get();
+            }
+            foreach($response["data"] as $key=>$value){
+                // $response["rate"][$key] = $value->est_id;
+                $response["rate_count"][$value->est_id] = DB::table("tbl_rating")->where("est_id",$value->est_id)->count();
+                $response["rate"][$value->est_id] = DB::table("tbl_rating")->where("est_id",$value->est_id)->avg("rate");
+                if($response["rate"][$value->est_id] == null){
+                    $response["rate"][$value->est_id] = 0;
+                }
+            }
+             
+        }
+        if($response["data"]->isEmpty()){
+            $response["status"] = "fail";
         }
         return $response;
     }
-    
     public function get_est_product(Request $request){
         $id = $request->id;
         if($request->for_process == "all_active")
@@ -425,7 +437,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function submit_edit_establishment_setting(Request $request){
         $est_id = $request->est_id;
         $update["establishment_name"]   = $request->est_name;
@@ -463,7 +474,6 @@ class ApiController extends Controller
         }
         return $response;
     }
-    
     public function change_pass(Request $request)
     {
         $est_user_id = $request->user_id;
