@@ -25,7 +25,7 @@ namespace NearbyPlaces
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtCategory.Text != "" && ApiClass.est_add_category(txtCategory.Text,ForLoginEstVO.getEstID()))
+            if (txtCategory.Text != "" && ApiClass.est_add_category(txtCategory.Text,ForLoginEstVO.getEstUserID()))
             {
                 MessageBox.Show("Category Add Successful!", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
