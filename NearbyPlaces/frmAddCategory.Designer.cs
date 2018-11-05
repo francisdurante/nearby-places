@@ -52,7 +52,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(17, 56);
+            this.btnAdd.Location = new System.Drawing.Point(17, 38);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(130, 55);
             this.btnAdd.TabIndex = 2;
@@ -62,7 +62,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(164, 56);
+            this.btnCancel.Location = new System.Drawing.Point(153, 38);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(130, 55);
             this.btnCancel.TabIndex = 3;
@@ -74,13 +74,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 123);
+            this.BackColor = System.Drawing.Color.Blue;
+            this.ClientSize = new System.Drawing.Size(365, 109);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.lbl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddCategory";
             this.Text = "Add Category";
+            this.Load += new System.EventHandler(this.frmAddCategory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

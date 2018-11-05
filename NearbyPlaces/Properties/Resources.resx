@@ -118,7 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="if_add_user_678158" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_add_user_678158.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_maintenance-repair-service-Gear_3853928" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_maintenance-repair-service-Gear_3853928.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Settings-5_379393" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Settings-5_379393.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_SignIn_1031506" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_SignIn_1031506.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="EATERYFINDERLOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EATERYFINDERLOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_v-31_3162614" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_v-31_3162614.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_icons_exit2_1564506" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_icons_exit2_1564506.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Settings-5_3793931" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Settings-5_3793931.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_account-circle_326497" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_account-circle_326497.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_user_male_add_85000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_user_male_add_85000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_cancel_3855592" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_cancel_3855592.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

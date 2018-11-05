@@ -334,6 +334,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(598, 363);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
@@ -342,6 +343,7 @@
             this.Controls.Add(this.lblNote);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbAccount);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEstSettings";
             this.Text = "Establishment Settings";
             this.Load += new System.EventHandler(this.frmEstSettings_Load);

@@ -13,6 +13,16 @@ namespace NearbyPlaces
 {
     public partial class frmAddCategory : Form
     {
+        private const int WM_NCHITTEST = 0x84;
+        private const int HTCLIENT = 0x1;
+        private const int HTCAPTION = 0x2;
+        protected override void WndProc(ref Message message)
+        {
+            base.WndProc(ref message);
+
+            if (message.Msg == WM_NCHITTEST && (int)message.Result == HTCLIENT)
+                message.Result = (IntPtr)HTCAPTION;
+        }
         public frmAddCategory()
         {
             InitializeComponent();
@@ -29,6 +39,11 @@ namespace NearbyPlaces
             {
                 MessageBox.Show("Category Add Successful!", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void frmAddCategory_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

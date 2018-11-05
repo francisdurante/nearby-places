@@ -13,6 +13,16 @@ namespace NearbyPlaces
 {
     public partial class frmRegisteredEst : Form
     {
+        private const int WM_NCHITTEST = 0x84;
+        private const int HTCLIENT = 0x1;
+        private const int HTCAPTION = 0x2;
+        protected override void WndProc(ref Message message)
+        {
+            base.WndProc(ref message);
+
+            if (message.Msg == WM_NCHITTEST && (int)message.Result == HTCLIENT)
+                message.Result = (IntPtr)HTCAPTION;
+        }
         public frmRegisteredEst()
         {
             InitializeComponent();
@@ -68,6 +78,10 @@ namespace NearbyPlaces
         {
             retrieveData(txtKey.Text,cbCategory.Text);
         }
-        
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

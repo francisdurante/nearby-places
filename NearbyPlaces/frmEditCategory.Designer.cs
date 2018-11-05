@@ -119,6 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(395, 193);
             this.Controls.Add(this.cbCurrentCategory);
             this.Controls.Add(this.lblCategory);
@@ -128,7 +129,7 @@
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.txtCatName);
             this.Controls.Add(this.lblCatName);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditCategory";
             this.Text = "Edit Category";
             this.Load += new System.EventHandler(this.frmEditCategory_Load);

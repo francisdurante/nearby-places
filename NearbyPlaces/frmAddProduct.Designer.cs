@@ -132,7 +132,7 @@
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(0, 112);
+            this.btnUpload.Location = new System.Drawing.Point(6, 112);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(118, 23);
             this.btnUpload.TabIndex = 1;
@@ -174,11 +174,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(642, 262);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.gbImageThumbnail);
             this.Controls.Add(this.gbProductDetails);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddProduct";
             this.Text = "Add Product";
             this.Load += new System.EventHandler(this.frmAddProduct_Load);

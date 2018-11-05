@@ -40,13 +40,14 @@
             this.cl_front_store = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cl_est_status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cl_user_status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cl_address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnRefresh = new System.Windows.Forms.Button();
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtKey = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblFilter = new System.Windows.Forms.Label();
             this.cbCategory = new System.Windows.Forms.ComboBox();
-            this.cl_address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvEst
@@ -126,6 +127,11 @@
             this.cl_user_status.Text = "User Status";
             this.cl_user_status.Width = 120;
             // 
+            // cl_address
+            // 
+            this.cl_address.Text = "Address";
+            this.cl_address.Width = 120;
+            // 
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(13, 4);
@@ -180,16 +186,23 @@
             this.cbCategory.Size = new System.Drawing.Size(204, 21);
             this.cbCategory.TabIndex = 6;
             // 
-            // cl_address
+            // btnCancel
             // 
-            this.cl_address.Text = "Address";
-            this.cl_address.Width = 120;
+            this.btnCancel.Location = new System.Drawing.Point(13, 400);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(165, 62);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "CANCEL";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmRegisteredEst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(784, 485);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.lblFilter);
             this.Controls.Add(this.btnSearch);
@@ -197,6 +210,7 @@
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.lvEst);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegisteredEst";
             this.Text = "Registered Establishment";
             this.Load += new System.EventHandler(this.frmRegisteredEst_Load);
@@ -226,5 +240,6 @@
         private System.Windows.Forms.Label lblFilter;
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.ColumnHeader cl_address;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

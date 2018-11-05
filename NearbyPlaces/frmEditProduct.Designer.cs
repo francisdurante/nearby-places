@@ -209,6 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(400, 401);
             this.Controls.Add(this.txtLocalPath);
             this.Controls.Add(this.lblLocalPath);
@@ -227,6 +228,7 @@
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.cbItemName);
             this.Controls.Add(this.lblItemName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditProduct";
             this.Text = "frmEditProduct";
             this.Load += new System.EventHandler(this.frmEditProduct_Load);

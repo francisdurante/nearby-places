@@ -15,6 +15,16 @@ namespace NearbyPlaces
 {
     public partial class frmAddProduct : Form
     {
+        private const int WM_NCHITTEST = 0x84;
+        private const int HTCLIENT = 0x1;
+        private const int HTCAPTION = 0x2;
+        protected override void WndProc(ref Message message)
+        {
+            base.WndProc(ref message);
+
+            if (message.Msg == WM_NCHITTEST && (int)message.Result == HTCLIENT)
+                message.Result = (IntPtr)HTCAPTION;
+        }
         public static FileInfo fileInfo;
         public frmAddProduct()
         {
@@ -31,7 +41,7 @@ namespace NearbyPlaces
             cbCategory.Items.Clear();
             cbCategory.Items.Add("");
             ArrayList category = new ArrayList();
-            category = ApiClass.getCategory(ForLoginEstVO.getEstID(),"all_active");
+            category = ApiClass.getCategory(ForLoginEstVO.getEstUserID(),"all_active");
             for(int x = 0; x < category.Count; x++)
             {
                 cbCategory.Items.Add(category[x]);

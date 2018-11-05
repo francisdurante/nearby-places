@@ -13,6 +13,16 @@ namespace NearbyPlaces
 {
     public partial class frmRegistration : Form
     {
+        private const int WM_NCHITTEST = 0x84;
+        private const int HTCLIENT = 0x1;
+        private const int HTCAPTION = 0x2;
+        protected override void WndProc(ref Message message)
+        {
+            base.WndProc(ref message);
+
+            if (message.Msg == WM_NCHITTEST && (int)message.Result == HTCLIENT)
+                message.Result = (IntPtr)HTCAPTION;
+        }
         private string frontStorePicPath = "";
         public frmRegistration()
         {
@@ -32,6 +42,7 @@ namespace NearbyPlaces
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text != "" ||
+                frontStorePicPath != "" ||
                 txtPassword.Text != "" ||
                 txtRePassword.Text != "" ||
                 txtSecurity.Text != "" ||

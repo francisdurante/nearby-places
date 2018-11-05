@@ -113,6 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(395, 188);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
@@ -122,7 +123,7 @@
             this.Controls.Add(this.lblNewpass);
             this.Controls.Add(this.txtCurrentPass);
             this.Controls.Add(this.lblCurrentPass);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmChangePassword";
             this.Text = "Change Password";
             this.ResumeLayout(false);
