@@ -51,9 +51,12 @@
             // lblItemName
             // 
             this.lblItemName.AutoSize = true;
+            this.lblItemName.BackColor = System.Drawing.Color.Transparent;
+            this.lblItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemName.ForeColor = System.Drawing.Color.White;
             this.lblItemName.Location = new System.Drawing.Point(13, 28);
             this.lblItemName.Name = "lblItemName";
-            this.lblItemName.Size = new System.Drawing.Size(101, 13);
+            this.lblItemName.Size = new System.Drawing.Size(136, 15);
             this.lblItemName.TabIndex = 0;
             this.lblItemName.Text = "Current Item Name :";
             // 
@@ -61,7 +64,7 @@
             // 
             this.cbItemName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbItemName.FormattingEnabled = true;
-            this.cbItemName.Location = new System.Drawing.Point(130, 25);
+            this.cbItemName.Location = new System.Drawing.Point(155, 22);
             this.cbItemName.Name = "cbItemName";
             this.cbItemName.Size = new System.Drawing.Size(207, 21);
             this.cbItemName.TabIndex = 1;
@@ -70,9 +73,12 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
+            this.lblCategory.BackColor = System.Drawing.Color.Transparent;
+            this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategory.ForeColor = System.Drawing.Color.White;
             this.lblCategory.Location = new System.Drawing.Point(13, 85);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(55, 13);
+            this.lblCategory.Size = new System.Drawing.Size(71, 15);
             this.lblCategory.TabIndex = 2;
             this.lblCategory.Text = "Category :";
             // 
@@ -80,7 +86,7 @@
             // 
             this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(130, 82);
+            this.cbCategory.Location = new System.Drawing.Point(155, 79);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(207, 21);
             this.cbCategory.TabIndex = 3;
@@ -88,22 +94,27 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
+            this.lblPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.White;
             this.lblPrice.Location = new System.Drawing.Point(13, 112);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(40, 13);
+            this.lblPrice.Size = new System.Drawing.Size(52, 15);
             this.lblPrice.TabIndex = 4;
             this.lblPrice.Text = "Price : ";
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(130, 109);
+            this.txtPrice.Location = new System.Drawing.Point(155, 106);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(207, 20);
             this.txtPrice.TabIndex = 5;
             // 
             // pbThumbnail
             // 
-            this.pbThumbnail.Location = new System.Drawing.Point(130, 136);
+            this.pbThumbnail.BackColor = System.Drawing.Color.Transparent;
+            this.pbThumbnail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbThumbnail.Location = new System.Drawing.Point(155, 133);
             this.pbThumbnail.Name = "pbThumbnail";
             this.pbThumbnail.Size = new System.Drawing.Size(207, 100);
             this.pbThumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -113,9 +124,12 @@
             // lblThumbnail
             // 
             this.lblThumbnail.AutoSize = true;
+            this.lblThumbnail.BackColor = System.Drawing.Color.Transparent;
+            this.lblThumbnail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThumbnail.ForeColor = System.Drawing.Color.White;
             this.lblThumbnail.Location = new System.Drawing.Point(13, 175);
             this.lblThumbnail.Name = "lblThumbnail";
-            this.lblThumbnail.Size = new System.Drawing.Size(65, 13);
+            this.lblThumbnail.Size = new System.Drawing.Size(87, 15);
             this.lblThumbnail.TabIndex = 7;
             this.lblThumbnail.Text = "Thumbnail : ";
             // 
@@ -141,7 +155,7 @@
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(130, 243);
+            this.btnChange.Location = new System.Drawing.Point(155, 240);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(207, 23);
             this.btnChange.TabIndex = 10;
@@ -152,9 +166,12 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
             this.lblStatus.Location = new System.Drawing.Point(13, 309);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(46, 13);
+            this.lblStatus.Size = new System.Drawing.Size(59, 15);
             this.lblStatus.TabIndex = 11;
             this.lblStatus.Text = "Status : ";
             // 
@@ -165,7 +182,7 @@
             this.cbStatus.Items.AddRange(new object[] {
             "ACTIVE",
             "INACTIVE"});
-            this.cbStatus.Location = new System.Drawing.Point(130, 306);
+            this.cbStatus.Location = new System.Drawing.Point(155, 303);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(207, 21);
             this.cbStatus.TabIndex = 13;
@@ -174,15 +191,18 @@
             // lblNewItemName
             // 
             this.lblNewItemName.AutoSize = true;
+            this.lblNewItemName.BackColor = System.Drawing.Color.Transparent;
+            this.lblNewItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewItemName.ForeColor = System.Drawing.Color.White;
             this.lblNewItemName.Location = new System.Drawing.Point(13, 56);
             this.lblNewItemName.Name = "lblNewItemName";
-            this.lblNewItemName.Size = new System.Drawing.Size(67, 13);
+            this.lblNewItemName.Size = new System.Drawing.Size(89, 15);
             this.lblNewItemName.TabIndex = 14;
             this.lblNewItemName.Text = "Item Name : ";
             // 
             // txtItemName
             // 
-            this.txtItemName.Location = new System.Drawing.Point(130, 54);
+            this.txtItemName.Location = new System.Drawing.Point(155, 51);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.Size = new System.Drawing.Size(207, 20);
             this.txtItemName.TabIndex = 15;
@@ -190,15 +210,18 @@
             // lblLocalPath
             // 
             this.lblLocalPath.AutoSize = true;
+            this.lblLocalPath.BackColor = System.Drawing.Color.Transparent;
+            this.lblLocalPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalPath.ForeColor = System.Drawing.Color.White;
             this.lblLocalPath.Location = new System.Drawing.Point(13, 273);
             this.lblLocalPath.Name = "lblLocalPath";
-            this.lblLocalPath.Size = new System.Drawing.Size(67, 13);
+            this.lblLocalPath.Size = new System.Drawing.Size(87, 15);
             this.lblLocalPath.TabIndex = 16;
             this.lblLocalPath.Text = "Local Path : ";
             // 
             // txtLocalPath
             // 
-            this.txtLocalPath.Location = new System.Drawing.Point(130, 273);
+            this.txtLocalPath.Location = new System.Drawing.Point(155, 270);
             this.txtLocalPath.Name = "txtLocalPath";
             this.txtLocalPath.ReadOnly = true;
             this.txtLocalPath.Size = new System.Drawing.Size(207, 20);
@@ -210,6 +233,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
+            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(400, 401);
             this.Controls.Add(this.txtLocalPath);
             this.Controls.Add(this.lblLocalPath);

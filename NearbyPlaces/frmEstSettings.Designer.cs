@@ -70,9 +70,11 @@
             // 
             // gbAccount
             // 
+            this.gbAccount.BackColor = System.Drawing.Color.Transparent;
             this.gbAccount.Controls.Add(this.btnChangePassword);
             this.gbAccount.Controls.Add(this.txtUserName);
             this.gbAccount.Controls.Add(this.lbluserName);
+            this.gbAccount.ForeColor = System.Drawing.SystemColors.Control;
             this.gbAccount.Location = new System.Drawing.Point(12, 241);
             this.gbAccount.Name = "gbAccount";
             this.gbAccount.Size = new System.Drawing.Size(273, 110);
@@ -82,6 +84,7 @@
             // 
             // btnChangePassword
             // 
+            this.btnChangePassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnChangePassword.Location = new System.Drawing.Point(9, 58);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(252, 23);
@@ -100,6 +103,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnChangePic);
             this.groupBox1.Controls.Add(this.pbFrontStore);
             this.groupBox1.Controls.Add(this.cbAge);
@@ -116,16 +120,19 @@
             this.groupBox1.Controls.Add(this.lblEstType);
             this.groupBox1.Controls.Add(this.txtEstName);
             this.groupBox1.Controls.Add(this.lblEstName);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(570, 223);
+            this.groupBox1.Size = new System.Drawing.Size(602, 223);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Establishment Settings";
             // 
             // btnChangePic
             // 
-            this.btnChangePic.Location = new System.Drawing.Point(342, 188);
+            this.btnChangePic.ForeColor = System.Drawing.Color.Black;
+            this.btnChangePic.Location = new System.Drawing.Point(348, 188);
             this.btnChangePic.Name = "btnChangePic";
             this.btnChangePic.Size = new System.Drawing.Size(200, 23);
             this.btnChangePic.TabIndex = 15;
@@ -135,7 +142,7 @@
             // 
             // pbFrontStore
             // 
-            this.pbFrontStore.Location = new System.Drawing.Point(342, 106);
+            this.pbFrontStore.Location = new System.Drawing.Point(348, 106);
             this.pbFrontStore.Name = "pbFrontStore";
             this.pbFrontStore.Size = new System.Drawing.Size(200, 75);
             this.pbFrontStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,9 +160,9 @@
             "ADULTS (25 - 59 years old)",
             "SENIORS (60 and Over years old)",
             "ALL"});
-            this.cbAge.Location = new System.Drawing.Point(146, 133);
+            this.cbAge.Location = new System.Drawing.Point(169, 133);
             this.cbAge.Name = "cbAge";
-            this.cbAge.Size = new System.Drawing.Size(173, 21);
+            this.cbAge.Size = new System.Drawing.Size(173, 23);
             this.cbAge.TabIndex = 13;
             // 
             // lblAge
@@ -163,7 +170,7 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Location = new System.Drawing.Point(9, 136);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(93, 13);
+            this.lblAge.Size = new System.Drawing.Size(120, 15);
             this.lblAge.TabIndex = 12;
             this.lblAge.Text = "Good for Age Of : ";
             // 
@@ -182,9 +189,9 @@
             "NEUTRAL",
             "SURPIRSE",
             "ALL"});
-            this.cbEmotion.Location = new System.Drawing.Point(146, 106);
+            this.cbEmotion.Location = new System.Drawing.Point(169, 106);
             this.cbEmotion.Name = "cbEmotion";
-            this.cbEmotion.Size = new System.Drawing.Size(173, 21);
+            this.cbEmotion.Size = new System.Drawing.Size(173, 23);
             this.cbEmotion.TabIndex = 11;
             // 
             // lblEmotion
@@ -192,31 +199,31 @@
             this.lblEmotion.AutoSize = true;
             this.lblEmotion.Location = new System.Drawing.Point(9, 109);
             this.lblEmotion.Name = "lblEmotion";
-            this.lblEmotion.Size = new System.Drawing.Size(112, 13);
+            this.lblEmotion.Size = new System.Drawing.Size(149, 15);
             this.lblEmotion.TabIndex = 10;
             this.lblEmotion.Text = "Good for Emotion Of : ";
             // 
             // txtLongitude
             // 
-            this.txtLongitude.Location = new System.Drawing.Point(382, 80);
+            this.txtLongitude.Location = new System.Drawing.Point(427, 80);
             this.txtLongitude.Name = "txtLongitude";
-            this.txtLongitude.Size = new System.Drawing.Size(160, 20);
+            this.txtLongitude.Size = new System.Drawing.Size(160, 21);
             this.txtLongitude.TabIndex = 9;
             // 
             // lblLongitude
             // 
             this.lblLongitude.AutoSize = true;
-            this.lblLongitude.Location = new System.Drawing.Point(313, 83);
+            this.lblLongitude.Location = new System.Drawing.Point(338, 83);
             this.lblLongitude.Name = "lblLongitude";
-            this.lblLongitude.Size = new System.Drawing.Size(63, 13);
+            this.lblLongitude.Size = new System.Drawing.Size(83, 15);
             this.lblLongitude.TabIndex = 8;
             this.lblLongitude.Text = "Longitude : ";
             // 
             // txtLatitude
             // 
-            this.txtLatitude.Location = new System.Drawing.Point(146, 80);
+            this.txtLatitude.Location = new System.Drawing.Point(169, 80);
             this.txtLatitude.Name = "txtLatitude";
-            this.txtLatitude.Size = new System.Drawing.Size(160, 20);
+            this.txtLatitude.Size = new System.Drawing.Size(160, 21);
             this.txtLatitude.TabIndex = 7;
             // 
             // lblLatitude
@@ -224,15 +231,15 @@
             this.lblLatitude.AutoSize = true;
             this.lblLatitude.Location = new System.Drawing.Point(9, 83);
             this.lblLatitude.Name = "lblLatitude";
-            this.lblLatitude.Size = new System.Drawing.Size(54, 13);
+            this.lblLatitude.Size = new System.Drawing.Size(71, 15);
             this.lblLatitude.TabIndex = 6;
             this.lblLatitude.Text = "Latitude : ";
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(146, 53);
+            this.txtAddress.Location = new System.Drawing.Point(169, 53);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(396, 20);
+            this.txtAddress.Size = new System.Drawing.Size(418, 21);
             this.txtAddress.TabIndex = 5;
             // 
             // lblAddress
@@ -240,17 +247,17 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.Location = new System.Drawing.Point(9, 56);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(113, 13);
+            this.lblAddress.Size = new System.Drawing.Size(161, 15);
             this.lblAddress.TabIndex = 4;
-            this.lblAddress.Text = "Establishment Address";
+            this.lblAddress.Text = "Establishment Address :";
             // 
             // cbEstType
             // 
             this.cbEstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstType.FormattingEnabled = true;
-            this.cbEstType.Location = new System.Drawing.Point(146, 160);
+            this.cbEstType.Location = new System.Drawing.Point(169, 160);
             this.cbEstType.Name = "cbEstType";
-            this.cbEstType.Size = new System.Drawing.Size(173, 21);
+            this.cbEstType.Size = new System.Drawing.Size(173, 23);
             this.cbEstType.TabIndex = 3;
             this.cbEstType.SelectedIndexChanged += new System.EventHandler(this.cbEstType_SelectedIndexChanged);
             // 
@@ -259,16 +266,16 @@
             this.lblEstType.AutoSize = true;
             this.lblEstType.Location = new System.Drawing.Point(9, 163);
             this.lblEstType.Name = "lblEstType";
-            this.lblEstType.Size = new System.Drawing.Size(108, 13);
+            this.lblEstType.Size = new System.Drawing.Size(144, 15);
             this.lblEstType.TabIndex = 2;
             this.lblEstType.Text = "Establishment Type : ";
             this.lblEstType.Click += new System.EventHandler(this.lblEstType_Click);
             // 
             // txtEstName
             // 
-            this.txtEstName.Location = new System.Drawing.Point(146, 27);
+            this.txtEstName.Location = new System.Drawing.Point(169, 27);
             this.txtEstName.Name = "txtEstName";
-            this.txtEstName.Size = new System.Drawing.Size(396, 20);
+            this.txtEstName.Size = new System.Drawing.Size(418, 21);
             this.txtEstName.TabIndex = 1;
             // 
             // lblEstName
@@ -276,13 +283,14 @@
             this.lblEstName.AutoSize = true;
             this.lblEstName.Location = new System.Drawing.Point(9, 30);
             this.lblEstName.Name = "lblEstName";
-            this.lblEstName.Size = new System.Drawing.Size(112, 13);
+            this.lblEstName.Size = new System.Drawing.Size(152, 15);
             this.lblEstName.TabIndex = 0;
             this.lblEstName.Text = "Establishment Name : ";
             // 
             // lblNote
             // 
             this.lblNote.AutoSize = true;
+            this.lblNote.BackColor = System.Drawing.Color.Transparent;
             this.lblNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNote.Location = new System.Drawing.Point(332, 323);
             this.lblNote.Name = "lblNote";
@@ -293,6 +301,7 @@
             // lblNote2
             // 
             this.lblNote2.AutoSize = true;
+            this.lblNote2.BackColor = System.Drawing.Color.Transparent;
             this.lblNote2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNote2.Location = new System.Drawing.Point(424, 304);
             this.lblNote2.Name = "lblNote2";
@@ -303,6 +312,7 @@
             // lblNote3
             // 
             this.lblNote3.AutoSize = true;
+            this.lblNote3.BackColor = System.Drawing.Color.Transparent;
             this.lblNote3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNote3.Location = new System.Drawing.Point(291, 339);
             this.lblNote3.Name = "lblNote3";
@@ -334,8 +344,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
-            this.ClientSize = new System.Drawing.Size(598, 363);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(626, 363);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblNote3);

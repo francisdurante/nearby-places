@@ -37,15 +37,18 @@
             // lbl
             // 
             this.lbl.AutoSize = true;
+            this.lbl.BackColor = System.Drawing.Color.Transparent;
+            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.White;
             this.lbl.Location = new System.Drawing.Point(14, 15);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(89, 13);
+            this.lbl.Size = new System.Drawing.Size(117, 15);
             this.lbl.TabIndex = 0;
             this.lbl.Text = "Category Name : ";
             // 
             // txtCategory
             // 
-            this.txtCategory.Location = new System.Drawing.Point(109, 12);
+            this.txtCategory.Location = new System.Drawing.Point(129, 13);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(210, 20);
             this.txtCategory.TabIndex = 1;
@@ -74,7 +77,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(365, 109);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);

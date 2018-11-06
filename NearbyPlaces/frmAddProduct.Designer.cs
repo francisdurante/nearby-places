@@ -51,7 +51,7 @@
             this.lblProductName.AutoSize = true;
             this.lblProductName.Location = new System.Drawing.Point(6, 29);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(84, 13);
+            this.lblProductName.Size = new System.Drawing.Size(110, 15);
             this.lblProductName.TabIndex = 0;
             this.lblProductName.Text = "Product Name : ";
             // 
@@ -60,7 +60,7 @@
             this.lblPrice.AutoSize = true;
             this.lblPrice.Location = new System.Drawing.Point(6, 55);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(40, 13);
+            this.lblPrice.Size = new System.Drawing.Size(52, 15);
             this.lblPrice.TabIndex = 1;
             this.lblPrice.Text = "Price : ";
             // 
@@ -69,21 +69,24 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Location = new System.Drawing.Point(6, 82);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(58, 13);
+            this.lblCategory.Size = new System.Drawing.Size(75, 15);
             this.lblCategory.TabIndex = 2;
             this.lblCategory.Text = "Category : ";
             // 
             // gbProductDetails
             // 
+            this.gbProductDetails.BackColor = System.Drawing.Color.Transparent;
             this.gbProductDetails.Controls.Add(this.cbCategory);
             this.gbProductDetails.Controls.Add(this.txtPrice);
             this.gbProductDetails.Controls.Add(this.txtProductName);
             this.gbProductDetails.Controls.Add(this.lblProductName);
             this.gbProductDetails.Controls.Add(this.lblCategory);
             this.gbProductDetails.Controls.Add(this.lblPrice);
+            this.gbProductDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbProductDetails.ForeColor = System.Drawing.Color.White;
             this.gbProductDetails.Location = new System.Drawing.Point(12, 12);
             this.gbProductDetails.Name = "gbProductDetails";
-            this.gbProductDetails.Size = new System.Drawing.Size(273, 142);
+            this.gbProductDetails.Size = new System.Drawing.Size(308, 142);
             this.gbProductDetails.TabIndex = 3;
             this.gbProductDetails.TabStop = false;
             this.gbProductDetails.Text = "Product Details";
@@ -91,31 +94,34 @@
             // cbCategory
             // 
             this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(97, 79);
+            this.cbCategory.Location = new System.Drawing.Point(122, 79);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(170, 21);
+            this.cbCategory.Size = new System.Drawing.Size(170, 23);
             this.cbCategory.TabIndex = 5;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(97, 52);
+            this.txtPrice.Location = new System.Drawing.Point(122, 52);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(170, 20);
+            this.txtPrice.Size = new System.Drawing.Size(170, 21);
             this.txtPrice.TabIndex = 4;
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(97, 26);
+            this.txtProductName.Location = new System.Drawing.Point(122, 26);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(170, 20);
+            this.txtProductName.Size = new System.Drawing.Size(170, 21);
             this.txtProductName.TabIndex = 3;
             // 
             // gbImageThumbnail
             // 
+            this.gbImageThumbnail.BackColor = System.Drawing.Color.Transparent;
             this.gbImageThumbnail.Controls.Add(this.txtFilePath);
             this.gbImageThumbnail.Controls.Add(this.btnUpload);
             this.gbImageThumbnail.Controls.Add(this.pbMenuPic);
-            this.gbImageThumbnail.Location = new System.Drawing.Point(291, 12);
+            this.gbImageThumbnail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbImageThumbnail.ForeColor = System.Drawing.Color.White;
+            this.gbImageThumbnail.Location = new System.Drawing.Point(326, 12);
             this.gbImageThumbnail.Name = "gbImageThumbnail";
             this.gbImageThumbnail.Size = new System.Drawing.Size(339, 142);
             this.gbImageThumbnail.TabIndex = 6;
@@ -127,11 +133,12 @@
             this.txtFilePath.Location = new System.Drawing.Point(130, 115);
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.ReadOnly = true;
-            this.txtFilePath.Size = new System.Drawing.Size(203, 20);
+            this.txtFilePath.Size = new System.Drawing.Size(203, 21);
             this.txtFilePath.TabIndex = 2;
             // 
             // btnUpload
             // 
+            this.btnUpload.ForeColor = System.Drawing.Color.Black;
             this.btnUpload.Location = new System.Drawing.Point(6, 112);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(118, 23);
@@ -152,7 +159,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(12, 181);
+            this.btnSubmit.Location = new System.Drawing.Point(12, 160);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(171, 51);
             this.btnSubmit.TabIndex = 7;
@@ -162,7 +169,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(189, 181);
+            this.btnCancel.Location = new System.Drawing.Point(189, 160);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(171, 51);
             this.btnCancel.TabIndex = 8;
@@ -174,8 +181,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
-            this.ClientSize = new System.Drawing.Size(642, 262);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(677, 234);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.gbImageThumbnail);

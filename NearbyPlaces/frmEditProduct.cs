@@ -47,7 +47,7 @@ namespace NearbyPlaces
                 cbItemName.Items.Add(product[x]);
             }
             ArrayList category = new ArrayList();
-            category = ApiClass.getCategory(ForEstablishmentLogin.ForLoginEstVO.getEstID(), "all");
+            category = ApiClass.getCategory(ForEstablishmentLogin.ForLoginEstVO.getEstUserID(), "all");
             for (int x = 0; x < category.Count; x++)
             {
                 cbCategory.Items.Add(category[x]);

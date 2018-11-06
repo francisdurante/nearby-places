@@ -145,24 +145,27 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
+            this.lblSearch.BackColor = System.Drawing.Color.Transparent;
+            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.ForeColor = System.Drawing.Color.White;
             this.lblSearch.Location = new System.Drawing.Point(184, 7);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(50, 13);
+            this.lblSearch.Size = new System.Drawing.Size(64, 15);
             this.lblSearch.TabIndex = 2;
             this.lblSearch.Text = "Search : ";
             // 
             // txtKey
             // 
-            this.txtKey.Location = new System.Drawing.Point(230, 4);
+            this.txtKey.Location = new System.Drawing.Point(242, 6);
             this.txtKey.Name = "txtKey";
             this.txtKey.Size = new System.Drawing.Size(204, 20);
             this.txtKey.TabIndex = 3;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(450, 19);
+            this.btnSearch.Location = new System.Drawing.Point(452, 7);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(153, 23);
+            this.btnSearch.Size = new System.Drawing.Size(158, 44);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -171,9 +174,12 @@
             // lblFilter
             // 
             this.lblFilter.AutoSize = true;
+            this.lblFilter.BackColor = System.Drawing.Color.Transparent;
+            this.lblFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilter.ForeColor = System.Drawing.Color.White;
             this.lblFilter.Location = new System.Drawing.Point(184, 31);
             this.lblFilter.Name = "lblFilter";
-            this.lblFilter.Size = new System.Drawing.Size(38, 13);
+            this.lblFilter.Size = new System.Drawing.Size(52, 15);
             this.lblFilter.TabIndex = 5;
             this.lblFilter.Text = "Filter : ";
             // 
@@ -181,7 +187,7 @@
             // 
             this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(230, 28);
+            this.cbCategory.Location = new System.Drawing.Point(242, 30);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(204, 21);
             this.cbCategory.TabIndex = 6;
@@ -200,7 +206,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 485);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.cbCategory);

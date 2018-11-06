@@ -63,6 +63,16 @@ namespace NearbyPlaces.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _019_Malibu_Beach {
+            get {
+                object obj = ResourceManager.GetObject("019 Malibu Beach", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EATERYFINDERLOGO {
             get {
                 object obj = ResourceManager.GetObject("EATERYFINDERLOGO", resourceCulture);
@@ -166,6 +176,16 @@ namespace NearbyPlaces.Properties {
         internal static System.Drawing.Bitmap if_v_31_3162614 {
             get {
                 object obj = ResourceManager.GetObject("if_v-31_3162614", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

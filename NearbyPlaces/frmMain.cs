@@ -212,5 +212,20 @@ namespace NearbyPlaces
                 MessageBox.Show("Establishment Settings Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void aboutSystemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form f = Application.OpenForms["frmAbout"];
+            if (f == null)
+            {
+                frmAbout fes = new frmAbout();
+                fes.MdiParent = this;
+                fes.Show();
+            }
+            else
+            {
+                MessageBox.Show("About Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

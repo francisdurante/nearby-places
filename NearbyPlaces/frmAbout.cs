@@ -1,5 +1,4 @@
-﻿using NearbyPlaces.ForEstablishmentLogin;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,11 +10,12 @@ using System.Windows.Forms;
 
 namespace NearbyPlaces
 {
-    public partial class frmAddCategory : Form
+    public partial class frmAbout : Form
     {
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
         private const int HTCAPTION = 0x2;
+
         protected override void WndProc(ref Message message)
         {
             base.WndProc(ref message);
@@ -23,25 +23,22 @@ namespace NearbyPlaces
             if (message.Msg == WM_NCHITTEST && (int)message.Result == HTCLIENT)
                 message.Result = (IntPtr)HTCAPTION;
         }
-        public frmAddCategory()
+        public frmAbout()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void lblDateCreated_Click(object sender, EventArgs e)
         {
-            Close();  
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnOK_Click(object sender, EventArgs e)
         {
-            if (txtCategory.Text != "" && ApiClass.est_add_category(txtCategory.Text,ForLoginEstVO.getEstUserID()))
-            {
-                MessageBox.Show("Category Add Successful!", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            Close();
         }
 
-        private void frmAddCategory_Load(object sender, EventArgs e)
+        private void frmAbout_Load(object sender, EventArgs e)
         {
 
         }

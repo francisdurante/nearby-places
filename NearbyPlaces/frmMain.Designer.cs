@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsLoggedIn = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsEstName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -59,9 +60,9 @@
             this.tsLoggedIn,
             this.tsEstName,
             this.userName});
-            this.statusStrip1.Location = new System.Drawing.Point(171, 509);
+            this.statusStrip1.Location = new System.Drawing.Point(177, 509);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(689, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(683, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -86,7 +87,9 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Blue;
+            this.menuStrip1.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.menuStrip1.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.establishmentSystemToolStripMenuItem,
@@ -96,21 +99,25 @@
             this.lOGOUTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(171, 531);
+            this.menuStrip1.Size = new System.Drawing.Size(177, 531);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // establishmentSystemToolStripMenuItem
             // 
+            this.establishmentSystemToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.establishmentSystemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addProductOnMenuToolStripMenuItem,
             this.categoryMenuToolStripMenuItem,
             this.establishmentTypeToolStripMenuItem,
             this.showAllEst});
+            this.establishmentSystemToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.establishmentSystemToolStripMenuItem.Image = global::NearbyPlaces.Properties.Resources.if_maintenance_repair_service_Gear_3853928;
             this.establishmentSystemToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.establishmentSystemToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.establishmentSystemToolStripMenuItem.Name = "establishmentSystemToolStripMenuItem";
-            this.establishmentSystemToolStripMenuItem.Size = new System.Drawing.Size(158, 67);
+            this.establishmentSystemToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 4, 0);
+            this.establishmentSystemToolStripMenuItem.Size = new System.Drawing.Size(164, 67);
             this.establishmentSystemToolStripMenuItem.Text = "Establishment Maintenance";
             this.establishmentSystemToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -195,8 +202,10 @@
             // 
             this.registrationTab.Image = global::NearbyPlaces.Properties.Resources.if_add_user_678158;
             this.registrationTab.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.registrationTab.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.registrationTab.Name = "registrationTab";
-            this.registrationTab.Size = new System.Drawing.Size(158, 67);
+            this.registrationTab.Padding = new System.Windows.Forms.Padding(10, 0, 4, 0);
+            this.registrationTab.Size = new System.Drawing.Size(164, 67);
             this.registrationTab.Text = "REGISTRATION";
             this.registrationTab.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.registrationTab.Click += new System.EventHandler(this.registrationTab_Click);
@@ -207,8 +216,9 @@
             this.establishmentSettingsToolStripMenuItem});
             this.accountSettingsToolStripMenuItem.Image = global::NearbyPlaces.Properties.Resources.if_account_circle_326497;
             this.accountSettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.accountSettingsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.accountSettingsToolStripMenuItem.Name = "accountSettingsToolStripMenuItem";
-            this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(158, 67);
+            this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(164, 67);
             this.accountSettingsToolStripMenuItem.Text = "Account Settings";
             this.accountSettingsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -223,17 +233,20 @@
             // 
             this.aboutSystemToolStripMenuItem.Image = global::NearbyPlaces.Properties.Resources.if_v_31_3162614;
             this.aboutSystemToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.aboutSystemToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.aboutSystemToolStripMenuItem.Name = "aboutSystemToolStripMenuItem";
-            this.aboutSystemToolStripMenuItem.Size = new System.Drawing.Size(158, 67);
+            this.aboutSystemToolStripMenuItem.Size = new System.Drawing.Size(164, 67);
             this.aboutSystemToolStripMenuItem.Text = "About System";
             this.aboutSystemToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.aboutSystemToolStripMenuItem.Click += new System.EventHandler(this.aboutSystemToolStripMenuItem_Click);
             // 
             // lOGOUTToolStripMenuItem
             // 
             this.lOGOUTToolStripMenuItem.Image = global::NearbyPlaces.Properties.Resources.if_icons_exit2_1564506;
             this.lOGOUTToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.lOGOUTToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.lOGOUTToolStripMenuItem.Name = "lOGOUTToolStripMenuItem";
-            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(158, 67);
+            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(164, 67);
             this.lOGOUTToolStripMenuItem.Text = "LOGOUT";
             this.lOGOUTToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.lOGOUTToolStripMenuItem.Click += new System.EventHandler(this.lOGOUTToolStripMenuItem_Click);
@@ -249,13 +262,13 @@
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EATERY FINDER V1";
+            this.Text = "EateryFinder - V1.11062018";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.statusStrip1.ResumeLayout(false);

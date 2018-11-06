@@ -67,7 +67,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Location = new System.Drawing.Point(10, 22);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(64, 13);
+            this.lblUsername.Size = new System.Drawing.Size(91, 16);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username : ";
             // 
@@ -75,7 +75,7 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(125, 19);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(152, 20);
+            this.txtUsername.Size = new System.Drawing.Size(152, 22);
             this.txtUsername.TabIndex = 1;
             // 
             // txtPassword
@@ -83,7 +83,7 @@
             this.txtPassword.Location = new System.Drawing.Point(125, 45);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(152, 20);
+            this.txtPassword.Size = new System.Drawing.Size(152, 22);
             this.txtPassword.TabIndex = 3;
             // 
             // lblPassword
@@ -91,7 +91,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Location = new System.Drawing.Point(10, 48);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(62, 13);
+            this.lblPassword.Size = new System.Drawing.Size(88, 16);
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Password : ";
             // 
@@ -100,7 +100,7 @@
             this.txtRePassword.Location = new System.Drawing.Point(125, 71);
             this.txtRePassword.Name = "txtRePassword";
             this.txtRePassword.PasswordChar = '*';
-            this.txtRePassword.Size = new System.Drawing.Size(152, 20);
+            this.txtRePassword.Size = new System.Drawing.Size(152, 22);
             this.txtRePassword.TabIndex = 5;
             // 
             // lblRePassword
@@ -108,12 +108,13 @@
             this.lblRePassword.AutoSize = true;
             this.lblRePassword.Location = new System.Drawing.Point(10, 74);
             this.lblRePassword.Name = "lblRePassword";
-            this.lblRePassword.Size = new System.Drawing.Size(79, 13);
+            this.lblRePassword.Size = new System.Drawing.Size(113, 16);
             this.lblRePassword.TabIndex = 4;
             this.lblRePassword.Text = "Re-Password : ";
             // 
             // gbAccountDetails
             // 
+            this.gbAccountDetails.BackColor = System.Drawing.Color.Transparent;
             this.gbAccountDetails.Controls.Add(this.lblSecurity);
             this.gbAccountDetails.Controls.Add(this.txtSecurity);
             this.gbAccountDetails.Controls.Add(this.txtUsername);
@@ -122,6 +123,8 @@
             this.gbAccountDetails.Controls.Add(this.lblRePassword);
             this.gbAccountDetails.Controls.Add(this.lblPassword);
             this.gbAccountDetails.Controls.Add(this.txtPassword);
+            this.gbAccountDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbAccountDetails.ForeColor = System.Drawing.Color.White;
             this.gbAccountDetails.Location = new System.Drawing.Point(13, 13);
             this.gbAccountDetails.Name = "gbAccountDetails";
             this.gbAccountDetails.Size = new System.Drawing.Size(283, 321);
@@ -134,20 +137,21 @@
             this.lblSecurity.AutoSize = true;
             this.lblSecurity.Location = new System.Drawing.Point(10, 102);
             this.lblSecurity.Name = "lblSecurity";
-            this.lblSecurity.Size = new System.Drawing.Size(113, 13);
+            this.lblSecurity.Size = new System.Drawing.Size(76, 16);
             this.lblSecurity.TabIndex = 7;
-            this.lblSecurity.Text = "Security Registration : ";
+            this.lblSecurity.Text = "Security : ";
             // 
             // txtSecurity
             // 
             this.txtSecurity.Location = new System.Drawing.Point(125, 99);
             this.txtSecurity.Name = "txtSecurity";
             this.txtSecurity.PasswordChar = '_';
-            this.txtSecurity.Size = new System.Drawing.Size(152, 20);
+            this.txtSecurity.Size = new System.Drawing.Size(152, 22);
             this.txtSecurity.TabIndex = 6;
             // 
             // gbEstablishmentDetails
             // 
+            this.gbEstablishmentDetails.BackColor = System.Drawing.Color.Transparent;
             this.gbEstablishmentDetails.Controls.Add(this.txtAddress);
             this.gbEstablishmentDetails.Controls.Add(this.lblAddress);
             this.gbEstablishmentDetails.Controls.Add(this.btnBrowse);
@@ -165,9 +169,11 @@
             this.gbEstablishmentDetails.Controls.Add(this.lblEstName);
             this.gbEstablishmentDetails.Controls.Add(this.lblLat);
             this.gbEstablishmentDetails.Controls.Add(this.lblLon);
+            this.gbEstablishmentDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbEstablishmentDetails.ForeColor = System.Drawing.Color.White;
             this.gbEstablishmentDetails.Location = new System.Drawing.Point(302, 13);
             this.gbEstablishmentDetails.Name = "gbEstablishmentDetails";
-            this.gbEstablishmentDetails.Size = new System.Drawing.Size(355, 321);
+            this.gbEstablishmentDetails.Size = new System.Drawing.Size(383, 321);
             this.gbEstablishmentDetails.TabIndex = 7;
             this.gbEstablishmentDetails.TabStop = false;
             this.gbEstablishmentDetails.Text = "EstablishmentDetails";
@@ -175,9 +181,9 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(144, 178);
+            this.txtAddress.Location = new System.Drawing.Point(172, 180);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(205, 20);
+            this.txtAddress.Size = new System.Drawing.Size(205, 22);
             this.txtAddress.TabIndex = 22;
             // 
             // lblAddress
@@ -185,12 +191,13 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.Location = new System.Drawing.Point(13, 181);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(54, 13);
+            this.lblAddress.Size = new System.Drawing.Size(78, 16);
             this.lblAddress.TabIndex = 21;
             this.lblAddress.Text = "Address : ";
             // 
             // btnBrowse
             // 
+            this.btnBrowse.ForeColor = System.Drawing.Color.Black;
             this.btnBrowse.Location = new System.Drawing.Point(16, 265);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(122, 23);
@@ -201,7 +208,7 @@
             // 
             // pbFrontStore
             // 
-            this.pbFrontStore.Location = new System.Drawing.Point(144, 222);
+            this.pbFrontStore.Location = new System.Drawing.Point(172, 224);
             this.pbFrontStore.Name = "pbFrontStore";
             this.pbFrontStore.Size = new System.Drawing.Size(205, 93);
             this.pbFrontStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -213,7 +220,7 @@
             this.lblFrontStore.AutoSize = true;
             this.lblFrontStore.Location = new System.Drawing.Point(13, 249);
             this.lblFrontStore.Name = "lblFrontStore";
-            this.lblFrontStore.Size = new System.Drawing.Size(65, 13);
+            this.lblFrontStore.Size = new System.Drawing.Size(92, 16);
             this.lblFrontStore.TabIndex = 18;
             this.lblFrontStore.Text = "Front Store :";
             // 
@@ -221,9 +228,9 @@
             // 
             this.cbEstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstType.FormattingEnabled = true;
-            this.cbEstType.Location = new System.Drawing.Point(144, 151);
+            this.cbEstType.Location = new System.Drawing.Point(172, 153);
             this.cbEstType.Name = "cbEstType";
-            this.cbEstType.Size = new System.Drawing.Size(205, 21);
+            this.cbEstType.Size = new System.Drawing.Size(205, 24);
             this.cbEstType.TabIndex = 17;
             this.cbEstType.SelectedIndexChanged += new System.EventHandler(this.cbEstType_SelectedIndexChanged);
             // 
@@ -232,7 +239,7 @@
             this.lblEstType.AutoSize = true;
             this.lblEstType.Location = new System.Drawing.Point(13, 155);
             this.lblEstType.Name = "lblEstType";
-            this.lblEstType.Size = new System.Drawing.Size(108, 13);
+            this.lblEstType.Size = new System.Drawing.Size(157, 16);
             this.lblEstType.TabIndex = 16;
             this.lblEstType.Text = "Establishment Type : ";
             // 
@@ -247,9 +254,9 @@
             "ADULTS (25 - 59 years old)",
             "SENIORS (60 and Over years old)",
             "ALL"});
-            this.cbAge.Location = new System.Drawing.Point(144, 124);
+            this.cbAge.Location = new System.Drawing.Point(172, 126);
             this.cbAge.Name = "cbAge";
-            this.cbAge.Size = new System.Drawing.Size(205, 21);
+            this.cbAge.Size = new System.Drawing.Size(205, 24);
             this.cbAge.TabIndex = 15;
             // 
             // lblAge
@@ -257,7 +264,7 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Location = new System.Drawing.Point(13, 129);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(96, 13);
+            this.lblAge.Size = new System.Drawing.Size(136, 16);
             this.lblAge.TabIndex = 14;
             this.lblAge.Text = "Good For Age Of : ";
             // 
@@ -276,9 +283,9 @@
             "NEUTRAL",
             "SURPIRSE",
             "ALL"});
-            this.cbEmotion.Location = new System.Drawing.Point(144, 97);
+            this.cbEmotion.Location = new System.Drawing.Point(172, 99);
             this.cbEmotion.Name = "cbEmotion";
-            this.cbEmotion.Size = new System.Drawing.Size(205, 21);
+            this.cbEmotion.Size = new System.Drawing.Size(205, 24);
             this.cbEmotion.TabIndex = 13;
             this.cbEmotion.SelectedIndexChanged += new System.EventHandler(this.cbEmotion_SelectedIndexChanged);
             // 
@@ -287,29 +294,29 @@
             this.lblEmotion.AutoSize = true;
             this.lblEmotion.Location = new System.Drawing.Point(13, 102);
             this.lblEmotion.Name = "lblEmotion";
-            this.lblEmotion.Size = new System.Drawing.Size(115, 13);
+            this.lblEmotion.Size = new System.Drawing.Size(164, 16);
             this.lblEmotion.TabIndex = 12;
             this.lblEmotion.Text = "Good For Emotion Of : ";
             // 
             // txtEstablishmentName
             // 
-            this.txtEstablishmentName.Location = new System.Drawing.Point(144, 19);
+            this.txtEstablishmentName.Location = new System.Drawing.Point(172, 21);
             this.txtEstablishmentName.Name = "txtEstablishmentName";
-            this.txtEstablishmentName.Size = new System.Drawing.Size(205, 20);
+            this.txtEstablishmentName.Size = new System.Drawing.Size(205, 22);
             this.txtEstablishmentName.TabIndex = 7;
             // 
             // txtLon
             // 
-            this.txtLon.Location = new System.Drawing.Point(144, 71);
+            this.txtLon.Location = new System.Drawing.Point(172, 73);
             this.txtLon.Name = "txtLon";
-            this.txtLon.Size = new System.Drawing.Size(205, 20);
+            this.txtLon.Size = new System.Drawing.Size(205, 22);
             this.txtLon.TabIndex = 11;
             // 
             // txtLat
             // 
-            this.txtLat.Location = new System.Drawing.Point(144, 45);
+            this.txtLat.Location = new System.Drawing.Point(172, 47);
             this.txtLat.Name = "txtLat";
-            this.txtLat.Size = new System.Drawing.Size(205, 20);
+            this.txtLat.Size = new System.Drawing.Size(205, 22);
             this.txtLat.TabIndex = 9;
             // 
             // lblEstName
@@ -317,7 +324,7 @@
             this.lblEstName.AutoSize = true;
             this.lblEstName.Location = new System.Drawing.Point(13, 22);
             this.lblEstName.Name = "lblEstName";
-            this.lblEstName.Size = new System.Drawing.Size(106, 13);
+            this.lblEstName.Size = new System.Drawing.Size(154, 16);
             this.lblEstName.TabIndex = 6;
             this.lblEstName.Text = "Establisment Name : ";
             this.lblEstName.Click += new System.EventHandler(this.label1_Click);
@@ -327,7 +334,7 @@
             this.lblLat.AutoSize = true;
             this.lblLat.Location = new System.Drawing.Point(13, 48);
             this.lblLat.Name = "lblLat";
-            this.lblLat.Size = new System.Drawing.Size(74, 13);
+            this.lblLat.Size = new System.Drawing.Size(105, 16);
             this.lblLat.TabIndex = 8;
             this.lblLat.Text = "Map latitude : ";
             // 
@@ -336,7 +343,7 @@
             this.lblLon.AutoSize = true;
             this.lblLon.Location = new System.Drawing.Point(13, 74);
             this.lblLon.Name = "lblLon";
-            this.lblLon.Size = new System.Drawing.Size(87, 13);
+            this.lblLon.Size = new System.Drawing.Size(122, 16);
             this.lblLon.TabIndex = 10;
             this.lblLon.Text = "Map Longitude : ";
             // 
@@ -364,7 +371,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(697, 403);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);

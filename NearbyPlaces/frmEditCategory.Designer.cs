@@ -41,9 +41,12 @@
             // lblCatName
             // 
             this.lblCatName.AutoSize = true;
+            this.lblCatName.BackColor = System.Drawing.Color.Transparent;
+            this.lblCatName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCatName.ForeColor = System.Drawing.Color.White;
             this.lblCatName.Location = new System.Drawing.Point(8, 36);
             this.lblCatName.Name = "lblCatName";
-            this.lblCatName.Size = new System.Drawing.Size(114, 13);
+            this.lblCatName.Size = new System.Drawing.Size(149, 15);
             this.lblCatName.TabIndex = 0;
             this.lblCatName.Text = "New Category Name : ";
             // 
@@ -57,9 +60,12 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
             this.lblStatus.Location = new System.Drawing.Point(8, 62);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(37, 13);
+            this.lblStatus.Size = new System.Drawing.Size(47, 15);
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "Status";
             this.lblStatus.Click += new System.EventHandler(this.lblStatus_Click);
@@ -99,9 +105,12 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
+            this.lblCategory.BackColor = System.Drawing.Color.Transparent;
+            this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategory.ForeColor = System.Drawing.Color.White;
             this.lblCategory.Location = new System.Drawing.Point(8, 9);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(89, 13);
+            this.lblCategory.Size = new System.Drawing.Size(117, 15);
             this.lblCategory.TabIndex = 6;
             this.lblCategory.Text = "Category Name : ";
             // 
@@ -119,7 +128,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(395, 193);
             this.Controls.Add(this.cbCurrentCategory);
             this.Controls.Add(this.lblCategory);

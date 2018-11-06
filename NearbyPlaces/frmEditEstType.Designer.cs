@@ -41,7 +41,7 @@
             // cbEstName
             // 
             this.cbEstName.FormattingEnabled = true;
-            this.cbEstName.Location = new System.Drawing.Point(192, 26);
+            this.cbEstName.Location = new System.Drawing.Point(216, 28);
             this.cbEstName.Name = "cbEstName";
             this.cbEstName.Size = new System.Drawing.Size(195, 21);
             this.cbEstName.TabIndex = 0;
@@ -50,25 +50,31 @@
             // lblEstName
             // 
             this.lblEstName.AutoSize = true;
+            this.lblEstName.BackColor = System.Drawing.Color.Transparent;
+            this.lblEstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstName.ForeColor = System.Drawing.Color.White;
             this.lblEstName.Location = new System.Drawing.Point(13, 29);
             this.lblEstName.Name = "lblEstName";
-            this.lblEstName.Size = new System.Drawing.Size(112, 13);
+            this.lblEstName.Size = new System.Drawing.Size(152, 15);
             this.lblEstName.TabIndex = 1;
             this.lblEstName.Text = "Establishment Name : ";
             // 
             // lblCEstname
             // 
             this.lblCEstname.AutoSize = true;
+            this.lblCEstname.BackColor = System.Drawing.Color.Transparent;
+            this.lblCEstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCEstname.ForeColor = System.Drawing.Color.White;
             this.lblCEstname.Location = new System.Drawing.Point(13, 56);
             this.lblCEstname.Name = "lblCEstname";
-            this.lblCEstname.Size = new System.Drawing.Size(149, 13);
+            this.lblCEstname.Size = new System.Drawing.Size(203, 15);
             this.lblCEstname.TabIndex = 2;
             this.lblCEstname.Text = "Current Establishment Name : ";
             this.lblCEstname.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtCurrentEstName
             // 
-            this.txtCurrentEstName.Location = new System.Drawing.Point(192, 53);
+            this.txtCurrentEstName.Location = new System.Drawing.Point(216, 55);
             this.txtCurrentEstName.Name = "txtCurrentEstName";
             this.txtCurrentEstName.Size = new System.Drawing.Size(195, 20);
             this.txtCurrentEstName.TabIndex = 3;
@@ -76,9 +82,12 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
             this.lblStatus.Location = new System.Drawing.Point(13, 84);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(46, 13);
+            this.lblStatus.Size = new System.Drawing.Size(59, 15);
             this.lblStatus.TabIndex = 4;
             this.lblStatus.Text = "Status : ";
             // 
@@ -88,7 +97,7 @@
             this.cbStatus.Items.AddRange(new object[] {
             "ACTIVE",
             "INACTIVE"});
-            this.cbStatus.Location = new System.Drawing.Point(192, 81);
+            this.cbStatus.Location = new System.Drawing.Point(216, 83);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(195, 21);
             this.cbStatus.TabIndex = 5;
@@ -117,8 +126,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
-            this.ClientSize = new System.Drawing.Size(408, 185);
+            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(423, 185);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cbStatus);

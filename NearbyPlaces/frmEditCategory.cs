@@ -38,7 +38,7 @@ namespace NearbyPlaces
         private void frmEditCategory_Load(object sender, EventArgs e)
         {
            
-            category = ApiClass.getCategory(ForLoginEstVO.getEstID(),"all");
+            category = ApiClass.getCategory(ForLoginEstVO.getEstUserID(),"all");
             for (int x = 0; x < category.Count; x++)
             {
                 cbCurrentCategory.Items.Add(category[x]);
@@ -48,7 +48,7 @@ namespace NearbyPlaces
 
         private void cbCurrentCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ApiClass.editCategory(ForLoginEstVO.getEstID(), cbCurrentCategory.Text);
+            ApiClass.editCategory(ForLoginEstVO.getEstUserID(), cbCurrentCategory.Text);
             if (forEditCategory.forEditCategory.getStatus() == 1)
             {
                 cbStatus.Text = "ACTIVE";
