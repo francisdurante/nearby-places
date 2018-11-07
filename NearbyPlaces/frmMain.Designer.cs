@@ -206,7 +206,7 @@
             this.registrationTab.Name = "registrationTab";
             this.registrationTab.Padding = new System.Windows.Forms.Padding(10, 0, 4, 0);
             this.registrationTab.Size = new System.Drawing.Size(164, 67);
-            this.registrationTab.Text = "REGISTRATION";
+            this.registrationTab.Text = "Registration";
             this.registrationTab.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.registrationTab.Click += new System.EventHandler(this.registrationTab_Click);
             // 
@@ -262,13 +262,14 @@
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EateryFinder - V1.11062018";
+            this.Text = "EateryFinder - V1.11072018";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.statusStrip1.ResumeLayout(false);
