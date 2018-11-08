@@ -12,6 +12,7 @@ namespace NearbyPlaces
 {
     class ApiClass
     {
+        public static String AppVersion = "v"+DateTime.Now.ToString("MMddyyyy");
         public static bool establisment_login(string username, string password)
         {
             HttpClient client = new HttpClient();
@@ -194,7 +195,7 @@ namespace NearbyPlaces
             string url = "http://darkened-career.000webhostapp.com/api/add_product?product_name=" + productName + 
                 "&product_price=" + productPrice +
                 "&pass=add_product&product_cat=" + product_cat + 
-                "&est_id="+ForLoginEstVO.getEstID();
+                "&est_id="+ForLoginEstVO.getEstUserID();
             //HttpResponseMessage response = client.GetAsync("api/add_product?product_name=" + productName +
             //    "&pass=add_product" +
             //    "&product_price=" + productPrice +

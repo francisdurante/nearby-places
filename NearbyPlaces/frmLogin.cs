@@ -36,6 +36,7 @@ namespace NearbyPlaces
             {
                 ForEstablishmentLogin.ForLoginEstVO.setUser(txtUsername.Text);
                 frmMain main = new frmMain();
+                main.Text = "Eatery Finder - " + ApiClass.AppVersion;
                 main.Show();
                 this.Hide();
             }

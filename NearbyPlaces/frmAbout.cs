@@ -40,7 +40,7 @@ namespace NearbyPlaces
 
         private void frmAbout_Load(object sender, EventArgs e)
         {
-
+            lblAppVersion.Text = ApiClass.AppVersion;
         }
     }
 }

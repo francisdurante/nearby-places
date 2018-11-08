@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblApplicationName = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblAppVersion = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -101,17 +101,16 @@
             this.lblApplicationName.TabIndex = 3;
             this.lblApplicationName.Text = "Application Name : ";
             // 
-            // label3
+            // lblAppVersion
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(215, 171);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "v1.11072018";
+            this.lblAppVersion.AutoSize = true;
+            this.lblAppVersion.BackColor = System.Drawing.Color.Transparent;
+            this.lblAppVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppVersion.ForeColor = System.Drawing.Color.White;
+            this.lblAppVersion.Location = new System.Drawing.Point(215, 171);
+            this.lblAppVersion.Name = "lblAppVersion";
+            this.lblAppVersion.Size = new System.Drawing.Size(0, 15);
+            this.lblAppVersion.TabIndex = 6;
             // 
             // label4
             // 
@@ -143,7 +142,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(386, 278);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblAppVersion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblApplicationName);
@@ -167,7 +166,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblApplicationName;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblAppVersion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnOK;
     }
