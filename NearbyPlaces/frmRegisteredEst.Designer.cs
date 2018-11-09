@@ -147,7 +147,7 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.BackColor = System.Drawing.Color.Transparent;
             this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.ForeColor = System.Drawing.Color.White;
+            this.lblSearch.ForeColor = System.Drawing.Color.Black;
             this.lblSearch.Location = new System.Drawing.Point(184, 7);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(64, 15);
@@ -176,7 +176,7 @@
             this.lblFilter.AutoSize = true;
             this.lblFilter.BackColor = System.Drawing.Color.Transparent;
             this.lblFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFilter.ForeColor = System.Drawing.Color.White;
+            this.lblFilter.ForeColor = System.Drawing.Color.Black;
             this.lblFilter.Location = new System.Drawing.Point(184, 31);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.Size = new System.Drawing.Size(52, 15);
@@ -206,8 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 485);
             this.Controls.Add(this.btnCancel);
@@ -220,6 +219,7 @@
             this.Controls.Add(this.lvEst);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegisteredEst";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registered Establishment";
             this.Load += new System.EventHandler(this.frmRegisteredEst_Load);
             this.ResumeLayout(false);

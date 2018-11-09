@@ -43,7 +43,7 @@
             this.lblCatName.AutoSize = true;
             this.lblCatName.BackColor = System.Drawing.Color.Transparent;
             this.lblCatName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCatName.ForeColor = System.Drawing.Color.White;
+            this.lblCatName.ForeColor = System.Drawing.Color.Black;
             this.lblCatName.Location = new System.Drawing.Point(8, 36);
             this.lblCatName.Name = "lblCatName";
             this.lblCatName.Size = new System.Drawing.Size(149, 15);
@@ -62,7 +62,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.ForeColor = System.Drawing.Color.Black;
             this.lblStatus.Location = new System.Drawing.Point(8, 62);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(47, 15);
@@ -107,7 +107,7 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.BackColor = System.Drawing.Color.Transparent;
             this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.ForeColor = System.Drawing.Color.White;
+            this.lblCategory.ForeColor = System.Drawing.Color.Black;
             this.lblCategory.Location = new System.Drawing.Point(8, 9);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(117, 15);
@@ -128,8 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(395, 193);
             this.Controls.Add(this.cbCurrentCategory);
@@ -142,6 +141,7 @@
             this.Controls.Add(this.lblCatName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditCategory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Category";
             this.Load += new System.EventHandler(this.frmEditCategory_Load);
             this.ResumeLayout(false);

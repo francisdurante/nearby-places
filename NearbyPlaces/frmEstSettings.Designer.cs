@@ -62,9 +62,10 @@
             // lbluserName
             // 
             this.lbluserName.AutoSize = true;
+            this.lbluserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbluserName.Location = new System.Drawing.Point(6, 31);
             this.lbluserName.Name = "lbluserName";
-            this.lbluserName.Size = new System.Drawing.Size(64, 13);
+            this.lbluserName.Size = new System.Drawing.Size(85, 15);
             this.lbluserName.TabIndex = 0;
             this.lbluserName.Text = "Username : ";
             // 
@@ -74,10 +75,10 @@
             this.gbAccount.Controls.Add(this.btnChangePassword);
             this.gbAccount.Controls.Add(this.txtUserName);
             this.gbAccount.Controls.Add(this.lbluserName);
-            this.gbAccount.ForeColor = System.Drawing.SystemColors.Control;
+            this.gbAccount.ForeColor = System.Drawing.Color.Black;
             this.gbAccount.Location = new System.Drawing.Point(12, 241);
             this.gbAccount.Name = "gbAccount";
-            this.gbAccount.Size = new System.Drawing.Size(273, 110);
+            this.gbAccount.Size = new System.Drawing.Size(295, 110);
             this.gbAccount.TabIndex = 1;
             this.gbAccount.TabStop = false;
             this.gbAccount.Text = "Account Settings";
@@ -96,7 +97,7 @@
             // txtUserName
             // 
             this.txtUserName.Enabled = false;
-            this.txtUserName.Location = new System.Drawing.Point(76, 28);
+            this.txtUserName.Location = new System.Drawing.Point(104, 28);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(185, 20);
             this.txtUserName.TabIndex = 1;
@@ -121,7 +122,7 @@
             this.groupBox1.Controls.Add(this.txtEstName);
             this.groupBox1.Controls.Add(this.lblEstName);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(602, 223);
@@ -292,7 +293,7 @@
             this.lblNote.AutoSize = true;
             this.lblNote.BackColor = System.Drawing.Color.Transparent;
             this.lblNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNote.Location = new System.Drawing.Point(332, 323);
+            this.lblNote.Location = new System.Drawing.Point(355, 323);
             this.lblNote.Name = "lblNote";
             this.lblNote.Size = new System.Drawing.Size(222, 13);
             this.lblNote.TabIndex = 3;
@@ -303,7 +304,7 @@
             this.lblNote2.AutoSize = true;
             this.lblNote2.BackColor = System.Drawing.Color.Transparent;
             this.lblNote2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNote2.Location = new System.Drawing.Point(424, 304);
+            this.lblNote2.Location = new System.Drawing.Point(447, 304);
             this.lblNote2.Name = "lblNote2";
             this.lblNote2.Size = new System.Drawing.Size(40, 13);
             this.lblNote2.TabIndex = 4;
@@ -314,7 +315,7 @@
             this.lblNote3.AutoSize = true;
             this.lblNote3.BackColor = System.Drawing.Color.Transparent;
             this.lblNote3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNote3.Location = new System.Drawing.Point(291, 339);
+            this.lblNote3.Location = new System.Drawing.Point(314, 339);
             this.lblNote3.Name = "lblNote3";
             this.lblNote3.Size = new System.Drawing.Size(294, 13);
             this.lblNote3.TabIndex = 5;
@@ -344,8 +345,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(626, 363);
             this.Controls.Add(this.btnCancel);
@@ -357,6 +357,7 @@
             this.Controls.Add(this.gbAccount);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEstSettings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Establishment Settings";
             this.Load += new System.EventHandler(this.frmEstSettings_Load);
             this.gbAccount.ResumeLayout(false);

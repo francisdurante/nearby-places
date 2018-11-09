@@ -57,7 +57,7 @@
             this.lblDateCreated.AutoSize = true;
             this.lblDateCreated.BackColor = System.Drawing.Color.Transparent;
             this.lblDateCreated.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateCreated.ForeColor = System.Drawing.Color.White;
+            this.lblDateCreated.ForeColor = System.Drawing.Color.Black;
             this.lblDateCreated.Location = new System.Drawing.Point(77, 221);
             this.lblDateCreated.Name = "lblDateCreated";
             this.lblDateCreated.Size = new System.Drawing.Size(103, 15);
@@ -70,7 +70,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(215, 221);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 15);
@@ -82,7 +82,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(215, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 15);
@@ -94,7 +94,7 @@
             this.lblApplicationName.AutoSize = true;
             this.lblApplicationName.BackColor = System.Drawing.Color.Transparent;
             this.lblApplicationName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApplicationName.ForeColor = System.Drawing.Color.White;
+            this.lblApplicationName.ForeColor = System.Drawing.Color.Black;
             this.lblApplicationName.Location = new System.Drawing.Point(77, 197);
             this.lblApplicationName.Name = "lblApplicationName";
             this.lblApplicationName.Size = new System.Drawing.Size(132, 15);
@@ -106,7 +106,7 @@
             this.lblAppVersion.AutoSize = true;
             this.lblAppVersion.BackColor = System.Drawing.Color.Transparent;
             this.lblAppVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppVersion.ForeColor = System.Drawing.Color.White;
+            this.lblAppVersion.ForeColor = System.Drawing.Color.Black;
             this.lblAppVersion.Location = new System.Drawing.Point(215, 171);
             this.lblAppVersion.Name = "lblAppVersion";
             this.lblAppVersion.Size = new System.Drawing.Size(0, 15);
@@ -117,7 +117,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(77, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(142, 15);
@@ -138,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(386, 278);
             this.Controls.Add(this.btnOK);
@@ -151,6 +151,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAbout";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAbout";
             this.Load += new System.EventHandler(this.frmAbout_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

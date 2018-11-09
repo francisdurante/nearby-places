@@ -59,6 +59,8 @@ namespace NearbyPlaces
 
         private void addCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             Form f = Application.OpenForms["frmAddCategory"];
             if (f == null)
             {
@@ -79,6 +81,8 @@ namespace NearbyPlaces
 
         private void addProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             Form f = Application.OpenForms["frmAddProduct"];
             if (f == null)
             {
@@ -94,6 +98,8 @@ namespace NearbyPlaces
 
         private void editCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             Form f = Application.OpenForms["frmEditCategory"];
             if (f == null)
             {
@@ -109,6 +115,8 @@ namespace NearbyPlaces
 
         private void editProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             Form f = Application.OpenForms["frmEditProduct"];
             if (f == null)
             {
@@ -140,6 +148,8 @@ namespace NearbyPlaces
 
         private void addTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             Form f = Application.OpenForms["frmAddEstType"];
             if (f == null)
             {
@@ -155,6 +165,8 @@ namespace NearbyPlaces
 
         private void editTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             Form f = Application.OpenForms["frmEditEstType"];
             if (f == null)
             {
@@ -170,6 +182,8 @@ namespace NearbyPlaces
 
         private void registrationTab_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             Form f = Application.OpenForms["frmRegistration"];
             if (f == null)
             {
@@ -185,6 +199,8 @@ namespace NearbyPlaces
 
         private void showAllEst_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             Form f = Application.OpenForms["frmRegisteredEst"];
             if (f == null)
             {
@@ -200,6 +216,8 @@ namespace NearbyPlaces
 
         private void establishmentSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             Form f = Application.OpenForms["frmEstSettings"];
             if (f == null)
             {
@@ -215,6 +233,8 @@ namespace NearbyPlaces
 
         private void aboutSystemToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             Form f = Application.OpenForms["frmAbout"];
             if (f == null)
             {

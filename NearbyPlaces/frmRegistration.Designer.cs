@@ -124,7 +124,7 @@
             this.gbAccountDetails.Controls.Add(this.lblPassword);
             this.gbAccountDetails.Controls.Add(this.txtPassword);
             this.gbAccountDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbAccountDetails.ForeColor = System.Drawing.Color.White;
+            this.gbAccountDetails.ForeColor = System.Drawing.Color.Black;
             this.gbAccountDetails.Location = new System.Drawing.Point(13, 13);
             this.gbAccountDetails.Name = "gbAccountDetails";
             this.gbAccountDetails.Size = new System.Drawing.Size(283, 321);
@@ -170,7 +170,7 @@
             this.gbEstablishmentDetails.Controls.Add(this.lblLat);
             this.gbEstablishmentDetails.Controls.Add(this.lblLon);
             this.gbEstablishmentDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbEstablishmentDetails.ForeColor = System.Drawing.Color.White;
+            this.gbEstablishmentDetails.ForeColor = System.Drawing.Color.Black;
             this.gbEstablishmentDetails.Location = new System.Drawing.Point(302, 13);
             this.gbEstablishmentDetails.Name = "gbEstablishmentDetails";
             this.gbEstablishmentDetails.Size = new System.Drawing.Size(383, 321);
@@ -371,8 +371,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(697, 403);
             this.Controls.Add(this.btnCancel);
@@ -381,6 +380,7 @@
             this.Controls.Add(this.gbAccountDetails);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegistration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "-";
             this.Load += new System.EventHandler(this.frmRegistration_Load);
             this.gbAccountDetails.ResumeLayout(false);

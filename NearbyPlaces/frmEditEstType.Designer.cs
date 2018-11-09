@@ -52,7 +52,7 @@
             this.lblEstName.AutoSize = true;
             this.lblEstName.BackColor = System.Drawing.Color.Transparent;
             this.lblEstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstName.ForeColor = System.Drawing.Color.White;
+            this.lblEstName.ForeColor = System.Drawing.Color.Black;
             this.lblEstName.Location = new System.Drawing.Point(13, 29);
             this.lblEstName.Name = "lblEstName";
             this.lblEstName.Size = new System.Drawing.Size(152, 15);
@@ -64,7 +64,7 @@
             this.lblCEstname.AutoSize = true;
             this.lblCEstname.BackColor = System.Drawing.Color.Transparent;
             this.lblCEstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCEstname.ForeColor = System.Drawing.Color.White;
+            this.lblCEstname.ForeColor = System.Drawing.Color.Black;
             this.lblCEstname.Location = new System.Drawing.Point(13, 56);
             this.lblCEstname.Name = "lblCEstname";
             this.lblCEstname.Size = new System.Drawing.Size(203, 15);
@@ -84,7 +84,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.ForeColor = System.Drawing.Color.Black;
             this.lblStatus.Location = new System.Drawing.Point(13, 84);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(59, 15);
@@ -126,8 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
-            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(423, 185);
             this.Controls.Add(this.btnCancel);
@@ -140,6 +139,7 @@
             this.Controls.Add(this.cbEstName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditEstType";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Establishment Type";
             this.Load += new System.EventHandler(this.frmEditEstType_Load);
             this.ResumeLayout(false);

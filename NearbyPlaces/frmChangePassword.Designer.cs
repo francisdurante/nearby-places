@@ -43,7 +43,7 @@
             this.lblCurrentPass.AutoSize = true;
             this.lblCurrentPass.BackColor = System.Drawing.Color.Transparent;
             this.lblCurrentPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentPass.ForeColor = System.Drawing.Color.White;
+            this.lblCurrentPass.ForeColor = System.Drawing.Color.Black;
             this.lblCurrentPass.Location = new System.Drawing.Point(12, 27);
             this.lblCurrentPass.Name = "lblCurrentPass";
             this.lblCurrentPass.Size = new System.Drawing.Size(132, 15);
@@ -71,7 +71,7 @@
             this.lblNewpass.AutoSize = true;
             this.lblNewpass.BackColor = System.Drawing.Color.Transparent;
             this.lblNewpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewpass.ForeColor = System.Drawing.Color.White;
+            this.lblNewpass.ForeColor = System.Drawing.Color.Black;
             this.lblNewpass.Location = new System.Drawing.Point(12, 53);
             this.lblNewpass.Name = "lblNewpass";
             this.lblNewpass.Size = new System.Drawing.Size(113, 15);
@@ -91,7 +91,7 @@
             this.lblConfirm.AutoSize = true;
             this.lblConfirm.BackColor = System.Drawing.Color.Transparent;
             this.lblConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirm.ForeColor = System.Drawing.Color.White;
+            this.lblConfirm.ForeColor = System.Drawing.Color.Black;
             this.lblConfirm.Location = new System.Drawing.Point(12, 79);
             this.lblConfirm.Name = "lblConfirm";
             this.lblConfirm.Size = new System.Drawing.Size(167, 15);
@@ -122,8 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(410, 188);
             this.Controls.Add(this.btnCancel);
@@ -136,6 +135,7 @@
             this.Controls.Add(this.lblCurrentPass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmChangePassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change Password";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -53,7 +53,7 @@
             this.lblItemName.AutoSize = true;
             this.lblItemName.BackColor = System.Drawing.Color.Transparent;
             this.lblItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemName.ForeColor = System.Drawing.Color.White;
+            this.lblItemName.ForeColor = System.Drawing.Color.Black;
             this.lblItemName.Location = new System.Drawing.Point(13, 28);
             this.lblItemName.Name = "lblItemName";
             this.lblItemName.Size = new System.Drawing.Size(136, 15);
@@ -75,7 +75,7 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.BackColor = System.Drawing.Color.Transparent;
             this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.ForeColor = System.Drawing.Color.White;
+            this.lblCategory.ForeColor = System.Drawing.Color.Black;
             this.lblCategory.Location = new System.Drawing.Point(13, 85);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(71, 15);
@@ -96,7 +96,7 @@
             this.lblPrice.AutoSize = true;
             this.lblPrice.BackColor = System.Drawing.Color.Transparent;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.ForeColor = System.Drawing.Color.White;
+            this.lblPrice.ForeColor = System.Drawing.Color.Black;
             this.lblPrice.Location = new System.Drawing.Point(13, 112);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(52, 15);
@@ -126,7 +126,7 @@
             this.lblThumbnail.AutoSize = true;
             this.lblThumbnail.BackColor = System.Drawing.Color.Transparent;
             this.lblThumbnail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThumbnail.ForeColor = System.Drawing.Color.White;
+            this.lblThumbnail.ForeColor = System.Drawing.Color.Black;
             this.lblThumbnail.Location = new System.Drawing.Point(13, 175);
             this.lblThumbnail.Name = "lblThumbnail";
             this.lblThumbnail.Size = new System.Drawing.Size(87, 15);
@@ -168,7 +168,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.ForeColor = System.Drawing.Color.Black;
             this.lblStatus.Location = new System.Drawing.Point(13, 309);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(59, 15);
@@ -193,7 +193,7 @@
             this.lblNewItemName.AutoSize = true;
             this.lblNewItemName.BackColor = System.Drawing.Color.Transparent;
             this.lblNewItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewItemName.ForeColor = System.Drawing.Color.White;
+            this.lblNewItemName.ForeColor = System.Drawing.Color.Black;
             this.lblNewItemName.Location = new System.Drawing.Point(13, 56);
             this.lblNewItemName.Name = "lblNewItemName";
             this.lblNewItemName.Size = new System.Drawing.Size(89, 15);
@@ -212,7 +212,7 @@
             this.lblLocalPath.AutoSize = true;
             this.lblLocalPath.BackColor = System.Drawing.Color.Transparent;
             this.lblLocalPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalPath.ForeColor = System.Drawing.Color.White;
+            this.lblLocalPath.ForeColor = System.Drawing.Color.Black;
             this.lblLocalPath.Location = new System.Drawing.Point(13, 273);
             this.lblLocalPath.Name = "lblLocalPath";
             this.lblLocalPath.Size = new System.Drawing.Size(87, 15);
@@ -232,8 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
-            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(400, 401);
             this.Controls.Add(this.txtLocalPath);
@@ -255,6 +254,7 @@
             this.Controls.Add(this.lblItemName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditProduct";
             this.Load += new System.EventHandler(this.frmEditProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbThumbnail)).EndInit();

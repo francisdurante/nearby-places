@@ -83,7 +83,7 @@
             this.gbProductDetails.Controls.Add(this.lblCategory);
             this.gbProductDetails.Controls.Add(this.lblPrice);
             this.gbProductDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbProductDetails.ForeColor = System.Drawing.Color.White;
+            this.gbProductDetails.ForeColor = System.Drawing.Color.Black;
             this.gbProductDetails.Location = new System.Drawing.Point(12, 12);
             this.gbProductDetails.Name = "gbProductDetails";
             this.gbProductDetails.Size = new System.Drawing.Size(308, 142);
@@ -93,6 +93,8 @@
             // 
             // cbCategory
             // 
+            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategory.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(122, 79);
             this.cbCategory.Name = "cbCategory";
@@ -120,7 +122,7 @@
             this.gbImageThumbnail.Controls.Add(this.btnUpload);
             this.gbImageThumbnail.Controls.Add(this.pbMenuPic);
             this.gbImageThumbnail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbImageThumbnail.ForeColor = System.Drawing.Color.White;
+            this.gbImageThumbnail.ForeColor = System.Drawing.Color.Black;
             this.gbImageThumbnail.Location = new System.Drawing.Point(326, 12);
             this.gbImageThumbnail.Name = "gbImageThumbnail";
             this.gbImageThumbnail.Size = new System.Drawing.Size(339, 142);
@@ -181,8 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::NearbyPlaces.Properties.Resources.images;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(677, 234);
             this.Controls.Add(this.btnCancel);
@@ -191,6 +192,7 @@
             this.Controls.Add(this.gbProductDetails);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Product";
             this.Load += new System.EventHandler(this.frmAddProduct_Load);
             this.gbProductDetails.ResumeLayout(false);

@@ -12,7 +12,7 @@ namespace NearbyPlaces
 {
     class ApiClass
     {
-        public static String AppVersion = "v"+DateTime.Now.ToString("MMddyyyy");
+        public static String AppVersion = "v11092018";
         public static bool establisment_login(string username, string password)
         {
             HttpClient client = new HttpClient();
