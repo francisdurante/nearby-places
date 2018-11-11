@@ -41,7 +41,7 @@ namespace NearbyPlaces
             btnSave.Enabled = false;
 
             ArrayList product = new ArrayList();
-            product = ApiClass.getProduct(ForEstablishmentLogin.ForLoginEstVO.getEstID(), "all");
+            product = ApiClass.getProduct(ForEstablishmentLogin.ForLoginEstVO.getEstUserID(), "all");
             for (int x = 0; x < product.Count; x++)
             {
                 cbItemName.Items.Add(product[x]);
@@ -63,7 +63,7 @@ namespace NearbyPlaces
                 btnChange.Enabled = true;
                 btnSave.Enabled = true;
                 txtItemName.Text = cbItemName.Text;
-                ApiClass.editProduct(ForEstablishmentLogin.ForLoginEstVO.getEstID(), cbItemName.Text);
+                ApiClass.editProduct(ForEstablishmentLogin.ForLoginEstVO.getEstUserID(), cbItemName.Text);
                 cbCategory.Text = forEditProduct.forEditProductVO.getCategory();
                 txtPrice.Text = forEditProduct.forEditProductVO.getPrice();
                 string path = forEditProduct.forEditProductVO.getPath();
@@ -114,7 +114,7 @@ namespace NearbyPlaces
                 cbCategory.Text != forEditProduct.forEditProductVO.getCategory())
             {
                 if (ApiClass.submit_edited_product(forEditProduct.forEditProductVO.getItemId(),
-                    ForEstablishmentLogin.ForLoginEstVO.getEstID()
+                    ForEstablishmentLogin.ForLoginEstVO.getEstUserID()
                     , cbCategory.Text, status,
                     oldPath, txtItemName.Text,
                     txtPrice.Text,

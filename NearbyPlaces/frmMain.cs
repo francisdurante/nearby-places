@@ -46,6 +46,7 @@ namespace NearbyPlaces
                 showAllEst.Visible = true;
                 addProductOnMenuToolStripMenuItem.Visible = false;
                 categoryMenuToolStripMenuItem.Visible = false;
+                accountSettingsToolStripMenuItem.Visible = false;
             }
             else
             {
