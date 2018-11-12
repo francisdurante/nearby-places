@@ -13,6 +13,7 @@ namespace NearbyPlaces
 {
     public partial class frmEstSettings : Form
     {
+        public static frmMain mainStatusStrip { get; set; }
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
         private const int HTCAPTION = 0x2;
@@ -104,6 +105,7 @@ namespace NearbyPlaces
                     if (ApiClass.submit_edit_est_setting(ForEstablishmentLogin.ForLoginEstVO.getEstID().ToString(),txtEstName.Text, txtAddress.Text, txtLatitude.Text, txtLongitude.Text, cbEmotion.Text, cbAge.Text, cbEstType.Text, path))
                     {
                         MessageBox.Show("Changes Applied!", "Establishment Setting", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        mainStatusStrip.tsEstName.Text = "Establishment Name : " + txtEstName.Text;
                     }
                     else
                     {

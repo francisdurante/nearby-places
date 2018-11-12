@@ -27,6 +27,7 @@ namespace NearbyPlaces
         public frmMain()
         {
             InitializeComponent();
+            frmEstSettings.mainStatusStrip = this;
         }
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)

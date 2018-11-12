@@ -66,7 +66,7 @@ namespace NearbyPlaces
            // MessageBox.Show(fileInfo + "");
            if(ApiClass.addProduct(txtProductName.Text, txtPrice.Text,txtFilePath.Text,cbCategory.Text))
             {
-                MessageBox.Show("success");
+                MessageBox.Show("Add Product Successful","Add Product",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 

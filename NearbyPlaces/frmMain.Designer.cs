@@ -281,10 +281,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tsLoggedIn;
-        private System.Windows.Forms.ToolStripStatusLabel tsEstName;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem establishmentSystemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addProductOnMenuToolStripMenuItem;
@@ -303,5 +300,7 @@
         private System.Windows.Forms.ToolStripMenuItem showAllEst;
         private System.Windows.Forms.ToolStripMenuItem accountSettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem establishmentSettingsToolStripMenuItem;
+        public System.Windows.Forms.StatusStrip statusStrip1;
+        public System.Windows.Forms.ToolStripStatusLabel tsEstName;
     }
 }
