@@ -176,7 +176,7 @@
             this.gbEstablishmentDetails.Size = new System.Drawing.Size(397, 321);
             this.gbEstablishmentDetails.TabIndex = 7;
             this.gbEstablishmentDetails.TabStop = false;
-            this.gbEstablishmentDetails.Text = "EstablishmentDetails";
+            this.gbEstablishmentDetails.Text = "Establishment Details";
             this.gbEstablishmentDetails.Enter += new System.EventHandler(this.gbEstablishmentDetails_Enter);
             // 
             // txtAddress
@@ -294,9 +294,9 @@
             this.lblEmotion.AutoSize = true;
             this.lblEmotion.Location = new System.Drawing.Point(13, 102);
             this.lblEmotion.Name = "lblEmotion";
-            this.lblEmotion.Size = new System.Drawing.Size(170, 16);
+            this.lblEmotion.Size = new System.Drawing.Size(168, 16);
             this.lblEmotion.TabIndex = 12;
-            this.lblEmotion.Text = "Category Of Emotions : ";
+            this.lblEmotion.Text = "Category of Emotions : ";
             // 
             // txtEstablishmentName
             // 

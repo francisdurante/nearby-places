@@ -220,12 +220,14 @@
             this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(164, 67);
             this.accountSettingsToolStripMenuItem.Text = "Profile";
             this.accountSettingsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.accountSettingsToolStripMenuItem.Click += new System.EventHandler(this.accountSettingsToolStripMenuItem_Click);
             // 
             // establishmentSettingsToolStripMenuItem
             // 
             this.establishmentSettingsToolStripMenuItem.Name = "establishmentSettingsToolStripMenuItem";
             this.establishmentSettingsToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.establishmentSettingsToolStripMenuItem.Text = "Establishment Settings";
+            this.establishmentSettingsToolStripMenuItem.Visible = false;
             this.establishmentSettingsToolStripMenuItem.Click += new System.EventHandler(this.establishmentSettingsToolStripMenuItem_Click);
             // 
             // aboutSystemToolStripMenuItem
