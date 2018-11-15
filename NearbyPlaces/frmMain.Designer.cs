@@ -218,7 +218,7 @@
             this.accountSettingsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
             this.accountSettingsToolStripMenuItem.Name = "accountSettingsToolStripMenuItem";
             this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(164, 67);
-            this.accountSettingsToolStripMenuItem.Text = "Account Settings";
+            this.accountSettingsToolStripMenuItem.Text = "Profile";
             this.accountSettingsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // establishmentSettingsToolStripMenuItem
@@ -237,6 +237,7 @@
             this.aboutSystemToolStripMenuItem.Size = new System.Drawing.Size(164, 67);
             this.aboutSystemToolStripMenuItem.Text = "About System";
             this.aboutSystemToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.aboutSystemToolStripMenuItem.Visible = false;
             this.aboutSystemToolStripMenuItem.Click += new System.EventHandler(this.aboutSystemToolStripMenuItem_Click);
             // 
             // lOGOUTToolStripMenuItem

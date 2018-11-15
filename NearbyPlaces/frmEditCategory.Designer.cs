@@ -42,30 +42,30 @@
             // 
             this.lblCatName.AutoSize = true;
             this.lblCatName.BackColor = System.Drawing.Color.Transparent;
-            this.lblCatName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCatName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCatName.ForeColor = System.Drawing.Color.Black;
-            this.lblCatName.Location = new System.Drawing.Point(8, 36);
+            this.lblCatName.Location = new System.Drawing.Point(9, 74);
             this.lblCatName.Name = "lblCatName";
-            this.lblCatName.Size = new System.Drawing.Size(149, 15);
+            this.lblCatName.Size = new System.Drawing.Size(178, 18);
             this.lblCatName.TabIndex = 0;
             this.lblCatName.Text = "New Category Name : ";
             // 
             // txtCatName
             // 
-            this.txtCatName.Location = new System.Drawing.Point(162, 33);
+            this.txtCatName.Location = new System.Drawing.Point(12, 94);
             this.txtCatName.Name = "txtCatName";
-            this.txtCatName.Size = new System.Drawing.Size(191, 20);
+            this.txtCatName.Size = new System.Drawing.Size(306, 20);
             this.txtCatName.TabIndex = 1;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.Black;
-            this.lblStatus.Location = new System.Drawing.Point(8, 62);
+            this.lblStatus.Location = new System.Drawing.Point(9, 126);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(47, 15);
+            this.lblStatus.Size = new System.Drawing.Size(56, 18);
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "Status";
             this.lblStatus.Click += new System.EventHandler(this.lblStatus_Click);
@@ -77,16 +77,16 @@
             this.cbStatus.Items.AddRange(new object[] {
             "ACTIVE",
             "INACTIVE"});
-            this.cbStatus.Location = new System.Drawing.Point(162, 59);
+            this.cbStatus.Location = new System.Drawing.Point(12, 146);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(191, 21);
+            this.cbStatus.Size = new System.Drawing.Size(306, 21);
             this.cbStatus.TabIndex = 3;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(11, 99);
+            this.btnSave.Location = new System.Drawing.Point(12, 183);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(168, 76);
+            this.btnSave.Size = new System.Drawing.Size(150, 34);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -94,9 +94,9 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(185, 99);
+            this.btnCancel.Location = new System.Drawing.Point(168, 183);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(168, 76);
+            this.btnCancel.Size = new System.Drawing.Size(150, 34);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -106,11 +106,11 @@
             // 
             this.lblCategory.AutoSize = true;
             this.lblCategory.BackColor = System.Drawing.Color.Transparent;
-            this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.Black;
-            this.lblCategory.Location = new System.Drawing.Point(8, 9);
+            this.lblCategory.Location = new System.Drawing.Point(9, 21);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(117, 15);
+            this.lblCategory.Size = new System.Drawing.Size(140, 18);
             this.lblCategory.TabIndex = 6;
             this.lblCategory.Text = "Category Name : ";
             // 
@@ -118,9 +118,9 @@
             // 
             this.cbCurrentCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCurrentCategory.FormattingEnabled = true;
-            this.cbCurrentCategory.Location = new System.Drawing.Point(162, 6);
+            this.cbCurrentCategory.Location = new System.Drawing.Point(12, 41);
             this.cbCurrentCategory.Name = "cbCurrentCategory";
-            this.cbCurrentCategory.Size = new System.Drawing.Size(191, 21);
+            this.cbCurrentCategory.Size = new System.Drawing.Size(306, 21);
             this.cbCurrentCategory.TabIndex = 7;
             this.cbCurrentCategory.SelectedIndexChanged += new System.EventHandler(this.cbCurrentCategory_SelectedIndexChanged);
             // 
@@ -130,7 +130,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(395, 193);
+            this.ClientSize = new System.Drawing.Size(335, 247);
             this.Controls.Add(this.cbCurrentCategory);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.btnCancel);
