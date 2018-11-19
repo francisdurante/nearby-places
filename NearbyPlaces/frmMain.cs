@@ -48,6 +48,8 @@ namespace NearbyPlaces
                 addProductOnMenuToolStripMenuItem.Visible = false;
                 categoryMenuToolStripMenuItem.Visible = false;
                 accountSettingsToolStripMenuItem.Visible = false;
+                establishmentTypeToolStripMenuItem.Visible = false; // OPTIONAL 11202018
+                viewMenuToolStripMenuItem.Visible = false;
             }
             else
             {

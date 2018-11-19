@@ -12,7 +12,7 @@ namespace NearbyPlaces
 {
     class ApiClass
     {
-        public static String AppVersion = "v11152018.2";
+        public static String AppVersion = "v11202018.0";
         public static bool establisment_login(string username, string password)
         {
             HttpClient client = new HttpClient();

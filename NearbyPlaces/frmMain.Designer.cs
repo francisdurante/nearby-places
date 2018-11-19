@@ -180,18 +180,19 @@
             this.establishmentTypeToolStripMenuItem.Name = "establishmentTypeToolStripMenuItem";
             this.establishmentTypeToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
             this.establishmentTypeToolStripMenuItem.Text = "Establishment Type";
+            this.establishmentTypeToolStripMenuItem.Visible = false;
             // 
             // addTypeToolStripMenuItem
             // 
             this.addTypeToolStripMenuItem.Name = "addTypeToolStripMenuItem";
-            this.addTypeToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.addTypeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addTypeToolStripMenuItem.Text = "Add Type";
             this.addTypeToolStripMenuItem.Click += new System.EventHandler(this.addTypeToolStripMenuItem_Click);
             // 
             // editTypeToolStripMenuItem
             // 
             this.editTypeToolStripMenuItem.Name = "editTypeToolStripMenuItem";
-            this.editTypeToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.editTypeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.editTypeToolStripMenuItem.Text = "Edit Type";
             this.editTypeToolStripMenuItem.Click += new System.EventHandler(this.editTypeToolStripMenuItem_Click);
             // 
