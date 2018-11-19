@@ -188,7 +188,7 @@ class ApiController extends Controller
             $insert["date_created"] = Carbon::now();
             $product_cat = $request->product_cat;
         if($request->pass == "add_product"){
-          $cat_id = DB::table("tbl_menu_category")->where("category_name",$product_cat)->first();
+          $cat_id = DB::table("tbl_menu_category")->where("category_name",$product_cat)->where("added_by",$request->est_id)->first();
           if($cat_id->id > 0){
              $insert["category_id"] = (int)$cat_id->id;
              $id = DB::table("tbl_menu_item")->insertGetId($insert);

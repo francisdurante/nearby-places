@@ -62,3 +62,5 @@ C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Deb
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmEstSettings.resources
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.csprojResolveAssemblyReference.cache
 C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmChangePassword.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmAbout.resources
+C:\Users\Francis\Desktop\project.exe\C#\nearby\NearbyPlaces\NearbyPlaces\obj\Debug\NearbyPlaces.frmViewMenu.resources

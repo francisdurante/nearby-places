@@ -45,6 +45,7 @@
             this.addTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showAllEst = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrationTab = new System.Windows.Forms.ToolStripMenuItem();
             this.accountSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.establishmentSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -109,7 +110,8 @@
             this.addProductOnMenuToolStripMenuItem,
             this.categoryMenuToolStripMenuItem,
             this.establishmentTypeToolStripMenuItem,
-            this.showAllEst});
+            this.showAllEst,
+            this.viewMenuToolStripMenuItem});
             this.establishmentSystemToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.establishmentSystemToolStripMenuItem.Image = global::NearbyPlaces.Properties.Resources.if_maintenance_repair_service_Gear_3853928;
             this.establishmentSystemToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -151,13 +153,15 @@
             this.editCategoryToolStripMenuItem});
             this.categoryMenuToolStripMenuItem.Name = "categoryMenuToolStripMenuItem";
             this.categoryMenuToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.categoryMenuToolStripMenuItem.Text = "Category Menu";
+            this.categoryMenuToolStripMenuItem.Text = "Category Menu Settings";
+            this.categoryMenuToolStripMenuItem.Click += new System.EventHandler(this.categoryMenuToolStripMenuItem_Click);
             // 
             // addCategoryToolStripMenuItem
             // 
             this.addCategoryToolStripMenuItem.Name = "addCategoryToolStripMenuItem";
             this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.addCategoryToolStripMenuItem.Text = "Add Category";
+            this.addCategoryToolStripMenuItem.Visible = false;
             this.addCategoryToolStripMenuItem.Click += new System.EventHandler(this.addCategoryToolStripMenuItem_Click);
             // 
             // editCategoryToolStripMenuItem
@@ -165,6 +169,7 @@
             this.editCategoryToolStripMenuItem.Name = "editCategoryToolStripMenuItem";
             this.editCategoryToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.editCategoryToolStripMenuItem.Text = "Edit Category";
+            this.editCategoryToolStripMenuItem.Visible = false;
             this.editCategoryToolStripMenuItem.Click += new System.EventHandler(this.editCategoryToolStripMenuItem_Click);
             // 
             // establishmentTypeToolStripMenuItem
@@ -196,6 +201,13 @@
             this.showAllEst.Size = new System.Drawing.Size(253, 22);
             this.showAllEst.Text = "Show all Registered Establishment";
             this.showAllEst.Click += new System.EventHandler(this.showAllEst_Click);
+            // 
+            // viewMenuToolStripMenuItem
+            // 
+            this.viewMenuToolStripMenuItem.Name = "viewMenuToolStripMenuItem";
+            this.viewMenuToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.viewMenuToolStripMenuItem.Text = "View Menu";
+            this.viewMenuToolStripMenuItem.Click += new System.EventHandler(this.viewMenuToolStripMenuItem_Click);
             // 
             // registrationTab
             // 
@@ -305,5 +317,6 @@
         private System.Windows.Forms.ToolStripMenuItem establishmentSettingsToolStripMenuItem;
         public System.Windows.Forms.StatusStrip statusStrip1;
         public System.Windows.Forms.ToolStripStatusLabel tsEstName;
+        private System.Windows.Forms.ToolStripMenuItem viewMenuToolStripMenuItem;
     }
 }

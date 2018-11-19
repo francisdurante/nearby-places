@@ -532,5 +532,38 @@ namespace NearbyPlaces
             }
             return resp;
         }
+
+        public static string[,] getProductOfEstablishment(string id)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("api/get_est_product?for_process=all_active&pass=get_product&id="+id).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+            string[,] est_product = null;
+            if (responseStatus == "success")
+            {
+
+                int length = ((JArray)status["data"]).Count;
+                est_product = new string[length, 5];
+                for (int x = 0; x < length; x++)
+                {
+                    int i = 0;
+                    est_product[x, i] = status["data"][x]["id"].ToString();
+                    est_product[x, ++i] = status["data"][x]["item_name"].ToString();
+                    est_product[x, ++i] = "₱ " + status["data"][x]["price"].ToString();
+                    est_product[x, ++i] = status["data"][x]["category_name"].ToString();
+                    est_product[x, ++i] = status["data"][x]["path"] == null ? "N/A" : path(status["data"][x]["path"].ToString());
+
+                }
+            }
+            else {
+                MessageBox.Show("Error Getting Registered Establishment", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                est_product = null;
+            }
+
+            return est_product;
+        }
     }
 }

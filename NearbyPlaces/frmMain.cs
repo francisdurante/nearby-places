@@ -254,5 +254,39 @@ namespace NearbyPlaces
                 MessageBox.Show("Establishment Settings Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void categoryMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            Form f = Application.OpenForms["frmEditCategory"];
+            if (f == null)
+            {
+                frmEditCategory fec = new frmEditCategory();
+                fec.MdiParent = this;
+                fec.Show();
+            }
+            else
+            {
+                MessageBox.Show("Edit Category Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void viewMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            Form f = Application.OpenForms["frmViewMenu"];
+            if (f == null)
+            {
+                frmViewMenu fec = new frmViewMenu();
+                fec.MdiParent = this;
+                fec.Show();
+            }
+            else
+            {
+                MessageBox.Show("view Menu Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
