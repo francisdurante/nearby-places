@@ -40,6 +40,7 @@
             // 
             // cbEstName
             // 
+            this.cbEstName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstName.FormattingEnabled = true;
             this.cbEstName.Location = new System.Drawing.Point(216, 28);
             this.cbEstName.Name = "cbEstName";
@@ -93,6 +94,7 @@
             // 
             // cbStatus
             // 
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Items.AddRange(new object[] {
             "ACTIVE",

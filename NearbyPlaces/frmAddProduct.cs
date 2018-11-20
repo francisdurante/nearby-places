@@ -42,7 +42,8 @@ namespace NearbyPlaces
             cbCategory.Items.Add("");
             ArrayList category = new ArrayList();
             category = ApiClass.getCategory(ForLoginEstVO.getEstUserID(),"all_active");
-            for(int x = 0; x < category.Count; x++)
+            category.Sort();
+            for (int x = 0; x < category.Count; x++)
             {
                 cbCategory.Items.Add(category[x]);
             }

@@ -48,6 +48,8 @@ namespace NearbyPlaces
                 addProductOnMenuToolStripMenuItem.Visible = false;
                 categoryMenuToolStripMenuItem.Visible = false;
                 accountSettingsToolStripMenuItem.Visible = false;
+                establishmentTypeToolStripMenuItem.Visible = false; // OPTIONAL 11202018
+                viewMenuToolStripMenuItem.Visible = false;
             }
             else
             {
@@ -218,19 +220,7 @@ namespace NearbyPlaces
 
         private void establishmentSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)
-                ActiveMdiChild.Close();
-            Form f = Application.OpenForms["frmEstSettings"];
-            if (f == null)
-            {
-                frmEstSettings fes = new frmEstSettings();
-                fes.MdiParent = this;
-                fes.Show();
-            }
-            else
-            {
-                MessageBox.Show("Establishment Settings Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            
         }
 
         private void aboutSystemToolStripMenuItem_Click(object sender, EventArgs e)
@@ -247,6 +237,57 @@ namespace NearbyPlaces
             else
             {
                 MessageBox.Show("About Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void accountSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            Form f = Application.OpenForms["frmEstSettings"];
+            if (f == null)
+            {
+                frmEstSettings fes = new frmEstSettings();
+                fes.MdiParent = this;
+                fes.Show();
+            }
+            else
+            {
+                MessageBox.Show("Establishment Settings Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void categoryMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            Form f = Application.OpenForms["frmEditCategory"];
+            if (f == null)
+            {
+                frmEditCategory fec = new frmEditCategory();
+                fec.MdiParent = this;
+                fec.Show();
+            }
+            else
+            {
+                MessageBox.Show("Edit Category Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void viewMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            Form f = Application.OpenForms["frmViewMenu"];
+            if (f == null)
+            {
+                frmViewMenu fec = new frmViewMenu();
+                fec.MdiParent = this;
+                fec.Show();
+            }
+            else
+            {
+                MessageBox.Show("view Menu Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

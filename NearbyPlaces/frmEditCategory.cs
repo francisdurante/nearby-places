@@ -37,13 +37,7 @@ namespace NearbyPlaces
 
         private void frmEditCategory_Load(object sender, EventArgs e)
         {
-           
-            category = ApiClass.getCategory(ForLoginEstVO.getEstUserID(),"all");
-            for (int x = 0; x < category.Count; x++)
-            {
-                cbCurrentCategory.Items.Add(category[x]);
-            }
-
+            getMenuCategory();
         }
 
         private void cbCurrentCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -89,6 +83,7 @@ namespace NearbyPlaces
                     if(ApiClass.submit_edited_category(forEditCategory.forEditCategory.getCatId(), ForLoginEstVO.getEstID(), txtCatName.Text, status))
                     {
                         MessageBox.Show("Edit Success", "Edit Category", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        getMenuCategory();
                         
                     }
                     else
@@ -102,6 +97,37 @@ namespace NearbyPlaces
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (txtCategory.Text != "" && ApiClass.est_add_category(txtCategory.Text, ForLoginEstVO.getEstUserID()))
+            {
+                MessageBox.Show("Category Add Successful!", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                getMenuCategory();
+                txtCategory.Clear();
+            }
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void getMenuCategory()
+        {
+            cbCurrentCategory.Items.Clear();
+            category = ApiClass.getCategory(ForLoginEstVO.getEstUserID(), "all");
+            category.Sort();
+            for (int x = 0; x < category.Count; x++)
+            {
+                cbCurrentCategory.Items.Add(category[x]);
+            }
         }
     }
 }

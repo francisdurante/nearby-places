@@ -173,15 +173,15 @@
             this.gbEstablishmentDetails.ForeColor = System.Drawing.Color.Black;
             this.gbEstablishmentDetails.Location = new System.Drawing.Point(302, 13);
             this.gbEstablishmentDetails.Name = "gbEstablishmentDetails";
-            this.gbEstablishmentDetails.Size = new System.Drawing.Size(383, 321);
+            this.gbEstablishmentDetails.Size = new System.Drawing.Size(397, 321);
             this.gbEstablishmentDetails.TabIndex = 7;
             this.gbEstablishmentDetails.TabStop = false;
-            this.gbEstablishmentDetails.Text = "EstablishmentDetails";
+            this.gbEstablishmentDetails.Text = "Establishment Details";
             this.gbEstablishmentDetails.Enter += new System.EventHandler(this.gbEstablishmentDetails_Enter);
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(172, 180);
+            this.txtAddress.Location = new System.Drawing.Point(186, 180);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(205, 22);
             this.txtAddress.TabIndex = 22;
@@ -198,7 +198,7 @@
             // btnBrowse
             // 
             this.btnBrowse.ForeColor = System.Drawing.Color.Black;
-            this.btnBrowse.Location = new System.Drawing.Point(16, 265);
+            this.btnBrowse.Location = new System.Drawing.Point(13, 268);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(122, 23);
             this.btnBrowse.TabIndex = 20;
@@ -208,7 +208,7 @@
             // 
             // pbFrontStore
             // 
-            this.pbFrontStore.Location = new System.Drawing.Point(172, 224);
+            this.pbFrontStore.Location = new System.Drawing.Point(186, 224);
             this.pbFrontStore.Name = "pbFrontStore";
             this.pbFrontStore.Size = new System.Drawing.Size(205, 93);
             this.pbFrontStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -220,15 +220,15 @@
             this.lblFrontStore.AutoSize = true;
             this.lblFrontStore.Location = new System.Drawing.Point(13, 249);
             this.lblFrontStore.Name = "lblFrontStore";
-            this.lblFrontStore.Size = new System.Drawing.Size(92, 16);
+            this.lblFrontStore.Size = new System.Drawing.Size(63, 16);
             this.lblFrontStore.TabIndex = 18;
-            this.lblFrontStore.Text = "Front Store :";
+            this.lblFrontStore.Text = "Image : ";
             // 
             // cbEstType
             // 
             this.cbEstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstType.FormattingEnabled = true;
-            this.cbEstType.Location = new System.Drawing.Point(172, 153);
+            this.cbEstType.Location = new System.Drawing.Point(186, 153);
             this.cbEstType.Name = "cbEstType";
             this.cbEstType.Size = new System.Drawing.Size(205, 24);
             this.cbEstType.TabIndex = 17;
@@ -254,7 +254,7 @@
             "ADULTS (25 - 59 years old)",
             "SENIORS (60 and Over years old)",
             "ALL"});
-            this.cbAge.Location = new System.Drawing.Point(172, 126);
+            this.cbAge.Location = new System.Drawing.Point(186, 126);
             this.cbAge.Name = "cbAge";
             this.cbAge.Size = new System.Drawing.Size(205, 24);
             this.cbAge.TabIndex = 15;
@@ -264,9 +264,9 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Location = new System.Drawing.Point(13, 129);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(136, 16);
+            this.lblAge.Size = new System.Drawing.Size(98, 16);
             this.lblAge.TabIndex = 14;
-            this.lblAge.Text = "Good For Age Of : ";
+            this.lblAge.Text = "Age Range : ";
             // 
             // cbEmotion
             // 
@@ -283,7 +283,7 @@
             "NEUTRAL",
             "SURPIRSE",
             "ALL"});
-            this.cbEmotion.Location = new System.Drawing.Point(172, 99);
+            this.cbEmotion.Location = new System.Drawing.Point(186, 99);
             this.cbEmotion.Name = "cbEmotion";
             this.cbEmotion.Size = new System.Drawing.Size(205, 24);
             this.cbEmotion.TabIndex = 13;
@@ -294,27 +294,27 @@
             this.lblEmotion.AutoSize = true;
             this.lblEmotion.Location = new System.Drawing.Point(13, 102);
             this.lblEmotion.Name = "lblEmotion";
-            this.lblEmotion.Size = new System.Drawing.Size(164, 16);
+            this.lblEmotion.Size = new System.Drawing.Size(168, 16);
             this.lblEmotion.TabIndex = 12;
-            this.lblEmotion.Text = "Good For Emotion Of : ";
+            this.lblEmotion.Text = "Category of Emotions : ";
             // 
             // txtEstablishmentName
             // 
-            this.txtEstablishmentName.Location = new System.Drawing.Point(172, 21);
+            this.txtEstablishmentName.Location = new System.Drawing.Point(186, 21);
             this.txtEstablishmentName.Name = "txtEstablishmentName";
             this.txtEstablishmentName.Size = new System.Drawing.Size(205, 22);
             this.txtEstablishmentName.TabIndex = 7;
             // 
             // txtLon
             // 
-            this.txtLon.Location = new System.Drawing.Point(172, 73);
+            this.txtLon.Location = new System.Drawing.Point(186, 73);
             this.txtLon.Name = "txtLon";
             this.txtLon.Size = new System.Drawing.Size(205, 22);
             this.txtLon.TabIndex = 11;
             // 
             // txtLat
             // 
-            this.txtLat.Location = new System.Drawing.Point(172, 47);
+            this.txtLat.Location = new System.Drawing.Point(186, 47);
             this.txtLat.Name = "txtLat";
             this.txtLat.Size = new System.Drawing.Size(205, 22);
             this.txtLat.TabIndex = 9;
@@ -373,7 +373,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(697, 403);
+            this.ClientSize = new System.Drawing.Size(711, 403);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.gbEstablishmentDetails);

@@ -78,6 +78,7 @@ namespace NearbyPlaces
         {
             ArrayList type = new ArrayList();
             type = ApiClass.get_est_type("active", "");
+            type.Sort();
             for(int x = 0; x < type.Count; x++)
             {
                 cbEstType.Items.Add(type[x]);

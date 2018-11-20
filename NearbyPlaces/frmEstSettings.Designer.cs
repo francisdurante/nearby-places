@@ -171,9 +171,9 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Location = new System.Drawing.Point(9, 136);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(120, 15);
+            this.lblAge.Size = new System.Drawing.Size(77, 15);
             this.lblAge.TabIndex = 12;
-            this.lblAge.Text = "Good for Age Of : ";
+            this.lblAge.Text = "Age Range";
             // 
             // cbEmotion
             // 
@@ -200,9 +200,9 @@
             this.lblEmotion.AutoSize = true;
             this.lblEmotion.Location = new System.Drawing.Point(9, 109);
             this.lblEmotion.Name = "lblEmotion";
-            this.lblEmotion.Size = new System.Drawing.Size(149, 15);
+            this.lblEmotion.Size = new System.Drawing.Size(110, 15);
             this.lblEmotion.TabIndex = 10;
-            this.lblEmotion.Text = "Good for Emotion Of : ";
+            this.lblEmotion.Text = "Type of Emotion";
             // 
             // txtLongitude
             // 
