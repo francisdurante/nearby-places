@@ -188,7 +188,7 @@ class ApiController extends Controller
             $insert["date_created"] = Carbon::now();
             $product_cat = $request->product_cat;
         if($request->pass == "add_product"){
-          $cat_id = DB::table("tbl_menu_category")->where("category_name",$product_cat)->first();
+          $cat_id = DB::table("tbl_menu_category")->where("category_name",$product_cat)->where("added_by",$request->est_id)->first();
           if($cat_id->id > 0){
              $insert["category_id"] = (int)$cat_id->id;
              $id = DB::table("tbl_menu_item")->insertGetId($insert);
@@ -488,6 +488,44 @@ class ApiController extends Controller
             }
         }else{
             $response["status"] = "fail";
+        }
+        return $response;
+    }
+    
+    public function face_suggestion(Request $request)
+    {
+        $age = $request->age;
+        $emotion = $request->emotion;
+        if($request->pass == "face_suggestion"){
+           $response["suggestion"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->
+                join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
+                join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->where("good_for_emotion_of",$emotion)->where("good_at_of",$age)->orWhere("good_for_emotion_of","ALL")->where("good_at_of","ALL")->get();
+            
+            $response["other"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->
+                join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
+                join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->where("good_for_emotion_of","!=",$emotion)->orWhere("good_at_of","!=",$age)->get();
+                $response["status"] = "success";
+                
+            foreach($response["suggestion"] as $key=>$value){
+                // $response["rate"][$key] = $value->est_id;
+                $response["rate_count"][$value->est_id] = DB::table("tbl_rating")->where("est_id",$value->est_id)->count();
+                $response["rate"][$value->est_id] = DB::table("tbl_rating")->where("est_id",$value->est_id)->avg("rate");
+                if($response["rate"][$value->est_id] == null){
+                    $response["rate"][$value->est_id] = 0;
+                }
+            }
+                foreach($response["other"] as $key=>$value){
+                // $response["rate"][$key] = $value->est_id;
+                $response["rate_count"][$value->est_id] = DB::table("tbl_rating")->where("est_id",$value->est_id)->count();
+                $response["rate"][$value->est_id] = DB::table("tbl_rating")->where("est_id",$value->est_id)->avg("rate");
+                if($response["rate"][$value->est_id] == null){
+                    $response["rate"][$value->est_id] = 0;
+                }
+                }
+        }else{
+            $response["status"] = "fail";
+            $response["suggestion"] = "";
+            $response["other"] = "";
         }
         return $response;
     }
