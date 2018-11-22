@@ -95,6 +95,7 @@
             // 
             // btnRefresh
             // 
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Location = new System.Drawing.Point(12, 13);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(141, 46);
@@ -144,6 +145,7 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(495, 12);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(141, 46);
@@ -154,6 +156,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Location = new System.Drawing.Point(12, 429);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(141, 46);
