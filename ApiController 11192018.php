@@ -499,7 +499,7 @@ class ApiController extends Controller
         if($request->pass == "face_suggestion"){
            $response["suggestion"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->
                 join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
-                join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->where("good_for_emotion_of",$emotion)->where("good_at_of",$age)->orWhere("good_for_emotion_of","ALL")->where("good_at_of","ALL")->get();
+                join("tbl_est_type","tbl_est_type.id","=","tbl_establishment.est_type_id")->orderBy("tbl_establishment.id")->where("good_for_emotion_of",$emotion)->where("good_at_of",$age)->get();
             
             $response["other"] =  DB::table("tbl_estabalishment_user")->select("*","tbl_estabalishment_user.status as user_status","tbl_establishment.status as est_status","tbl_estabalishment_user.id as est_id","tbl_establishment.id as est_id")->
                 join("tbl_establishment","tbl_establishment.establishment_user_id","=","tbl_estabalishment_user.id")->
