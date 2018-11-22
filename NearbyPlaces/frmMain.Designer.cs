@@ -49,7 +49,7 @@
             this.registrationTab = new System.Windows.Forms.ToolStripMenuItem();
             this.accountSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.establishmentSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.commentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -95,7 +95,7 @@
             this.establishmentSystemToolStripMenuItem,
             this.registrationTab,
             this.accountSettingsToolStripMenuItem,
-            this.aboutSystemToolStripMenuItem,
+            this.commentListToolStripMenuItem,
             this.lOGOUTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -185,14 +185,14 @@
             // addTypeToolStripMenuItem
             // 
             this.addTypeToolStripMenuItem.Name = "addTypeToolStripMenuItem";
-            this.addTypeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addTypeToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.addTypeToolStripMenuItem.Text = "Add Type";
             this.addTypeToolStripMenuItem.Click += new System.EventHandler(this.addTypeToolStripMenuItem_Click);
             // 
             // editTypeToolStripMenuItem
             // 
             this.editTypeToolStripMenuItem.Name = "editTypeToolStripMenuItem";
-            this.editTypeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editTypeToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.editTypeToolStripMenuItem.Text = "Edit Type";
             this.editTypeToolStripMenuItem.Click += new System.EventHandler(this.editTypeToolStripMenuItem_Click);
             // 
@@ -243,17 +243,16 @@
             this.establishmentSettingsToolStripMenuItem.Visible = false;
             this.establishmentSettingsToolStripMenuItem.Click += new System.EventHandler(this.establishmentSettingsToolStripMenuItem_Click);
             // 
-            // aboutSystemToolStripMenuItem
+            // commentListToolStripMenuItem
             // 
-            this.aboutSystemToolStripMenuItem.Image = global::NearbyPlaces.Properties.Resources.if_v_31_3162614;
-            this.aboutSystemToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.aboutSystemToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
-            this.aboutSystemToolStripMenuItem.Name = "aboutSystemToolStripMenuItem";
-            this.aboutSystemToolStripMenuItem.Size = new System.Drawing.Size(164, 67);
-            this.aboutSystemToolStripMenuItem.Text = "About System";
-            this.aboutSystemToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.aboutSystemToolStripMenuItem.Visible = false;
-            this.aboutSystemToolStripMenuItem.Click += new System.EventHandler(this.aboutSystemToolStripMenuItem_Click);
+            this.commentListToolStripMenuItem.Image = global::NearbyPlaces.Properties.Resources.iconfinder_comment_discussion_298752;
+            this.commentListToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.commentListToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.commentListToolStripMenuItem.Name = "commentListToolStripMenuItem";
+            this.commentListToolStripMenuItem.Size = new System.Drawing.Size(164, 67);
+            this.commentListToolStripMenuItem.Text = "Comment List";
+            this.commentListToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.commentListToolStripMenuItem.Click += new System.EventHandler(this.aboutSystemToolStripMenuItem_Click);
             // 
             // lOGOUTToolStripMenuItem
             // 
@@ -301,7 +300,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem establishmentSystemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addProductOnMenuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutSystemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem commentListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addProductToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editProductToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoryMenuToolStripMenuItem;

@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NearbyPlaces
@@ -46,6 +38,7 @@ namespace NearbyPlaces
                 establishmentTypeToolStripMenuItem.Visible = true;
                 showAllEst.Visible = true;
                 addProductOnMenuToolStripMenuItem.Visible = false;
+                commentListToolStripMenuItem.Visible = true;
                 categoryMenuToolStripMenuItem.Visible = false;
                 accountSettingsToolStripMenuItem.Visible = false;
                 establishmentTypeToolStripMenuItem.Visible = false; // OPTIONAL 11202018
@@ -54,6 +47,7 @@ namespace NearbyPlaces
             else
             {
                 registrationTab.Visible = false;
+                commentListToolStripMenuItem.Visible = false;
                 establishmentTypeToolStripMenuItem.Visible = false;
                 showAllEst.Visible = false;
                 addProductOnMenuToolStripMenuItem.Visible = true;
@@ -227,16 +221,16 @@ namespace NearbyPlaces
         {
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
-            Form f = Application.OpenForms["frmAbout"];
+            Form f = Application.OpenForms["frmCommentList"];
             if (f == null)
             {
-                frmAbout fes = new frmAbout();
+                frmCommentList fes = new frmCommentList();
                 fes.MdiParent = this;
                 fes.Show();
             }
             else
             {
-                MessageBox.Show("About Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Comment List Form is Already Open.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

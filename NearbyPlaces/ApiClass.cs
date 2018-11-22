@@ -12,7 +12,7 @@ namespace NearbyPlaces
 {
     class ApiClass
     {
-        public static String AppVersion = "v11202018.0";
+        public static String AppVersion = "v11222018.0";
         public static bool establisment_login(string username, string password)
         {
             HttpClient client = new HttpClient();
@@ -564,6 +564,79 @@ namespace NearbyPlaces
             }
 
             return est_product;
+        }
+        public static string[,] getAllComment(string est_filter, string user_filter)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("api/get_all_comment?pass=get_all_comment&est="+est_filter+"&user="+user_filter).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+            string[,] comment_data = null;
+            if (responseStatus == "success")
+            {
+                int length = ((JArray)status["data"]).Count;
+                comment_data = new string[length, 7];
+                for (int x = 0; x < length; x++)
+                {
+                    int i = 0;
+                    comment_data[x, i] = status["data"][x]["comment_id"].ToString();
+                    comment_data[x, ++i] = status["data"][x]["user_comment"].ToString();
+                    comment_data[x, ++i] = status["data"][x]["comment_status"] == 0 ? "PENDING" : status["data"][x]["comment_status"] == 1 ? "POSTED" : "REJECTED";
+                    comment_data[x, ++i] = status["data"][x]["comment_date"].ToString();
+                    comment_data[x, ++i] = status["data"][x]["username"].ToString();
+                    comment_data[x, ++i] = status["data"][x]["establishment_name"].ToString();
+                }
+            }
+            else {
+                MessageBox.Show("Error Getting Registered Establishment", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                comment_data = null;
+            }
+
+            return comment_data;
+        }
+        public static string[,] getCommentByID(int id)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("/api/get_comment_by_id?pass=get_comment_by_id&id="+id).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+            string[,] comment_data = null;
+            if (responseStatus == "success")
+            {
+                int length = ((JArray)status["data"]).Count;
+                comment_data = new string[length, 2];
+                for (int x = 0; x < length; x++)
+                {
+                    int i = 0;
+                    comment_data[x, i] = status["data"][x]["user_comment"].ToString();
+                    comment_data[x, ++i] = status["data"][x]["comment_status"] == 0 ? "PENDING" : status["data"][x]["comment_status"] == 1 ? "POSTED" : "REJECTED";
+                }
+
+            }
+            
+            return comment_data;
+        }
+
+        public static bool updateCommentStatus(int id, string status_comment)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://darkened-career.000webhostapp.com/");
+            HttpResponseMessage response = client.GetAsync("api/update_comment?pass=update_comment&id="+id+"&status="+status_comment).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var status = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            string responseStatus = status["status"].ToString();
+            if (responseStatus == "success")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
